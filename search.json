@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Eman Ajmal",
+    "section": "",
+    "text": "This is Eman Ajmal’s webiste. I am a social analyst.\n\nplot(iris)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Eman Ajmal is a social analyst.\n\nplot(mtcars)"
+  },
+  {
+    "objectID": "Project.html",
+    "href": "Project.html",
+    "title": "Project",
+    "section": "",
+    "text": "Eman Ajmal is a social analyst.\n\nplot(mtcars)"
+  },
+  {
+    "objectID": "Assignment1.html",
+    "href": "Assignment1.html",
+    "title": "Assignment1",
+    "section": "",
+    "text": "Eman Ajmal is a social analyst.\n\nplot(mtcars)"
+  }
+]
