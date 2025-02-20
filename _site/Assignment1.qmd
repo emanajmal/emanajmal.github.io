@@ -1,0 +1,114 @@
+---
+Title: Assignment 1 - Information Management
+---
+
+# Assignment 1
+
+## Question 1
+
+Name and describe three applications you have used that employed a database system to store and access persistent data (e.g., airlines, online trade, banking, university system).
+
+### 1. Online Banking
+- How it Uses Databases: Stores customer data, transactions, and account details.
+- Reasoning: Ensures secure, fast, and reliable access to banking information.
+
+### 2. E-commerce (e.g., Amazon)
+- How it Uses Databases: Manages product listings, customer orders, and payments.
+- Reasoning: Uses a relational database to store structured data and provide recommendations.
+
+### 3. University Management Systems
+- How it Uses Databases: Stores student records, enrollments, and grades.
+- Reasoning: Ensures students and faculty have real-time access to course materials and academic records.
+
+## Question 2  
+
+Propose three applications in domain projects (e.g., criminology, economics, brain science, etc.).
+Be sure to include: 
+1.Purpose
+2.Functions
+3.Simple interface design
+
+### 1. Community Well-Being Tracker
+- Purpose: Measures and tracks social well-being indicators like mental health, employment, and community engagement.
+- Functions:
+  - Collects survey responses on life satisfaction, stress levels, and social interactions.
+  - Tracks changes in employment, education, and local crime rates.
+  - Provides visual reports and insights for policymakers and community leaders.
+- Simple Interface Design: A dashboard displays key indicators like mental health scores, employment trends, and community engagement in charts and graphs. Users can fill out surveys to update data, and policymakers can generate reports with visual insights. The interface includes a homepage overview, survey page, and a report export option.
+
+### 2. Digital Public Opinion Analyzer
+- Purpose: Analyzes public sentiment on social issues by gathering data from social media and news sources.
+- Functions:
+  - Collects and categorizes posts on topics like inequality, human rights, and policy changes.
+  - Uses sentiment analysis to determine whether opinions are positive, negative, or neutral.
+  - Generates reports on trending social issues over time.
+- Simple Interface Design: Users enter keywords to analyze public sentiment from news and social media, displayed through a word cloud, sentiment pie chart, and regional heatmap. A live feed shows relevant posts, and a report generation page allows data exports. The interface is search-focused with real-time insights.
+
+### 3. Social Mobility & Inequality Tracker
+- Purpose: Tracks data on economic and social mobility to understand inequality trends in different regions.
+- Functions:
+  - Stores data on income, education, and employment trends across communities.
+  - Provides comparison charts on social mobility rates based on location, gender, and ethnicity.
+  - Recommends policies and resources to improve access to opportunities.
+- Simple Interface Design: An interactive heat map and dashboard display income trends, education levels, and employment data by region. Users can compare multiple areas, view bar charts, and access policy recommendations. The interface supports searching, visual comparisons, and report downloads. 
+
+### Question 3
+
+If data can be retrieved efficiently and effectively, why is data mining needed? 
+
+Data mining is essential because it allows us to extract meaningful insights from large datasets beyond just retrieving stored data. Below are key reasons why data mining is needed:
+
+### 1. Finding Hidden Patterns & Relationships 
+   - Databases can retrieve data efficiently, but they don’t automatically find patterns or trends.
+
+### 2. Predictive Analytics & Forecasting 
+   - Data mining helps predict future trends based on historical data.
+
+### 3. Decision-Making & Automation
+   - Businesses use data mining to make data-driven decisions rather than relying on intuition.
+
+### 4. Reducing Complexity in Big Data
+   - Big data is too large and complex for traditional database queries alone. Data mining helps extract valuable insights from massive datasets.
+
+### 5. Competitive Advantage & Business Intelligence 
+   - Companies use data mining to gain a competitive edge by identifying market trends, customer preferences, and business risks.
+
+## Question 6
+
+Describe at least three tables that might be used to store information in a social network/social media system such as Twitter or Reddit.  
+
+A social media platform like Twitter or Reddit would require multiple tables for structured data management. Below are three essential tables:
+
+### 1. Users Table
+- Stores information about users.  
+
+  | Column Name | Description |
+  |------------|------------|
+  | User ID    | Unique identifier for each user |
+  | Username   | Display name of the user |
+  | Email      | Contact email |
+  | Password   | Encrypted password |
+  | Date Joined | Date when the user registered |
+
+### 2. Posts Table
+- Stores tweets or Reddit posts.
+
+  | Column Name | Description |
+  |------------|------------|
+  | Post ID    | Unique identifier for each post |
+  | User ID    | ID of the user who posted |
+  | Post Content | Text or media content |
+  | Created At | Timestamp of post creation |
+  | Likes Count | Number of likes |
+  | Comments Count | Number of comments |
+
+### 3. Followers Table
+- Stores relationships between users.
+
+  | Column Name | Description |
+  |------------|------------|
+  | Follower ID | ID of the user who follows |
+  | Followed ID | ID of the user being followed |
+  | Date Followed | Timestamp of when the follow occurred |
+
+---
