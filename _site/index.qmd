@@ -1,0 +1,9 @@
+---
+title: "Eman Ajmal"
+---
+
+This is Eman Ajmal's webiste. I am a social analyst. 
+
+```{r}
+plot(iris)
+```
