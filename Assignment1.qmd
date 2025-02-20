@@ -1,0 +1,8 @@
+---
+Title: Assignmnet 1
+Format: html
+---
+
+quarto::render("Assignment1.qmd")
+
+------------------------------------------------------------------------
