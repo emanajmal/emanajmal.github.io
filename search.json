@@ -130,6 +130,6 @@
     "href": "Assignment4.html#question-3",
     "title": "Assignment4",
     "section": "Question 3",
-    "text": "Question 3\nSQL exercise:\n\nWrite an SQL query using the university schema to find the ID of each student who has never taken a course at the university. Do this using no subqueries and no set operations (use an outer join).\n\n\n\n\nQ3bAssignment4\n\n\n\nConsider the following database, write a query to find the ID of each employee with no manager. Note that an employee may simply have no manager listed or may have a null manager(use natural left outer join).\n\nSELECT e.ID\nFROM employee e\nOUTER JOIN manages m ON e.ID = m.ID\nWHERE m.manager_id IS NULL;"
+    "text": "Question 3\nSQL exercise:\n\nWrite an SQL query using the university schema to find the ID of each student who has never taken a course at the university. Do this using no subqueries and no set operations (use an outer join).\n\n\n\n\nQ3bAssignment4\n\n\n\nConsider the following database, write a query to find the ID of each employee with no manager. Note that an employee may simply have no manager listed or may have a null manager(use natural left outer join).\n\nSELECT e.ID\nFROM employee e\nOUTER JOIN manages m ON e.ID = m.ID\nWHERE m.manager_id IS NULL;\nResearch Proposal Eman_DatabaseProposal"
   }
 ]
