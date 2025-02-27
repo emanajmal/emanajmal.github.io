@@ -138,5 +138,61 @@
     "title": "Assignment 2",
     "section": "",
     "text": "Branch: branch_name\nAccount: account_number\nLoan: loan_number\nDepositor: (ID, account_number)\nBorrower: (ID, loan_number)\nCustomer: ID\n\n\n\n\n\nAccount: branch_name\nLoan: branch_name\nDepositor: ID, account_number\nBorrower: ID, loan_number"
+  },
+  {
+    "objectID": "Assignment3.html",
+    "href": "Assignment3.html",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Write SQL codes to get a list of:\n\nStudents IDs (hint: from the takes relation) \nInstructors\n\n\n\n\nQ2bAssignment3\n\n\n\nDepartments\n\n\n\n\nQ2cAssignment3\n\n\n\n\n\nWrite in SQL codes to do following queries:\n\nFind the ID and name of each student who has taken at least one Comp. Sci. course; make sure there are no duplicate names in the result.\n\n\n\n\nQ3aAssignmnet3\n\n\n\nAdd grades to the list \nFind the ID and name of each student who has not taken any course offered before 2017.\n\n\n\n\nQ3cAssignment3\n\n\n\nFor each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor.\n\n\n\n\nQ3dAssignment3\n\n\n\nFind the lowest, across all departments, of the per-department maximum salary computed by the preceding query.\n\n\n\n\nQ3eAssignment3\n\n\n\nAdd names to the list\n\n\n\n\nQ3fAssignment3\n\n\n\n\n\nFind instructor (with name and ID) who has never given an A grade in any course she or he has taught. (Instructors who have never taught a course trivially satisfy this condition.)\n\n\n\nQ4Assignment3"
+  },
+  {
+    "objectID": "Assignment3.html#question-2",
+    "href": "Assignment3.html#question-2",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Write SQL codes to get a list of:\n\nStudents IDs (hint: from the takes relation) \nInstructors\n\n\n\n\nQ2bAssignment3\n\n\n\nDepartments\n\n\n\n\nQ2cAssignment3"
+  },
+  {
+    "objectID": "Assignment3.html#question-3",
+    "href": "Assignment3.html#question-3",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Write in SQL codes to do following queries:\n\nFind the ID and name of each student who has taken at least one Comp. Sci. course; make sure there are no duplicate names in the result.\n\n\n\n\nQ3aAssignmnet3\n\n\n\nAdd grades to the list \nFind the ID and name of each student who has not taken any course offered before 2017.\n\n\n\n\nQ3cAssignment3\n\n\n\nFor each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor.\n\n\n\n\nQ3dAssignment3\n\n\n\nFind the lowest, across all departments, of the per-department maximum salary computed by the preceding query.\n\n\n\n\nQ3eAssignment3\n\n\n\nAdd names to the list\n\n\n\n\nQ3fAssignment3"
+  },
+  {
+    "objectID": "Assignment3.html#question-4",
+    "href": "Assignment3.html#question-4",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Find instructor (with name and ID) who has never given an A grade in any course she or he has taught. (Instructors who have never taught a course trivially satisfy this condition.)\n\n\n\nQ4Assignment3"
+  },
+  {
+    "objectID": "Assignment4.html",
+    "href": "Assignment4.html",
+    "title": "Assignment4",
+    "section": "",
+    "text": "Difference between a weak and a strong entity set:\n\nA strong entity set can be identified uniquely by its own attributes, such as an Employee with an Employee ID.\nA weak entity set on the other hand, cannot be identified by its own attributes alone and depends on a strong entity (also known as the owner entity) for identification. An example could be a Dependent entity that relies on the Employee entity for its identification (e.g., an employee’s dependent might be identified by the Employee ID and Dependent’s name)."
+  },
+  {
+    "objectID": "Assignment4.html#question-1",
+    "href": "Assignment4.html#question-1",
+    "title": "Assignment4",
+    "section": "",
+    "text": "Difference between a weak and a strong entity set:\n\nA strong entity set can be identified uniquely by its own attributes, such as an Employee with an Employee ID.\nA weak entity set on the other hand, cannot be identified by its own attributes alone and depends on a strong entity (also known as the owner entity) for identification. An example could be a Dependent entity that relies on the Employee entity for its identification (e.g., an employee’s dependent might be identified by the Employee ID and Dependent’s name)."
+  },
+  {
+    "objectID": "Assignment4.html#question-2",
+    "href": "Assignment4.html#question-2",
+    "title": "Assignment4",
+    "section": "Question 2",
+    "text": "Question 2\nDesign an E-R diagram for keeping track of the scoring statistics of your favorite sports team. You should store the matches played, the scores in each match, the players in each match, and individual player scoring statistics for each match. Summary statistics should be modeled as derived attributes with an explanation as to how they are computed.\n\nDraw the E-R diagram using draw.io.\nExpand to all teams in the league (Hint: add team entity)\n\n\n\n\nQ2Assignment4"
+  },
+  {
+    "objectID": "Assignment4.html#question-3",
+    "href": "Assignment4.html#question-3",
+    "title": "Assignment4",
+    "section": "Question 3",
+    "text": "Question 3\nSQL exercise:\n\nWrite an SQL query using the university schema to find the ID of each student who has never taken a course at the university. Do this using no subqueries and no set operations (use an outer join).\n\n\n\n\nQ3bAssignment4\n\n\n\nConsider the following database, write a query to find the ID of each employee with no manager. Note that an employee may simply have no manager listed or may have a null manager(use natural left outer join).\n\nSELECT e.ID\nFROM employee e\nOUTER JOIN manages m ON e.ID = m.ID\nWHERE m.manager_id IS NULL;"
   }
 ]
