@@ -21,125 +21,6 @@
     "text": "Eman Ajmal is a social analyst.\n\nplot(mtcars)"
   },
   {
-    "objectID": "Assignment1.html",
-    "href": "Assignment1.html",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "Name and describe three applications you have used that employed a database system to store and access persistent data (e.g., airlines, online trade, banking, university system).\n\n\n\nHow it Uses Databases: Stores customer data, transactions, and account details.\nReasoning: Ensures secure, fast, and reliable access to banking information.\n\n\n\n\n\nHow it Uses Databases: Manages product listings, customer orders, and payments.\nReasoning: Uses a relational database to store structured data and provide recommendations.\n\n\n\n\n\nHow it Uses Databases: Stores student records, enrollments, and grades.\nReasoning: Ensures students and faculty have real-time access to course materials and academic records.\n\n\n\n\n\nPropose three applications in domain projects (e.g., criminology, economics, brain science, etc.). Be sure to include: 1.Purpose 2.Functions 3.Simple interface design\n\n\n\nPurpose: Measures and tracks social well-being indicators like mental health, employment, and community engagement.\nFunctions:\n\nCollects survey responses on life satisfaction, stress levels, and social interactions.\nTracks changes in employment, education, and local crime rates.\nProvides visual reports and insights for policymakers and community leaders.\n\nSimple Interface Design: A dashboard displays key indicators like mental health scores, employment trends, and community engagement in charts and graphs. Users can fill out surveys to update data, and policymakers can generate reports with visual insights. The interface includes a homepage overview, survey page, and a report export option.\n\n\n\n\n\nPurpose: Analyzes public sentiment on social issues by gathering data from social media and news sources.\nFunctions:\n\nCollects and categorizes posts on topics like inequality, human rights, and policy changes.\nUses sentiment analysis to determine whether opinions are positive, negative, or neutral.\nGenerates reports on trending social issues over time.\n\nSimple Interface Design: Users enter keywords to analyze public sentiment from news and social media, displayed through a word cloud, sentiment pie chart, and regional heatmap. A live feed shows relevant posts, and a report generation page allows data exports. The interface is search-focused with real-time insights.\n\n\n\n\n\nPurpose: Tracks data on economic and social mobility to understand inequality trends in different regions.\nFunctions:\n\nStores data on income, education, and employment trends across communities.\nProvides comparison charts on social mobility rates based on location, gender, and ethnicity.\nRecommends policies and resources to improve access to opportunities.\n\nSimple Interface Design: An interactive heat map and dashboard display income trends, education levels, and employment data by region. Users can compare multiple areas, view bar charts, and access policy recommendations. The interface supports searching, visual comparisons, and report downloads.\n\n\n\n\nIf data can be retrieved efficiently and effectively, why is data mining needed?\nData mining is essential because it allows us to extract meaningful insights from large datasets beyond just retrieving stored data. Below are key reasons why data mining is needed:\n\n\n\n\nDatabases can retrieve data efficiently, but they don’t automatically find patterns or trends.\n\n\n\n\n\nData mining helps predict future trends based on historical data.\n\n\n\n\n\nBusinesses use data mining to make data-driven decisions rather than relying on intuition.\n\n\n\n\n\nBig data is too large and complex for traditional database queries alone. Data mining helps extract valuable insights from massive datasets.\n\n\n\n\n\nCompanies use data mining to gain a competitive edge by identifying market trends, customer preferences, and business risks.\n\n\n\n\n\nDescribe at least three tables that might be used to store information in a social network/social media system such as Twitter or Reddit.\nA social media platform like Twitter or Reddit would require multiple tables for structured data management. Below are three essential tables:\n\n\n\nStores information about users.\n\n\n\nColumn Name\nDescription\n\n\n\n\nUser ID\nUnique identifier for each user\n\n\nUsername\nDisplay name of the user\n\n\nEmail\nContact email\n\n\nPassword\nEncrypted password\n\n\nDate Joined\nDate when the user registered\n\n\n\n\n\n\n\n\nStores tweets or Reddit posts.\n\n\n\nColumn Name\nDescription\n\n\n\n\nPost ID\nUnique identifier for each post\n\n\nUser ID\nID of the user who posted\n\n\nPost Content\nText or media content\n\n\nCreated At\nTimestamp of post creation\n\n\nLikes Count\nNumber of likes\n\n\nComments Count\nNumber of comments\n\n\n\n\n\n\n\n\nStores relationships between users.\n\n\n\nColumn Name\nDescription\n\n\n\n\nFollower ID\nID of the user who follows\n\n\nFollowed ID\nID of the user being followed\n\n\nDate Followed\nTimestamp of when the follow occurred"
-  },
-  {
-    "objectID": "About.html",
-    "href": "About.html",
-    "title": "About",
-    "section": "",
-    "text": "Eman Ajmal is a social analyst.\n\nplot(mtcars)"
-  },
-  {
-    "objectID": "Assignment2.html",
-    "href": "Assignment2.html",
-    "title": "Eman Ajmal",
-    "section": "",
-    "text": "quarto::render(“assignment1.qmd”)"
-  },
-  {
-    "objectID": "Assignment1.html#assignment1",
-    "href": "Assignment1.html#assignment1",
-    "title": "Assignments",
-    "section": "Assignment1",
-    "text": "Assignment1\nView Assignment 1\nDownload Assignment 1 (PDF) quarto render assignments/Assignment1.qmd –to pdf quarto render assignments/Assignment2.qmd –to pdf quarto::render(“Assignment1.qmd”)"
-  },
-  {
-    "objectID": "Assignment1.html#assignment-1",
-    "href": "Assignment1.html#assignment-1",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "📄 View Assignment 1 (QMD)\n📄 Download Assignment 1 (PDF)\nquarto render assignments/Assignment1.qmd –to pdf\nquarto render"
-  },
-  {
-    "objectID": "Assignment1.html#question-1",
-    "href": "Assignment1.html#question-1",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "Name and describe three applications you have used that employed a database system to store and access persistent data (e.g., airlines, online trade, banking, university system).\n\n\n\nHow it Uses Databases: Stores customer data, transactions, and account details.\nReasoning: Ensures secure, fast, and reliable access to banking information.\n\n\n\n\n\nHow it Uses Databases: Manages product listings, customer orders, and payments.\nReasoning: Uses a relational database to store structured data and provide recommendations.\n\n\n\n\n\nHow it Uses Databases: Stores student records, enrollments, and grades.\nReasoning: Ensures students and faculty have real-time access to course materials and academic records."
-  },
-  {
-    "objectID": "Assignment1.html#question-2",
-    "href": "Assignment1.html#question-2",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "Propose three applications in domain projects (e.g., criminology, economics, brain science, etc.). Be sure to include: 1.Purpose 2.Functions 3.Simple interface design\n\n\n\nPurpose: Measures and tracks social well-being indicators like mental health, employment, and community engagement.\nFunctions:\n\nCollects survey responses on life satisfaction, stress levels, and social interactions.\nTracks changes in employment, education, and local crime rates.\nProvides visual reports and insights for policymakers and community leaders.\n\nSimple Interface Design: A dashboard displays key indicators like mental health scores, employment trends, and community engagement in charts and graphs. Users can fill out surveys to update data, and policymakers can generate reports with visual insights. The interface includes a homepage overview, survey page, and a report export option.\n\n\n\n\n\nPurpose: Analyzes public sentiment on social issues by gathering data from social media and news sources.\nFunctions:\n\nCollects and categorizes posts on topics like inequality, human rights, and policy changes.\nUses sentiment analysis to determine whether opinions are positive, negative, or neutral.\nGenerates reports on trending social issues over time.\n\nSimple Interface Design: Users enter keywords to analyze public sentiment from news and social media, displayed through a word cloud, sentiment pie chart, and regional heatmap. A live feed shows relevant posts, and a report generation page allows data exports. The interface is search-focused with real-time insights.\n\n\n\n\n\nPurpose: Tracks data on economic and social mobility to understand inequality trends in different regions.\nFunctions:\n\nStores data on income, education, and employment trends across communities.\nProvides comparison charts on social mobility rates based on location, gender, and ethnicity.\nRecommends policies and resources to improve access to opportunities.\n\nSimple Interface Design: An interactive heat map and dashboard display income trends, education levels, and employment data by region. Users can compare multiple areas, view bar charts, and access policy recommendations. The interface supports searching, visual comparisons, and report downloads.\n\n\n\n\nIf data can be retrieved efficiently and effectively, why is data mining needed?\nData mining is essential because it allows us to extract meaningful insights from large datasets beyond just retrieving stored data. Below are key reasons why data mining is needed:\n\n\n\n\nDatabases can retrieve data efficiently, but they don’t automatically find patterns or trends.\n\n\n\n\n\nData mining helps predict future trends based on historical data.\n\n\n\n\n\nBusinesses use data mining to make data-driven decisions rather than relying on intuition.\n\n\n\n\n\nBig data is too large and complex for traditional database queries alone. Data mining helps extract valuable insights from massive datasets.\n\n\n\n\n\nCompanies use data mining to gain a competitive edge by identifying market trends, customer preferences, and business risks."
-  },
-  {
-    "objectID": "Assignment1.html#question-3",
-    "href": "Assignment1.html#question-3",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "If data can be retrieved efficiently and effectively, why is data mining needed?\nData mining is essential because it allows us to extract meaningful insights from large datasets beyond just retrieving stored data. Below are key reasons why data mining is needed:\n\nFinding Hidden Patterns & Relationships\n\nDatabases can retrieve data efficiently, but they don’t automatically find patterns or trends.\n\nPredictive Analytics & Forecasting\n\nData mining helps predict future trends based on historical data.\n\nDecision-Making & Automation\n\nBusinesses use data mining to make data-driven decisions rather than relying on intuition.\n\nReducing Complexity in Big Data\n\nBig data is too large and complex for traditional database queries alone. Data mining helps extract valuable insights from massive datasets.\n\nCompetitive Advantage & Business Intelligence\n\nCompanies use data mining to gain a competitive edge by identifying market trends, customer preferences, and business risks."
-  },
-  {
-    "objectID": "Assignment1.html#question-6",
-    "href": "Assignment1.html#question-6",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "Describe at least three tables that might be used to store information in a social network/social media system such as Twitter or Reddit.\nA social media platform like Twitter or Reddit would require multiple tables for structured data management. Below are three essential tables:\n\n\n\nStores information about users.\n\n\n\nColumn Name\nDescription\n\n\n\n\nUser ID\nUnique identifier for each user\n\n\nUsername\nDisplay name of the user\n\n\nEmail\nContact email\n\n\nPassword\nEncrypted password\n\n\nDate Joined\nDate when the user registered\n\n\n\n\n\n\n\n\nStores tweets or Reddit posts.\n\n\n\nColumn Name\nDescription\n\n\n\n\nPost ID\nUnique identifier for each post\n\n\nUser ID\nID of the user who posted\n\n\nPost Content\nText or media content\n\n\nCreated At\nTimestamp of post creation\n\n\nLikes Count\nNumber of likes\n\n\nComments Count\nNumber of comments\n\n\n\n\n\n\n\n\nStores relationships between users.\n\n\n\nColumn Name\nDescription\n\n\n\n\nFollower ID\nID of the user who follows\n\n\nFollowed ID\nID of the user being followed\n\n\nDate Followed\nTimestamp of when the follow occurred"
-  },
-  {
-    "objectID": "assignments/Assignment2.html",
-    "href": "assignments/Assignment2.html",
-    "title": "Assignment 2",
-    "section": "",
-    "text": "Defines the structure of a relation, specifying its attributes and data types.\n\n\n\nA table containing rows that follow the schema.\n\n\n\nA specific snapshot of data in the relation at a given time.\n\n\n\n\n\n\n\n\n\n\nSchema\nRelation (Table)\nInstance\n\n\n\n\nStudent(ID, Name, Major, Year)\nA table storing student records\nA collection of student data at a specific moment\n\n\n\n\n\n\n\n\n\nA bank database schema includes the following entities:\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nbranch_name\nName of the branch\n\n\nbranch_city\nLocation of branch\n\n\nassets\nTotal branch assets\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nbranch_name\nAssociated branch (🔗 FK → Branch)\n\n\naccount_number\nUnique account ID\n\n\nbalance\nAccount balance\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nloan_number\nUnique loan ID\n\n\nbranch_name\nIssuing branch (🔗 FK → Branch)\n\n\namount\nLoan amount\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nID\nCustomer ID (🔗 FK → Customer)\n\n\naccount_number\nLinked account number (🔗 FK → Account)\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nID\nCustomer ID (🔗 FK → Customer)\n\n\nloan_number\nLinked loan number (🔗 FK → Loan)\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nID\nUnique customer ID\n\n\ncst_name\nCustomer’s name\n\n\ncst_street\nStreet address\n\n\ncst_city\nCity of residence\n\n\n\n\n\n\n\nOne Branch → Many Accounts (branch_name as FK in Account)\n\nOne Branch → Many Loans (branch_name as FK in Loan)\n\nOne Customer → Many Accounts (via Depositor table)\n\nOne Account → Many Customers (Joint accounts, via Depositor)\n\nOne Customer → Many Loans (via Borrower table)\n\nOne Loan → Many Customers (Co-borrowers, via Borrower)\n\n\n\n\n\n\n\n\n\nBranch: branch_name\nAccount: account_number\nLoan: loan_number\nDepositor: (ID, account_number)\nBorrower: (ID, loan_number)\nCustomer: ID\n\n\n\n\n\nAccount: branch_name\nLoan: branch_name\nDepositor: ID, account_number\nBorrower: ID, loan_number"
-  },
-  {
-    "objectID": "assignments/Assignment1.html",
-    "href": "assignments/Assignment1.html",
-    "title": "Eman Ajmal",
-    "section": "",
-    "text": "quarto::render(“Assignment1.qmd”)"
-  },
-  {
-    "objectID": "Assignment1.html#online-banking",
-    "href": "Assignment1.html#online-banking",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "How it Uses Databases: Stores customer data, transactions, and account details.\nReasoning: Ensures secure, fast, and reliable access to banking information."
-  },
-  {
-    "objectID": "Assignment1.html#e-commerce-e.g.-amazon",
-    "href": "Assignment1.html#e-commerce-e.g.-amazon",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "How it Uses Databases: Manages product listings, customer orders, and payments.\nReasoning: Uses a relational database to store structured data and provide recommendations."
-  },
-  {
-    "objectID": "Assignment1.html#university-management-systems",
-    "href": "Assignment1.html#university-management-systems",
-    "title": "Assignment 1",
-    "section": "",
-    "text": "How it Uses Databases: Stores student records, enrollments, and grades.\nReasoning: Ensures students and faculty have real-time access to course materials and academic records."
-  },
-  {
-    "objectID": "assignments/Assignment2.html#question-1-differences-between-relation-schema-relation-and-instance",
-    "href": "assignments/Assignment2.html#question-1-differences-between-relation-schema-relation-and-instance",
-    "title": "Assignment 2",
-    "section": "",
-    "text": "Defines the structure of a relation, specifying its attributes and data types.\n\n\n\nA table containing rows that follow the schema.\n\n\n\nA specific snapshot of data in the relation at a given time.\n\n\n\n\n\n\n\n\n\n\nSchema\nRelation (Table)\nInstance\n\n\n\n\nStudent(ID, Name, Major, Year)\nA table storing student records\nA collection of student data at a specific moment"
-  },
-  {
-    "objectID": "assignments/Assignment2.html#question-2-schema-diagram-for-bank-database",
-    "href": "assignments/Assignment2.html#question-2-schema-diagram-for-bank-database",
-    "title": "Assignment 2",
-    "section": "",
-    "text": "A bank database schema includes the following entities:\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nbranch_name\nName of the branch\n\n\nbranch_city\nLocation of branch\n\n\nassets\nTotal branch assets\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nbranch_name\nAssociated branch (🔗 FK → Branch)\n\n\naccount_number\nUnique account ID\n\n\nbalance\nAccount balance\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nloan_number\nUnique loan ID\n\n\nbranch_name\nIssuing branch (🔗 FK → Branch)\n\n\namount\nLoan amount\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nID\nCustomer ID (🔗 FK → Customer)\n\n\naccount_number\nLinked account number (🔗 FK → Account)\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nID\nCustomer ID (🔗 FK → Customer)\n\n\nloan_number\nLinked loan number (🔗 FK → Loan)\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nID\nUnique customer ID\n\n\ncst_name\nCustomer’s name\n\n\ncst_street\nStreet address\n\n\ncst_city\nCity of residence\n\n\n\n\n\n\n\nOne Branch → Many Accounts (branch_name as FK in Account)\n\nOne Branch → Many Loans (branch_name as FK in Loan)\n\nOne Customer → Many Accounts (via Depositor table)\n\nOne Account → Many Customers (Joint accounts, via Depositor)\n\nOne Customer → Many Loans (via Borrower table)\n\nOne Loan → Many Customers (Co-borrowers, via Borrower)"
-  },
-  {
-    "objectID": "assignments/Assignment2.html#question-3-primary-and-foreign-keys-for-the-bank-database",
-    "href": "assignments/Assignment2.html#question-3-primary-and-foreign-keys-for-the-bank-database",
-    "title": "Assignment 2",
-    "section": "",
-    "text": "Branch: branch_name\nAccount: account_number\nLoan: loan_number\nDepositor: (ID, account_number)\nBorrower: (ID, loan_number)\nCustomer: ID\n\n\n\n\n\nAccount: branch_name\nLoan: branch_name\nDepositor: ID, account_number\nBorrower: ID, loan_number"
-  },
-  {
     "objectID": "Assignment3.html",
     "href": "Assignment3.html",
     "title": "Assignment 3",
@@ -166,6 +47,62 @@
     "title": "Assignment 3",
     "section": "",
     "text": "Find instructor (with name and ID) who has never given an A grade in any course she or he has taught. (Instructors who have never taught a course trivially satisfy this condition.)\n\n\n\nQ4Assignment3"
+  },
+  {
+    "objectID": "Assignment1.html",
+    "href": "Assignment1.html",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Name and describe three applications you have used that employed a database system to store and access persistent data (e.g., airlines, online trade, banking, university system).\n\n\n\nHow it Uses Databases: Stores customer data, transactions, and account details.\nReasoning: Ensures secure, fast, and reliable access to banking information.\n\n\n\n\n\nHow it Uses Databases: Manages product listings, customer orders, and payments.\nReasoning: Uses a relational database to store structured data and provide recommendations.\n\n\n\n\n\nHow it Uses Databases: Stores student records, enrollments, and grades.\nReasoning: Ensures students and faculty have real-time access to course materials and academic records.\n\n\n\n\n\nPropose three applications in domain projects (e.g., criminology, economics, brain science, etc.). Be sure to include: 1.Purpose 2.Functions 3.Simple interface design\n\n\n\nPurpose: Measures and tracks social well-being indicators like mental health, employment, and community engagement.\nFunctions:\n\nCollects survey responses on life satisfaction, stress levels, and social interactions.\nTracks changes in employment, education, and local crime rates.\nProvides visual reports and insights for policymakers and community leaders.\n\nSimple Interface Design: A dashboard displays key indicators like mental health scores, employment trends, and community engagement in charts and graphs. Users can fill out surveys to update data, and policymakers can generate reports with visual insights. The interface includes a homepage overview, survey page, and a report export option.\n\n\n\n\n\nPurpose: Analyzes public sentiment on social issues by gathering data from social media and news sources.\nFunctions:\n\nCollects and categorizes posts on topics like inequality, human rights, and policy changes.\nUses sentiment analysis to determine whether opinions are positive, negative, or neutral.\nGenerates reports on trending social issues over time.\n\nSimple Interface Design: Users enter keywords to analyze public sentiment from news and social media, displayed through a word cloud, sentiment pie chart, and regional heatmap. A live feed shows relevant posts, and a report generation page allows data exports. The interface is search-focused with real-time insights.\n\n\n\n\n\nPurpose: Tracks data on economic and social mobility to understand inequality trends in different regions.\nFunctions:\n\nStores data on income, education, and employment trends across communities.\nProvides comparison charts on social mobility rates based on location, gender, and ethnicity.\nRecommends policies and resources to improve access to opportunities.\n\nSimple Interface Design: An interactive heat map and dashboard display income trends, education levels, and employment data by region. Users can compare multiple areas, view bar charts, and access policy recommendations. The interface supports searching, visual comparisons, and report downloads.\n\n\n\n\nIf data can be retrieved efficiently and effectively, why is data mining needed?\nData mining is essential because it allows us to extract meaningful insights from large datasets beyond just retrieving stored data. Below are key reasons why data mining is needed:\n\n\n\n\nDatabases can retrieve data efficiently, but they don’t automatically find patterns or trends.\n\n\n\n\n\nData mining helps predict future trends based on historical data.\n\n\n\n\n\nBusinesses use data mining to make data-driven decisions rather than relying on intuition.\n\n\n\n\n\nBig data is too large and complex for traditional database queries alone. Data mining helps extract valuable insights from massive datasets.\n\n\n\n\n\nCompanies use data mining to gain a competitive edge by identifying market trends, customer preferences, and business risks.\n\n\n\n\n\nDescribe at least three tables that might be used to store information in a social network/social media system such as Twitter or Reddit.\nA social media platform like Twitter or Reddit would require multiple tables for structured data management. Below are three essential tables:\n\n\n\nStores information about users.\n\n\n\nColumn Name\nDescription\n\n\n\n\nUser ID\nUnique identifier for each user\n\n\nUsername\nDisplay name of the user\n\n\nEmail\nContact email\n\n\nPassword\nEncrypted password\n\n\nDate Joined\nDate when the user registered\n\n\n\n\n\n\n\n\nStores tweets or Reddit posts.\n\n\n\nColumn Name\nDescription\n\n\n\n\nPost ID\nUnique identifier for each post\n\n\nUser ID\nID of the user who posted\n\n\nPost Content\nText or media content\n\n\nCreated At\nTimestamp of post creation\n\n\nLikes Count\nNumber of likes\n\n\nComments Count\nNumber of comments\n\n\n\n\n\n\n\n\nStores relationships between users.\n\n\n\nColumn Name\nDescription\n\n\n\n\nFollower ID\nID of the user who follows\n\n\nFollowed ID\nID of the user being followed\n\n\nDate Followed\nTimestamp of when the follow occurred"
+  },
+  {
+    "objectID": "Assignment1.html#question-1",
+    "href": "Assignment1.html#question-1",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Name and describe three applications you have used that employed a database system to store and access persistent data (e.g., airlines, online trade, banking, university system).\n\n\n\nHow it Uses Databases: Stores customer data, transactions, and account details.\nReasoning: Ensures secure, fast, and reliable access to banking information.\n\n\n\n\n\nHow it Uses Databases: Manages product listings, customer orders, and payments.\nReasoning: Uses a relational database to store structured data and provide recommendations.\n\n\n\n\n\nHow it Uses Databases: Stores student records, enrollments, and grades.\nReasoning: Ensures students and faculty have real-time access to course materials and academic records."
+  },
+  {
+    "objectID": "Assignment1.html#question-2",
+    "href": "Assignment1.html#question-2",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Propose three applications in domain projects (e.g., criminology, economics, brain science, etc.). Be sure to include: 1.Purpose 2.Functions 3.Simple interface design\n\n\n\nPurpose: Measures and tracks social well-being indicators like mental health, employment, and community engagement.\nFunctions:\n\nCollects survey responses on life satisfaction, stress levels, and social interactions.\nTracks changes in employment, education, and local crime rates.\nProvides visual reports and insights for policymakers and community leaders.\n\nSimple Interface Design: A dashboard displays key indicators like mental health scores, employment trends, and community engagement in charts and graphs. Users can fill out surveys to update data, and policymakers can generate reports with visual insights. The interface includes a homepage overview, survey page, and a report export option.\n\n\n\n\n\nPurpose: Analyzes public sentiment on social issues by gathering data from social media and news sources.\nFunctions:\n\nCollects and categorizes posts on topics like inequality, human rights, and policy changes.\nUses sentiment analysis to determine whether opinions are positive, negative, or neutral.\nGenerates reports on trending social issues over time.\n\nSimple Interface Design: Users enter keywords to analyze public sentiment from news and social media, displayed through a word cloud, sentiment pie chart, and regional heatmap. A live feed shows relevant posts, and a report generation page allows data exports. The interface is search-focused with real-time insights.\n\n\n\n\n\nPurpose: Tracks data on economic and social mobility to understand inequality trends in different regions.\nFunctions:\n\nStores data on income, education, and employment trends across communities.\nProvides comparison charts on social mobility rates based on location, gender, and ethnicity.\nRecommends policies and resources to improve access to opportunities.\n\nSimple Interface Design: An interactive heat map and dashboard display income trends, education levels, and employment data by region. Users can compare multiple areas, view bar charts, and access policy recommendations. The interface supports searching, visual comparisons, and report downloads.\n\n\n\n\nIf data can be retrieved efficiently and effectively, why is data mining needed?\nData mining is essential because it allows us to extract meaningful insights from large datasets beyond just retrieving stored data. Below are key reasons why data mining is needed:\n\n\n\n\nDatabases can retrieve data efficiently, but they don’t automatically find patterns or trends.\n\n\n\n\n\nData mining helps predict future trends based on historical data.\n\n\n\n\n\nBusinesses use data mining to make data-driven decisions rather than relying on intuition.\n\n\n\n\n\nBig data is too large and complex for traditional database queries alone. Data mining helps extract valuable insights from massive datasets.\n\n\n\n\n\nCompanies use data mining to gain a competitive edge by identifying market trends, customer preferences, and business risks."
+  },
+  {
+    "objectID": "Assignment1.html#question-6",
+    "href": "Assignment1.html#question-6",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Describe at least three tables that might be used to store information in a social network/social media system such as Twitter or Reddit.\nA social media platform like Twitter or Reddit would require multiple tables for structured data management. Below are three essential tables:\n\n\n\nStores information about users.\n\n\n\nColumn Name\nDescription\n\n\n\n\nUser ID\nUnique identifier for each user\n\n\nUsername\nDisplay name of the user\n\n\nEmail\nContact email\n\n\nPassword\nEncrypted password\n\n\nDate Joined\nDate when the user registered\n\n\n\n\n\n\n\n\nStores tweets or Reddit posts.\n\n\n\nColumn Name\nDescription\n\n\n\n\nPost ID\nUnique identifier for each post\n\n\nUser ID\nID of the user who posted\n\n\nPost Content\nText or media content\n\n\nCreated At\nTimestamp of post creation\n\n\nLikes Count\nNumber of likes\n\n\nComments Count\nNumber of comments\n\n\n\n\n\n\n\n\nStores relationships between users.\n\n\n\nColumn Name\nDescription\n\n\n\n\nFollower ID\nID of the user who follows\n\n\nFollowed ID\nID of the user being followed\n\n\nDate Followed\nTimestamp of when the follow occurred"
+  },
+  {
+    "objectID": "Assignment2.html",
+    "href": "Assignment2.html",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "Defines the structure of a relation, specifying its attributes and data types.\n\n\n\nA table containing rows that follow the schema.\n\n\n\nA specific snapshot of data in the relation at a given time.\n\n\n\n\n\n\n\n\n\n\nSchema\nRelation (Table)\nInstance\n\n\n\n\nStudent(ID, Name, Major, Year)\nA table storing student records\nA collection of student data at a specific moment\n\n\n\n\n\n\n\n\n\nA bank database schema includes the following entities:\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nbranch_name\nName of the branch\n\n\nbranch_city\nLocation of branch\n\n\nassets\nTotal branch assets\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nbranch_name\nAssociated branch (🔗 FK → Branch)\n\n\naccount_number\nUnique account ID\n\n\nbalance\nAccount balance\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nloan_number\nUnique loan ID\n\n\nbranch_name\nIssuing branch (🔗 FK → Branch)\n\n\namount\nLoan amount\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nID\nCustomer ID (🔗 FK → Customer)\n\n\naccount_number\nLinked account number (🔗 FK → Account)\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nID\nCustomer ID (🔗 FK → Customer)\n\n\nloan_number\nLinked loan number (🔗 FK → Loan)\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nID\nUnique customer ID\n\n\ncst_name\nCustomer’s name\n\n\ncst_street\nStreet address\n\n\ncst_city\nCity of residence\n\n\n\n\n\n\n\nOne Branch → Many Accounts (branch_name as FK in Account)\n\nOne Branch → Many Loans (branch_name as FK in Loan)\n\nOne Customer → Many Accounts (via Depositor table)\n\nOne Account → Many Customers (Joint accounts, via Depositor)\n\nOne Customer → Many Loans (via Borrower table)\n\nOne Loan → Many Customers (Co-borrowers, via Borrower)\n\n\n\n\n\n\n\n\n\nBranch: branch_name\nAccount: account_number\nLoan: loan_number\nDepositor: (ID, account_number)\nBorrower: (ID, loan_number)\nCustomer: ID\n\n\n\n\n\nAccount: branch_name\nLoan: branch_name\nDepositor: ID, account_number\nBorrower: ID, loan_number"
+  },
+  {
+    "objectID": "Assignment2.html#question-1-differences-between-relation-schema-relation-and-instance",
+    "href": "Assignment2.html#question-1-differences-between-relation-schema-relation-and-instance",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "Defines the structure of a relation, specifying its attributes and data types.\n\n\n\nA table containing rows that follow the schema.\n\n\n\nA specific snapshot of data in the relation at a given time.\n\n\n\n\n\n\n\n\n\n\nSchema\nRelation (Table)\nInstance\n\n\n\n\nStudent(ID, Name, Major, Year)\nA table storing student records\nA collection of student data at a specific moment"
+  },
+  {
+    "objectID": "Assignment2.html#question-2-schema-diagram-for-bank-database",
+    "href": "Assignment2.html#question-2-schema-diagram-for-bank-database",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "A bank database schema includes the following entities:\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nbranch_name\nName of the branch\n\n\nbranch_city\nLocation of branch\n\n\nassets\nTotal branch assets\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nbranch_name\nAssociated branch (🔗 FK → Branch)\n\n\naccount_number\nUnique account ID\n\n\nbalance\nAccount balance\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nloan_number\nUnique loan ID\n\n\nbranch_name\nIssuing branch (🔗 FK → Branch)\n\n\namount\nLoan amount\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nID\nCustomer ID (🔗 FK → Customer)\n\n\naccount_number\nLinked account number (🔗 FK → Account)\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nID\nCustomer ID (🔗 FK → Customer)\n\n\nloan_number\nLinked loan number (🔗 FK → Loan)\n\n\n\n\n\n\n\n\n\nColumn Name\nDescription\n\n\n\n\nID\nUnique customer ID\n\n\ncst_name\nCustomer’s name\n\n\ncst_street\nStreet address\n\n\ncst_city\nCity of residence\n\n\n\n\n\n\n\nOne Branch → Many Accounts (branch_name as FK in Account)\n\nOne Branch → Many Loans (branch_name as FK in Loan)\n\nOne Customer → Many Accounts (via Depositor table)\n\nOne Account → Many Customers (Joint accounts, via Depositor)\n\nOne Customer → Many Loans (via Borrower table)\n\nOne Loan → Many Customers (Co-borrowers, via Borrower)"
+  },
+  {
+    "objectID": "Assignment2.html#question-3-primary-and-foreign-keys-for-the-bank-database",
+    "href": "Assignment2.html#question-3-primary-and-foreign-keys-for-the-bank-database",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "Branch: branch_name\nAccount: account_number\nLoan: loan_number\nDepositor: (ID, account_number)\nBorrower: (ID, loan_number)\nCustomer: ID\n\n\n\n\n\nAccount: branch_name\nLoan: branch_name\nDepositor: ID, account_number\nBorrower: ID, loan_number"
   },
   {
     "objectID": "Assignment4.html",
