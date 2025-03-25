@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>assignment3 – Eman Ajmal</title>
+<title>Assignment 5 – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -143,74 +143,110 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignment-3" id="toc-assignment-3" class="nav-link active" data-scroll-target="#assignment-3">Assignment 3</a>
-  <ul class="collapse">
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#question-1-e-r-diagram-as-a-graph" id="toc-question-1-e-r-diagram-as-a-graph" class="nav-link active" data-scroll-target="#question-1-e-r-diagram-as-a-graph">Question 1: E-R Diagram as a Graph</a></li>
+  <li><a href="#question-3-why-do-we-have-weak-entity-sets" id="toc-question-3-why-do-we-have-weak-entity-sets" class="nav-link" data-scroll-target="#question-3-why-do-we-have-weak-entity-sets">Question 3: Why Do We Have Weak Entity Sets?</a></li>
   <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assignment 5</h1>
+</div>
 
 
 
-<section id="assignment-3" class="level1">
-<h1>Assignment 3</h1>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<p>Write SQL codes to get a list of:</p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="question-1-e-r-diagram-as-a-graph" class="level1">
+<h1>Question 1: E-R Diagram as a Graph</h1>
+<p>An E-R (Entity-Relationship) diagram can be viewed as a graph, where entities are nodes and relationships are edges. Understanding its structure helps ensure database integrity and effective design.</p>
+<ol type="a">
+<li>The graph is disconnected</li>
+</ol>
+<p>A disconnected graph means that some parts of the schema are isolated and do not connect to others. In terms of an enterprise schema, this implies that certain entities or relationships are not integrated with the rest of the database system.</p>
+<p>Example: Imagine we have a <code>Doctor</code> entity and a <code>Patient</code> entity, but no relationship (like <code>Treats</code>) connecting them. These two entities are disconnected in the E-R diagram.</p>
+<p>Implications: - Indicates missing relationships or a design flaw. - Can result in incomplete or difficult-to-query data. - Hurts the ability to enforce referential integrity.</p>
+<ol start="2" type="a">
+<li>The graph has a cycle</li>
+</ol>
+<p>A cycle in an E-R diagram means that starting from one entity, you can follow a path of relationships and return to the same entity.</p>
+<p>Example: <code>Doctor</code> → <code>Patient</code> → <code>Test</code> → <code>Doctor</code><br>
+This forms a loop (cycle) in the schema.</p>
+<p>Implications: - Not inherently wrong – cycles often represent real-world interconnectedness. - Can complicate queries, especially recursive ones. - May require careful normalization or handling to avoid data anomalies.</p>
+</section>
+<section id="question-3-why-do-we-have-weak-entity-sets" class="level1">
+<h1>Question 3: Why Do We Have Weak Entity Sets?</h1>
+<p>While it’s possible to convert weak entity sets to strong ones by adding attributes, we still use weak entity sets in practice due to design clarity and efficiency.</p>
+<p>Reasons We Use Weak Entity Sets:</p>
+<ul>
+<li>A weak entity cannot be uniquely identified by its own attributes.</li>
+<li>It depends on a related strong entity for uniqueness.</li>
+</ul>
+<p>Why Not Always Use Strong Entities?</p>
+<ul>
+<li>Making weak entities strong can require adding redundant or artificial keys, which is not always natural.</li>
+<li>Weak entities simplify data modeling for real-world hierarchical relationships.</li>
+<li>Helps maintain referential integrity and logical clarity in the schema.</li>
+</ul>
+</section>
+<section id="question-4" class="level1">
+<h1>Question 4</h1>
+<p>a: SQL Queries</p>
+<p>Schema:<br>
+employee(ID, name, street, city)<br>
+works(ID, company_id, salary)<br>
+company(company_id, name, city)<br>
+manages(employee_id, manager_id)</p>
 <ol type="i">
-<li>Students IDs (hint: from the takes relation)</li>
+<li>Find ID and name of employees who live in the same city as the location of their company:</li>
 </ol>
-<p><img src="_site/Images/Q1Assignment3.png" class="img-fluid"></p>
+<p>SELECT e.ID, e.name FROM employee AS e, works AS w, company AS c WHERE e.ID = w.ID AND w.company_id = c.company_id AND e.city = c.city;</p>
 <ol start="2" type="i">
-<li>Instructors</li>
+<li>Find ID and name of employees who live on the same street and in the same city as their manager:</li>
 </ol>
-<p><img src="_site/Images/Q2bAssignment3.png" class="img-fluid"></p>
+<p>SELECT e.ID, e.name</p>
+<p>FROM employee AS e, manages AS m, employee AS mngr</p>
+<p>WHERE e.ID = m.employee_id AND m.manager_id = mngr.ID</p>
+<p>AND e.city = mngr.city AND e.street = mngr.street;</p>
 <ol start="3" type="i">
-<li>Departments</li>
+<li>Find ID and name of employees who earn more than the average salary of all employees in their company:</li>
 </ol>
-<p><img src="_site/Images/Q2cAssignment3.png" class="img-fluid"></p>
-</section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<p>Write in SQL codes to do following queries:</p>
-<ol type="i">
-<li>Find the ID and name of each student who has taken at least one Comp. Sci. course; make sure there are no duplicate names in the result.</li>
-</ol>
-<p><img src="_site/Images/Q3aAssignment3.png" class="img-fluid"></p>
-<ol start="2" type="i">
-<li>Add grades to the list</li>
-</ol>
-<p><img src="_site/Images/Q3bAssignment3.png" class="img-fluid"></p>
-<ol start="3" type="i">
-<li>Find the ID and name of each student who has not taken any course offered before 2017.</li>
-</ol>
-<p><img src="_site/Images/Q3cAssignment3.png" class="img-fluid"></p>
-<ol start="4" type="i">
-<li>For each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor.</li>
-</ol>
-<p><img src="_site/Images/Q3dAssignment3.png" class="img-fluid"></p>
-<ol start="22" type="a">
-<li>Find the lowest, across all departments, of the per-department maximum salary computed by the preceding query.</li>
-</ol>
-<p><img src="_site/Images/Q3eAssignment3.png" class="img-fluid"></p>
-<ol start="6" type="i">
-<li>Add names to the list</li>
-</ol>
-<p><img src="_site/Images/Q3fAssignment3.png" class="img-fluid"></p>
-</section>
-<section id="question-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
-<p>Find instructor (with name and ID) who has never given an A grade in any course she or he has taught. (Instructors who have never taught a course trivially satisfy this condition.)</p>
-<p><img src="_site/Images/Q4Assignment3.png" class="img-fluid"></p>
+<p>SELECT e.ID, e.name</p>
+<p>FROM employee AS e, works AS w</p>
+<p>WHERE e.ID = w.ID AND w.salary &gt; ( SELECT AVG(w2.salary)</p>
+<p>FROM works AS w2</p>
+<p>WHERE w2.company_id = w.company_id</p>
+<p>b: What’s wrong with this SQL query?</p>
+<p>SELECT name, title</p>
+<p>FROM instructor NATURAL JOIN teaches NATURAL JOIN section NATURAL JOIN course</p>
+<p>WHERE semester = ‘Spring’ AND year = 2017;</p>
+<p>Problem: This query uses NATURAL JOIN, which joins tables based on all columns with the same name. This can cause unintended matches, especially if tables have generic column names like ID or course_id.</p>
+<p>Fix: Use explicit JOINs to clearly specify matching fields.</p>
+<p>Corrected Query:</p>
+<p>SELECT i.name, c.title</p>
+<p>FROM instructor AS i</p>
+<p>JOIN teaches AS t ON i.ID = t.ID</p>
+<p>JOIN section AS s ON t.course_id = s.course_id</p>
+<p>AND t.sec_id = s.sec_id</p>
+<p>AND t.semester = s.semester</p>
+<p>AND t.year = s.year JOIN course AS c ON s.course_id = c.course_id</p>
+<p>WHERE s.semester = ‘Spring’ AND s.year = 2017;</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
