@@ -144,8 +144,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#question-1-e-r-diagram-as-a-graph" id="toc-question-1-e-r-diagram-as-a-graph" class="nav-link active" data-scroll-target="#question-1-e-r-diagram-as-a-graph">Question 1: E-R Diagram as a Graph</a></li>
+  <li><a href="#a-the-graph-is-disconnected" id="toc-a-the-graph-is-disconnected" class="nav-link" data-scroll-target="#a-the-graph-is-disconnected">a) The graph is disconnected</a></li>
+  <li><a href="#b-the-graph-has-a-cycle" id="toc-b-the-graph-has-a-cycle" class="nav-link" data-scroll-target="#b-the-graph-has-a-cycle">b) The graph has a cycle</a></li>
   <li><a href="#question-3-why-do-we-have-weak-entity-sets" id="toc-question-3-why-do-we-have-weak-entity-sets" class="nav-link" data-scroll-target="#question-3-why-do-we-have-weak-entity-sets">Question 3: Why Do We Have Weak Entity Sets?</a></li>
   <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  <li><a href="#a-sql-queries" id="toc-a-sql-queries" class="nav-link" data-scroll-target="#a-sql-queries">a: SQL Queries</a></li>
+  <li><a href="#b-whats-wrong-with-this-sql-query" id="toc-b-whats-wrong-with-this-sql-query" class="nav-link" data-scroll-target="#b-whats-wrong-with-this-sql-query">b: What’s wrong with this SQL query?</a></li>
   </ul>
 </nav>
     </div>
@@ -174,15 +178,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="question-1-e-r-diagram-as-a-graph" class="level1">
 <h1>Question 1: E-R Diagram as a Graph</h1>
 <p>An E-R (Entity-Relationship) diagram can be viewed as a graph, where entities are nodes and relationships are edges. Understanding its structure helps ensure database integrity and effective design.</p>
-<ol type="a">
-<li>The graph is disconnected</li>
-</ol>
+</section>
+<section id="a-the-graph-is-disconnected" class="level1">
+<h1>a) The graph is disconnected</h1>
 <p>A disconnected graph means that some parts of the schema are isolated and do not connect to others. In terms of an enterprise schema, this implies that certain entities or relationships are not integrated with the rest of the database system.</p>
 <p>Example: Imagine we have a <code>Doctor</code> entity and a <code>Patient</code> entity, but no relationship (like <code>Treats</code>) connecting them. These two entities are disconnected in the E-R diagram.</p>
 <p>Implications: - Indicates missing relationships or a design flaw. - Can result in incomplete or difficult-to-query data. - Hurts the ability to enforce referential integrity.</p>
-<ol start="2" type="a">
-<li>The graph has a cycle</li>
-</ol>
+</section>
+<section id="b-the-graph-has-a-cycle" class="level1">
+<h1>b) The graph has a cycle</h1>
 <p>A cycle in an E-R diagram means that starting from one entity, you can follow a path of relationships and return to the same entity.</p>
 <p>Example: <code>Doctor</code> → <code>Patient</code> → <code>Test</code> → <code>Doctor</code><br>
 This forms a loop (cycle) in the schema.</p>
@@ -205,7 +209,9 @@ This forms a loop (cycle) in the schema.</p>
 </section>
 <section id="question-4" class="level1">
 <h1>Question 4</h1>
-<p>a: SQL Queries</p>
+</section>
+<section id="a-sql-queries" class="level1">
+<h1>a: SQL Queries</h1>
 <p>Schema:<br>
 employee(ID, name, street, city)<br>
 works(ID, company_id, salary)<br>
@@ -230,7 +236,9 @@ manages(employee_id, manager_id)</p>
 <p>WHERE e.ID = w.ID AND w.salary &gt; ( SELECT AVG(w2.salary)</p>
 <p>FROM works AS w2</p>
 <p>WHERE w2.company_id = w.company_id</p>
-<p>b: What’s wrong with this SQL query?</p>
+</section>
+<section id="b-whats-wrong-with-this-sql-query" class="level1">
+<h1>b: What’s wrong with this SQL query?</h1>
 <p>SELECT name, title</p>
 <p>FROM instructor NATURAL JOIN teaches NATURAL JOIN section NATURAL JOIN course</p>
 <p>WHERE semester = ‘Spring’ AND year = 2017;</p>
