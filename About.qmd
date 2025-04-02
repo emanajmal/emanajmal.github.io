@@ -2,8 +2,4 @@
 title: "About"
 ---
 
-Eman Ajmal is a social analyst.
-
-```{r}
-plot(mtcars)
-```
+Eman Ajmal is a social analyst. 
