@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Eman Ajmal</title>
+<title>Assignment 4 – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -142,15 +142,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Eman Ajmal</h1>
+<h1 class="title">Assignment 4</h1>
 </div>
 
 
@@ -167,9 +175,40 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is Eman Ajmal’s webiste. I am a social analyst.</p>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<p>Difference between a weak and a strong entity set:</p>
+<ul>
+<li>A strong entity set can be identified uniquely by its own attributes, such as an Employee with an Employee ID.</li>
+<li>A weak entity set on the other hand, cannot be identified by its own attributes alone and depends on a strong entity (also known as the owner entity) for identification. An example could be a Dependent entity that relies on the Employee entity for its identification (e.g., an employee’s dependent might be identified by the Employee ID and Dependent’s name).</li>
+</ul>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<p>Design an E-R diagram for keeping track of the scoring statistics of your favorite sports team. You should store the matches played, the scores in each match, the players in each match, and individual player scoring statistics for each match. Summary statistics should be modeled as derived attributes with an explanation as to how they are computed.</p>
+<ol type="i">
+<li><p>Draw the E-R diagram using draw.io.</p></li>
+<li><p>Expand to all teams in the league (Hint: add team entity)</p></li>
+</ol>
+<p><img src="_site/Images/Q2Assignment4.png" class="img-fluid"></p>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<p>SQL exercise:</p>
+<ol start="2" type="i">
+<li>Write an SQL query using the university schema to find the ID of each student who has never taken a course at the university. Do this using no subqueries and no set operations (use an outer join).</li>
+</ol>
+<p><img src="_site/Images/Q3bAssignment4.png" class="img-fluid"></p>
+<ol start="3" type="i">
+<li>Consider the following database, write a query to find the ID of each employee with no manager. Note that an employee may simply have no manager listed or may have a null manager(use natural left outer join).</li>
+</ol>
+<p>SELECT e.ID</p>
+<p>FROM employee e</p>
+<p>OUTER JOIN manages m ON e.ID = m.ID</p>
+<p>WHERE m.manager_id IS NULL;</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

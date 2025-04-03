@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project – Eman Ajmal</title>
+<title>Assignment 6 – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Project.html" aria-current="page"> 
+    <a class="nav-link" href="./Project.html"> 
 <span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -155,6 +155,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="./Assignment4.html">
  <span class="dropdown-text">Assignment 4</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./Assignment5.html">
+ <span class="dropdown-text">Assignment 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Assignmnet6.qmd">
+ <span class="dropdown-text">Assignment 6</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -168,15 +176,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project</h1>
+<h1 class="title">Assignment 6</h1>
 </div>
 
 
@@ -193,19 +209,129 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Eman Ajmal is a social analyst.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Project_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+<section id="question-1" class="level1">
+<h1>Question 1</h1>
+<ol type="a">
+<li><p>Using JSON YouTube: YouTube uses JSON to deliver video metadata, comments, and user interactions through its API. The JSON structure is hierarchical and includes nested fields for video IDs, thumbnails, and statistics such as views and likes. YouTube’s backend likely uses BigQuery and other Google Cloud services to store and manage data. The API fetches this data in JSON format, commonly consumed by frontend JavaScript frameworks.</p></li>
+<li><p>Using XML W3Schools: W3Schools offers XML data examples, including a sample file that provides information on books. The XML structure uses descriptive tags such as <book>, <author>, and <price>. The data can be accessed using XML parsers in JavaScript or server-side languages. Technologies like DOM and XSLT are used to query or transform the XML structure for web display.</price></author></book></p></li>
+</ol>
+</section>
+<section id="question-2" class="level1">
+<h1>Question 2</h1>
+<ol type="i">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> student.<span class="kw">ID</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> student</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> advisor <span class="kw">ON</span> student.<span class="kw">ID</span> <span class="op">=</span> advisor.s_ID</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> advisor.i_ID <span class="kw">IS</span> <span class="kw">NULL</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="i">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> I.<span class="kw">ID</span>, I.name</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> instructor I</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">NOT</span> <span class="kw">EXISTS</span> (</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">SELECT</span> <span class="op">*</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> course C</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">WHERE</span> C.dept_name <span class="op">=</span> I.dept_name</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">AND</span> <span class="kw">NOT</span> <span class="kw">EXISTS</span> (</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      <span class="kw">SELECT</span> <span class="op">*</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      <span class="kw">FROM</span> teaches T</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>      <span class="kw">WHERE</span> T.<span class="kw">ID</span> <span class="op">=</span> I.<span class="kw">ID</span> <span class="kw">AND</span> T.course_id <span class="op">=</span> C.course_id</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> I.name;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="question-3" class="level1">
+<h1>Question 3</h1>
+<ol type="a">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>   id     name              dept_name      salary</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>  <span class="dv">63395</span>  McKinnon          Cybernetics    <span class="fl">94333.99</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">78699</span>  Pingr             Statistics     <span class="fl">59303.62</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>  <span class="dv">96895</span>  Mird              Marketing      <span class="fl">119921.41</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>  <span class="dv">4233</span>   Luo               English        <span class="fl">88791.45</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>  <span class="dv">4034</span>   Murata            Athletics      <span class="fl">61387.56</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span>  <span class="dv">50885</span>  Konstantinides    Languages      <span class="fl">32570.50</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="a">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>   id     name              dept_name      salary</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>  <span class="dv">63395</span>  McKinnon          Cybernetics    <span class="fl">94333.99</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">78699</span>  Pingr             Statistics     <span class="fl">59303.62</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>  <span class="dv">96895</span>  Mird              Marketing      <span class="fl">119921.41</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>  <span class="dv">4233</span>   Luo               English        <span class="fl">88791.45</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>  <span class="dv">4034</span>   Murata            Athletics      <span class="fl">61387.56</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span>  <span class="dv">50885</span>  Konstantinides    Languages      <span class="fl">32570.50</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="a">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    id       name           dept_name       tot_cred</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>   <span class="dv">79352</span>    Rumat          Finance          <span class="dv">100</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>   <span class="dv">76672</span>    Miliko         Statistics       <span class="dv">116</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>   <span class="dv">14182</span>    Moszkowski     Civil Eng.       <span class="dv">73</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>   <span class="dv">44985</span>    Prieto         Biology          <span class="dv">91</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>   <span class="dv">44271</span>    Sowerby        English          <span class="dv">108</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span>   <span class="dv">40897</span>    Coppens        Math             <span class="dv">58</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="4" type="a">
+<li></li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>   id       name           dept_name        salary</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>  <span class="dv">63395</span>    McKinnon       Cybernetics      <span class="fl">94333.99</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>  <span class="dv">78699</span>    Pingr          Statistics       <span class="fl">59303.62</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>  <span class="dv">96895</span>    Mird           Marketing        <span class="fl">119921.41</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>  <span class="dv">4233</span>     Luo            English          <span class="fl">88791.45</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>  <span class="dv">4034</span>     Murata         Athletics        <span class="fl">61387.56</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span>  <span class="dv">50885</span>    Konstantinides Languages        <span class="fl">32570.50</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span>  <span class="dv">79653</span>    Levine         Elec. Eng.       <span class="fl">89805.83</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span>  <span class="dv">50330</span>    Shuming        Physics          <span class="fl">108011.81</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span>  <span class="dv">80759</span>    Queiroz        Biology          <span class="fl">45538.32</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="dv">73623</span>    Sullivan       Elec. Eng.       <span class="fl">90038.09</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span> <span class="dv">97302</span>    Bertolino      Mech. Eng.       <span class="fl">51647.57</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="dv">12</span> <span class="dv">57180</span>    Hau            Accounting       <span class="fl">43966.29</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="dv">13</span> <span class="dv">74420</span>    Voronina       Physics          <span class="fl">121141.99</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="dv">14</span> <span class="dv">35579</span>    Soisalon<span class="sc">-</span>...   Psychology       <span class="fl">62579.61</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="dv">15</span> <span class="dv">31955</span>    Moreira        Accounting       <span class="fl">71351.42</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="dv">16</span> <span class="dv">37687</span>    Arias          Statistics       <span class="fl">104563.38</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="dv">17</span> <span class="dv">6569</span>     Mingoz         Finance          <span class="fl">105311.38</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="dv">18</span> <span class="dv">16807</span>    Yazdi          Athletics        <span class="fl">98333.65</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="dv">19</span> <span class="dv">14365</span>    Lembr          Accounting       <span class="fl">32241.56</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="dv">20</span> <span class="dv">90643</span>    Choll          Statistics       <span class="fl">57807.09</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="dv">21</span> <span class="dv">81991</span>    Valtchev       Biology          <span class="fl">77036.18</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="dv">22</span> <span class="dv">95030</span>    Arinb          Statistics       <span class="fl">54805.11</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="dv">23</span> <span class="dv">15347</span>    Bawa           Athletics        <span class="fl">72140.88</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="dv">24</span> <span class="dv">74426</span>    Kenje          Marketing        <span class="fl">106554.73</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="dv">25</span> <span class="dv">42782</span>    Vicentino      Elec. Eng.       <span class="fl">34272.67</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="dv">26</span> <span class="dv">58558</span>    Dusserre       Marketing        <span class="fl">66143.25</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="dv">27</span> <span class="dv">63287</span>    Jaekel         Athletics        <span class="fl">103146.87</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="dv">28</span> <span class="dv">59795</span>    Desyl          Languages        <span class="fl">48803.38</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="dv">29</span> <span class="dv">22591</span>    DAgostino      Psychology       <span class="fl">59706.49</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="dv">30</span> <span class="dv">48570</span>    Sarkar         Pol. Sci.        <span class="fl">87549.80</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="dv">31</span> <span class="dv">79081</span>    Ullman         Accounting       <span class="fl">47307.10</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="dv">32</span> <span class="dv">52647</span>    Bancilhon      Pol. Sci.        <span class="fl">87958.01</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="dv">33</span> <span class="dv">25946</span>    Liley          Languages        <span class="fl">90891.69</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="dv">34</span> <span class="dv">36897</span>    Morris         Marketing        <span class="fl">43770.36</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="dv">35</span> <span class="dv">72553</span>    Yin            English          <span class="fl">46397.59</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="dv">36</span> <span class="dv">3199</span>     Gustafsson     Elec. Eng.       <span class="fl">82534.37</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="dv">37</span> <span class="dv">34175</span>    Bondi          Comp. Sci.       <span class="fl">115469.11</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="dv">38</span> <span class="dv">48507</span>    Lent           Mech. Eng.       <span class="fl">107978.47</span></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="dv">39</span> <span class="dv">65931</span>    Pimenta        Cybernetics      <span class="fl">79866.95</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="dv">40</span> <span class="dv">3335</span>     Bourrier       Comp. Sci.       <span class="fl">80797.83</span></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="dv">41</span> <span class="dv">64871</span>    Gutierrez      Statistics       <span class="fl">45310.53</span></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="dv">42</span> <span class="dv">95709</span>    Sakurai        English          <span class="fl">118143.98</span></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="dv">43</span> <span class="dv">43779</span>    Romero         Astronomy        <span class="fl">79070.08</span></span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="dv">44</span> <span class="dv">77346</span>    Mahmoud        Geology          <span class="fl">99382.59</span></span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a><span class="dv">45</span> <span class="dv">28097</span>    Kean           English          <span class="fl">35023.18</span></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="dv">46</span> <span class="dv">90376</span>    Bietzk         Cybernetics      <span class="fl">117836.50</span></span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a><span class="dv">47</span> <span class="dv">28400</span>    Atanassov      Statistics       <span class="fl">84982.92</span></span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a><span class="dv">48</span> <span class="dv">41930</span>    Tung           Athletics        <span class="fl">50482.03</span></span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a><span class="dv">49</span> <span class="dv">19368</span>    Wieland        Pol. Sci.        <span class="fl">124651.41</span></span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a><span class="dv">50</span> <span class="dv">99052</span>    Dale           Cybernetics      <span class="fl">93348.83</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
