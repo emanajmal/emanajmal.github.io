@@ -25,7 +25,7 @@
     "href": "Assignment3.html",
     "title": "Assignment 3",
     "section": "",
-    "text": "Write SQL codes to get a list of:\n\nStudents IDs (hint: from the takes relation)\n\n\n\nInstructors\n\n\n\nDepartments\n\n\n\n\n\nWrite in SQL codes to do following queries:\n\nFind the ID and name of each student who has taken at least one Comp. Sci. course; make sure there are no duplicate names in the result.\n\n\n\nAdd grades to the list\n\n\n\nFind the ID and name of each student who has not taken any course offered before 2017.\n\n\n\nFor each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor.\n\n\n\nFind the lowest, across all departments, of the per-department maximum salary computed by the preceding query.\n\n\n\nAdd names to the list\n\n![] (Images/Q3fAssignment3.png)\n\n\n\nFind instructor (with name and ID) who has never given an A grade in any course she or he has taught. (Instructors who have never taught a course trivially satisfy this condition.)"
+    "text": "Write SQL codes to get a list of:\n\nStudents IDs (hint: from the takes relation)\n\n\n\nInstructors\n\n\n\nDepartments\n\n\n\n\n\nWrite in SQL codes to do following queries:\n\nFind the ID and name of each student who has taken at least one Comp. Sci. course; make sure there are no duplicate names in the result.\n\n\n\nAdd grades to the list\n\n\n\nFind the ID and name of each student who has not taken any course offered before 2017.\n\n\n\nFor each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor.\n\n\n\nFind the lowest, across all departments, of the per-department maximum salary computed by the preceding query.\n\n\n\nAdd names to the list\n\n\n\n\n\nFind instructor (with name and ID) who has never given an A grade in any course she or he has taught. (Instructors who have never taught a course trivially satisfy this condition.)"
   },
   {
     "objectID": "Assignment3.html#question-2",
@@ -39,7 +39,7 @@
     "href": "Assignment3.html#question-3",
     "title": "Assignment 3",
     "section": "",
-    "text": "Write in SQL codes to do following queries:\n\nFind the ID and name of each student who has taken at least one Comp. Sci. course; make sure there are no duplicate names in the result.\n\n\n\nAdd grades to the list\n\n\n\nFind the ID and name of each student who has not taken any course offered before 2017.\n\n\n\nFor each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor.\n\n\n\nFind the lowest, across all departments, of the per-department maximum salary computed by the preceding query.\n\n\n\nAdd names to the list\n\n![] (Images/Q3fAssignment3.png)"
+    "text": "Write in SQL codes to do following queries:\n\nFind the ID and name of each student who has taken at least one Comp. Sci. course; make sure there are no duplicate names in the result.\n\n\n\nAdd grades to the list\n\n\n\nFind the ID and name of each student who has not taken any course offered before 2017.\n\n\n\nFor each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor.\n\n\n\nFind the lowest, across all departments, of the per-department maximum salary computed by the preceding query.\n\n\n\nAdd names to the list"
   },
   {
     "objectID": "Assignment3.html#question-4",
