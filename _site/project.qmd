@@ -1,9 +1,0 @@
----
-title: "Project"
----
-
-Eman Ajmal is a social analyst.
-
-```{r}
-plot(mtcars)
-```
