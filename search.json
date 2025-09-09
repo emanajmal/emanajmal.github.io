@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Hi, I am Eman Ajmal",
-    "section": "",
-    "text": "I’m a social data analyst passionate about turning real-world problems into actionable insights.\nI care deeply about development, equity, and evidence-based reform, and I’m driven by the belief that small interventions, rooted in data can spark long-term impact.\nCurrently pursuing my Master’s at UT Dallas, I focus on the intersection of data, people, and policy, and aim to build systems that inform, include, and improve.\n\n\n\n“Data is more than numbers — it’s people, stories, and change waiting to happen.”\n\n\n\nConnect with me"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -14,11 +7,39 @@
     "text": "Eman Ajmal is a social analyst."
   },
   {
-    "objectID": "Project.html",
-    "href": "Project.html",
-    "title": "Project",
+    "objectID": "Assignment4.html",
+    "href": "Assignment4.html",
+    "title": "Assignment 4",
     "section": "",
-    "text": "Eman Ajmal is a social analyst.\n\nplot(mtcars)"
+    "text": "Difference between a weak and a strong entity set:\n\nA strong entity set can be identified uniquely by its own attributes, such as an Employee with an Employee ID.\nA weak entity set on the other hand, cannot be identified by its own attributes alone and depends on a strong entity (also known as the owner entity) for identification. An example could be a Dependent entity that relies on the Employee entity for its identification (e.g., an employee’s dependent might be identified by the Employee ID and Dependent’s name)."
+  },
+  {
+    "objectID": "Assignment4.html#question-1",
+    "href": "Assignment4.html#question-1",
+    "title": "Assignment 4",
+    "section": "",
+    "text": "Difference between a weak and a strong entity set:\n\nA strong entity set can be identified uniquely by its own attributes, such as an Employee with an Employee ID.\nA weak entity set on the other hand, cannot be identified by its own attributes alone and depends on a strong entity (also known as the owner entity) for identification. An example could be a Dependent entity that relies on the Employee entity for its identification (e.g., an employee’s dependent might be identified by the Employee ID and Dependent’s name)."
+  },
+  {
+    "objectID": "Assignment4.html#question-2",
+    "href": "Assignment4.html#question-2",
+    "title": "Assignment 4",
+    "section": "Question 2",
+    "text": "Question 2\nDesign an E-R diagram for keeping track of the scoring statistics of your favorite sports team. You should store the matches played, the scores in each match, the players in each match, and individual player scoring statistics for each match. Summary statistics should be modeled as derived attributes with an explanation as to how they are computed.\n\nDraw the E-R diagram using draw.io.\nExpand to all teams in the league (Hint: add team entity)"
+  },
+  {
+    "objectID": "Assignment4.html#question-3",
+    "href": "Assignment4.html#question-3",
+    "title": "Assignment 4",
+    "section": "Question 3",
+    "text": "Question 3\nSQL exercise:\n\nWrite an SQL query using the university schema to find the ID of each student who has never taken a course at the university. Do this using no subqueries and no set operations (use an outer join).\n\n\n\nConsider the following database, write a query to find the ID of each employee with no manager. Note that an employee may simply have no manager listed or may have a null manager(use natural left outer join).\n\nSELECT e.ID\nFROM employee e\nOUTER JOIN manages m ON e.ID = m.ID\nWHERE m.manager_id IS NULL;"
+  },
+  {
+    "objectID": "Assignment6.html",
+    "href": "Assignment6.html",
+    "title": "Assignment 6",
+    "section": "",
+    "text": "Question 1\n\nUsing JSON YouTube: YouTube uses JSON to deliver video metadata, comments, and user interactions through its API. The JSON structure is hierarchical and includes nested fields for video IDs, thumbnails, and statistics such as views and likes. YouTube’s backend likely uses BigQuery and other Google Cloud services to store and manage data. The API fetches this data in JSON format, commonly consumed by frontend JavaScript frameworks.\nUsing XML W3Schools: W3Schools offers XML data examples, including a sample file that provides information on books. The XML structure uses descriptive tags such as , , and . The data can be accessed using XML parsers in JavaScript or server-side languages. Technologies like DOM and XSLT are used to query or transform the XML structure for web display.\n\n\n\nQuestion 2\n\n\n\nSELECT student.ID\nFROM student\nLEFT JOIN advisor ON student.ID = advisor.s_ID\nWHERE advisor.i_ID IS NULL;\n\n\n\nSELECT I.ID, I.name\nFROM instructor I\nWHERE NOT EXISTS (\n  SELECT *\n  FROM course C\n  WHERE C.dept_name = I.dept_name\n    AND NOT EXISTS (\n      SELECT *\n      FROM teaches T\n      WHERE T.ID = I.ID AND T.course_id = C.course_id\n    )\n)\nORDER BY I.name;\n\n\nQuestion 3\n\n\n\n\n   id     name              dept_name      salary\n1  63395  McKinnon          Cybernetics    94333.99\n2  78699  Pingr             Statistics     59303.62\n3  96895  Mird              Marketing      119921.41\n4  4233   Luo               English        88791.45\n5  4034   Murata            Athletics      61387.56\n6  50885  Konstantinides    Languages      32570.50\n\n\n\n   id     name              dept_name      salary\n1  63395  McKinnon          Cybernetics    94333.99\n2  78699  Pingr             Statistics     59303.62\n3  96895  Mird              Marketing      119921.41\n4  4233   Luo               English        88791.45\n5  4034   Murata            Athletics      61387.56\n6  50885  Konstantinides    Languages      32570.50\n\n\n\n    id       name           dept_name       tot_cred\n1   79352    Rumat          Finance          100\n2   76672    Miliko         Statistics       116\n3   14182    Moszkowski     Civil Eng.       73\n4   44985    Prieto         Biology          91\n5   44271    Sowerby        English          108\n6   40897    Coppens        Math             58\n\n\n\n   id       name           dept_name        salary\n1  63395    McKinnon       Cybernetics      94333.99\n2  78699    Pingr          Statistics       59303.62\n3  96895    Mird           Marketing        119921.41\n4  4233     Luo            English          88791.45\n5  4034     Murata         Athletics        61387.56\n6  50885    Konstantinides Languages        32570.50\n7  79653    Levine         Elec. Eng.       89805.83\n8  50330    Shuming        Physics          108011.81\n9  80759    Queiroz        Biology          45538.32\n10 73623    Sullivan       Elec. Eng.       90038.09\n11 97302    Bertolino      Mech. Eng.       51647.57\n12 57180    Hau            Accounting       43966.29\n13 74420    Voronina       Physics          121141.99\n14 35579    Soisalon-...   Psychology       62579.61\n15 31955    Moreira        Accounting       71351.42\n16 37687    Arias          Statistics       104563.38\n17 6569     Mingoz         Finance          105311.38\n18 16807    Yazdi          Athletics        98333.65\n19 14365    Lembr          Accounting       32241.56\n20 90643    Choll          Statistics       57807.09\n21 81991    Valtchev       Biology          77036.18\n22 95030    Arinb          Statistics       54805.11\n23 15347    Bawa           Athletics        72140.88\n24 74426    Kenje          Marketing        106554.73\n25 42782    Vicentino      Elec. Eng.       34272.67\n26 58558    Dusserre       Marketing        66143.25\n27 63287    Jaekel         Athletics        103146.87\n28 59795    Desyl          Languages        48803.38\n29 22591    DAgostino      Psychology       59706.49\n30 48570    Sarkar         Pol. Sci.        87549.80\n31 79081    Ullman         Accounting       47307.10\n32 52647    Bancilhon      Pol. Sci.        87958.01\n33 25946    Liley          Languages        90891.69\n34 36897    Morris         Marketing        43770.36\n35 72553    Yin            English          46397.59\n36 3199     Gustafsson     Elec. Eng.       82534.37\n37 34175    Bondi          Comp. Sci.       115469.11\n38 48507    Lent           Mech. Eng.       107978.47\n39 65931    Pimenta        Cybernetics      79866.95\n40 3335     Bourrier       Comp. Sci.       80797.83\n41 64871    Gutierrez      Statistics       45310.53\n42 95709    Sakurai        English          118143.98\n43 43779    Romero         Astronomy        79070.08\n44 77346    Mahmoud        Geology          99382.59\n45 28097    Kean           English          35023.18\n46 90376    Bietzk         Cybernetics      117836.50\n47 28400    Atanassov      Statistics       84982.92\n48 41930    Tung           Athletics        50482.03\n49 19368    Wieland        Pol. Sci.        124651.41\n50 99052    Dale           Cybernetics      93348.83"
   },
   {
     "objectID": "Assignment3.html",
@@ -105,34 +126,6 @@
     "text": "Question 3: Primary and Foreign Keys for the Bank Database\n\nPrimary Keys\n\nBranch: branch_name\nAccount: account_number\nLoan: loan_number\nDepositor: (ID, account_number)\nBorrower: (ID, loan_number)\nCustomer: ID\n\n\n\nForeign Keys\n\nAccount: branch_name\nLoan: branch_name\nDepositor: ID, account_number\nBorrower: ID, loan_number"
   },
   {
-    "objectID": "Assignment4.html",
-    "href": "Assignment4.html",
-    "title": "Assignment 4",
-    "section": "",
-    "text": "Difference between a weak and a strong entity set:\n\nA strong entity set can be identified uniquely by its own attributes, such as an Employee with an Employee ID.\nA weak entity set on the other hand, cannot be identified by its own attributes alone and depends on a strong entity (also known as the owner entity) for identification. An example could be a Dependent entity that relies on the Employee entity for its identification (e.g., an employee’s dependent might be identified by the Employee ID and Dependent’s name)."
-  },
-  {
-    "objectID": "Assignment4.html#question-1",
-    "href": "Assignment4.html#question-1",
-    "title": "Assignment 4",
-    "section": "",
-    "text": "Difference between a weak and a strong entity set:\n\nA strong entity set can be identified uniquely by its own attributes, such as an Employee with an Employee ID.\nA weak entity set on the other hand, cannot be identified by its own attributes alone and depends on a strong entity (also known as the owner entity) for identification. An example could be a Dependent entity that relies on the Employee entity for its identification (e.g., an employee’s dependent might be identified by the Employee ID and Dependent’s name)."
-  },
-  {
-    "objectID": "Assignment4.html#question-2",
-    "href": "Assignment4.html#question-2",
-    "title": "Assignment 4",
-    "section": "Question 2",
-    "text": "Question 2\nDesign an E-R diagram for keeping track of the scoring statistics of your favorite sports team. You should store the matches played, the scores in each match, the players in each match, and individual player scoring statistics for each match. Summary statistics should be modeled as derived attributes with an explanation as to how they are computed.\n\nDraw the E-R diagram using draw.io.\nExpand to all teams in the league (Hint: add team entity)"
-  },
-  {
-    "objectID": "Assignment4.html#question-3",
-    "href": "Assignment4.html#question-3",
-    "title": "Assignment 4",
-    "section": "Question 3",
-    "text": "Question 3\nSQL exercise:\n\nWrite an SQL query using the university schema to find the ID of each student who has never taken a course at the university. Do this using no subqueries and no set operations (use an outer join).\n\n\n\nConsider the following database, write a query to find the ID of each employee with no manager. Note that an employee may simply have no manager listed or may have a null manager(use natural left outer join).\n\nSELECT e.ID\nFROM employee e\nOUTER JOIN manages m ON e.ID = m.ID\nWHERE m.manager_id IS NULL;"
-  },
-  {
     "objectID": "Assignment5.html",
     "href": "Assignment5.html",
     "title": "Assignment 5",
@@ -140,10 +133,17 @@
     "text": "Question 1: E-R Diagram as a Graph\nAn E-R (Entity-Relationship) diagram can be viewed as a graph, where entities are nodes and relationships are edges. Understanding its structure helps ensure database integrity and effective design.\n\n\na) The graph is disconnected\nA disconnected graph means that some parts of the schema are isolated and do not connect to others. In terms of an enterprise schema, this implies that certain entities or relationships are not integrated with the rest of the database system.\nExample: Imagine we have a Doctor entity and a Patient entity, but no relationship (like Treats) connecting them. These two entities are disconnected in the E-R diagram.\nImplications: - Indicates missing relationships or a design flaw. - Can result in incomplete or difficult-to-query data. - Hurts the ability to enforce referential integrity.\n\n\nb) The graph has a cycle\nA cycle in an E-R diagram means that starting from one entity, you can follow a path of relationships and return to the same entity.\nExample: Doctor → Patient → Test → Doctor\nThis forms a loop (cycle) in the schema.\nImplications: - Not inherently wrong – cycles often represent real-world interconnectedness. - Can complicate queries, especially recursive ones. - May require careful normalization or handling to avoid data anomalies.\n\n\nQuestion 3: Why Do We Have Weak Entity Sets?\nWhile it’s possible to convert weak entity sets to strong ones by adding attributes, we still use weak entity sets in practice due to design clarity and efficiency.\nReasons We Use Weak Entity Sets:\n\nA weak entity cannot be uniquely identified by its own attributes.\nIt depends on a related strong entity for uniqueness.\n\nWhy Not Always Use Strong Entities?\n\nMaking weak entities strong can require adding redundant or artificial keys, which is not always natural.\nWeak entities simplify data modeling for real-world hierarchical relationships.\nHelps maintain referential integrity and logical clarity in the schema.\n\n\n\nQuestion 4\n\n\na: SQL Queries\nSchema:\nemployee(ID, name, street, city)\nworks(ID, company_id, salary)\ncompany(company_id, name, city)\nmanages(employee_id, manager_id)\n\nFind ID and name of employees who live in the same city as the location of their company:\n\nSELECT e.ID, e.name\nFROM employee AS e, works AS w, company AS c\nWHERE e.ID = w.ID AND w.company_id = c.company_id AND e.city = c.city;\n\nFind ID and name of employees who live on the same street and in the same city as their manager:\n\nSELECT e.ID, e.name\nFROM employee AS e, manages AS m, employee AS mngr\nWHERE e.ID = m.employee_id AND m.manager_id = mngr.ID\nAND e.city = mngr.city AND e.street = mngr.street;\n\nFind ID and name of employees who earn more than the average salary of all employees in their company:\n\nSELECT e.ID, e.name\nFROM employee AS e, works AS w\nWHERE e.ID = w.ID AND w.salary &gt; ( SELECT AVG(w2.salary)\nFROM works AS w2\nWHERE w2.company_id = w.company_id\n\n\nb: What’s wrong with this SQL query?\nSELECT name, title\nFROM instructor NATURAL JOIN teaches NATURAL JOIN section NATURAL JOIN course\nWHERE semester = ‘Spring’ AND year = 2017;\nProblem: This query uses NATURAL JOIN, which joins tables based on all columns with the same name. This can cause unintended matches, especially if tables have generic column names like ID or course_id.\nFix: Use explicit JOINs to clearly specify matching fields.\nCorrected Query:\nSELECT i.name, c.title\nFROM instructor AS i\nJOIN teaches AS t ON i.ID = t.ID\nJOIN section AS s ON t.course_id = s.course_id\nAND t.sec_id = s.sec_id\nAND t.semester = s.semester\nAND t.year = s.year JOIN course AS c ON s.course_id = c.course_id\nWHERE s.semester = ‘Spring’ AND s.year = 2017;"
   },
   {
-    "objectID": "Assignment6.html",
-    "href": "Assignment6.html",
-    "title": "Assignment 6",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hi, I am Eman Ajmal",
     "section": "",
-    "text": "Question 1\n\nUsing JSON YouTube: YouTube uses JSON to deliver video metadata, comments, and user interactions through its API. The JSON structure is hierarchical and includes nested fields for video IDs, thumbnails, and statistics such as views and likes. YouTube’s backend likely uses BigQuery and other Google Cloud services to store and manage data. The API fetches this data in JSON format, commonly consumed by frontend JavaScript frameworks.\nUsing XML W3Schools: W3Schools offers XML data examples, including a sample file that provides information on books. The XML structure uses descriptive tags such as , , and . The data can be accessed using XML parsers in JavaScript or server-side languages. Technologies like DOM and XSLT are used to query or transform the XML structure for web display.\n\n\n\nQuestion 2\n\n\n\nSELECT student.ID\nFROM student\nLEFT JOIN advisor ON student.ID = advisor.s_ID\nWHERE advisor.i_ID IS NULL;\n\n\n\nSELECT I.ID, I.name\nFROM instructor I\nWHERE NOT EXISTS (\n  SELECT *\n  FROM course C\n  WHERE C.dept_name = I.dept_name\n    AND NOT EXISTS (\n      SELECT *\n      FROM teaches T\n      WHERE T.ID = I.ID AND T.course_id = C.course_id\n    )\n)\nORDER BY I.name;\n\n\nQuestion 3\n\n\n\n\n   id     name              dept_name      salary\n1  63395  McKinnon          Cybernetics    94333.99\n2  78699  Pingr             Statistics     59303.62\n3  96895  Mird              Marketing      119921.41\n4  4233   Luo               English        88791.45\n5  4034   Murata            Athletics      61387.56\n6  50885  Konstantinides    Languages      32570.50\n\n\n\n   id     name              dept_name      salary\n1  63395  McKinnon          Cybernetics    94333.99\n2  78699  Pingr             Statistics     59303.62\n3  96895  Mird              Marketing      119921.41\n4  4233   Luo               English        88791.45\n5  4034   Murata            Athletics      61387.56\n6  50885  Konstantinides    Languages      32570.50\n\n\n\n    id       name           dept_name       tot_cred\n1   79352    Rumat          Finance          100\n2   76672    Miliko         Statistics       116\n3   14182    Moszkowski     Civil Eng.       73\n4   44985    Prieto         Biology          91\n5   44271    Sowerby        English          108\n6   40897    Coppens        Math             58\n\n\n\n   id       name           dept_name        salary\n1  63395    McKinnon       Cybernetics      94333.99\n2  78699    Pingr          Statistics       59303.62\n3  96895    Mird           Marketing        119921.41\n4  4233     Luo            English          88791.45\n5  4034     Murata         Athletics        61387.56\n6  50885    Konstantinides Languages        32570.50\n7  79653    Levine         Elec. Eng.       89805.83\n8  50330    Shuming        Physics          108011.81\n9  80759    Queiroz        Biology          45538.32\n10 73623    Sullivan       Elec. Eng.       90038.09\n11 97302    Bertolino      Mech. Eng.       51647.57\n12 57180    Hau            Accounting       43966.29\n13 74420    Voronina       Physics          121141.99\n14 35579    Soisalon-...   Psychology       62579.61\n15 31955    Moreira        Accounting       71351.42\n16 37687    Arias          Statistics       104563.38\n17 6569     Mingoz         Finance          105311.38\n18 16807    Yazdi          Athletics        98333.65\n19 14365    Lembr          Accounting       32241.56\n20 90643    Choll          Statistics       57807.09\n21 81991    Valtchev       Biology          77036.18\n22 95030    Arinb          Statistics       54805.11\n23 15347    Bawa           Athletics        72140.88\n24 74426    Kenje          Marketing        106554.73\n25 42782    Vicentino      Elec. Eng.       34272.67\n26 58558    Dusserre       Marketing        66143.25\n27 63287    Jaekel         Athletics        103146.87\n28 59795    Desyl          Languages        48803.38\n29 22591    DAgostino      Psychology       59706.49\n30 48570    Sarkar         Pol. Sci.        87549.80\n31 79081    Ullman         Accounting       47307.10\n32 52647    Bancilhon      Pol. Sci.        87958.01\n33 25946    Liley          Languages        90891.69\n34 36897    Morris         Marketing        43770.36\n35 72553    Yin            English          46397.59\n36 3199     Gustafsson     Elec. Eng.       82534.37\n37 34175    Bondi          Comp. Sci.       115469.11\n38 48507    Lent           Mech. Eng.       107978.47\n39 65931    Pimenta        Cybernetics      79866.95\n40 3335     Bourrier       Comp. Sci.       80797.83\n41 64871    Gutierrez      Statistics       45310.53\n42 95709    Sakurai        English          118143.98\n43 43779    Romero         Astronomy        79070.08\n44 77346    Mahmoud        Geology          99382.59\n45 28097    Kean           English          35023.18\n46 90376    Bietzk         Cybernetics      117836.50\n47 28400    Atanassov      Statistics       84982.92\n48 41930    Tung           Athletics        50482.03\n49 19368    Wieland        Pol. Sci.        124651.41\n50 99052    Dale           Cybernetics      93348.83"
+    "text": "I’m a social data analyst passionate about turning real-world problems into actionable insights.\nI care deeply about development, equity, and evidence-based reform, and I’m driven by the belief that small interventions, rooted in data can spark long-term impact.\nCurrently pursuing my Master’s at UT Dallas, I focus on the intersection of data, people, and policy, and aim to build systems that inform, include, and improve.\n\n\n\n“Data is more than numbers — it’s people, stories, and change waiting to happen.”\n\n\n\nConnect with me"
+  },
+  {
+    "objectID": "Project.html",
+    "href": "Project.html",
+    "title": "Project",
+    "section": "",
+    "text": "Eman Ajmal is a social analyst.\n\nplot(mtcars)"
   }
 ]
