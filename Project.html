@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>assignment1 – Eman Ajmal</title>
+<title>Project – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -92,10 +126,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./CV.html"> 
-<span class="menu-text">CV</span></a>
-  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6354" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">EPPS 6354</span>
@@ -157,265 +187,44 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#assignment-1" id="toc-assignment-1" class="nav-link active" data-scroll-target="#assignment-1">Assignment 1</a>
-  <ul class="collapse">
-  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a>
-  <ul class="collapse">
-  <li><a href="#online-banking" id="toc-online-banking" class="nav-link" data-scroll-target="#online-banking">1. Online Banking</a></li>
-  <li><a href="#e-commerce-e.g.-amazon" id="toc-e-commerce-e.g.-amazon" class="nav-link" data-scroll-target="#e-commerce-e.g.-amazon">2. E-commerce (e.g., Amazon)</a></li>
-  <li><a href="#university-management-systems" id="toc-university-management-systems" class="nav-link" data-scroll-target="#university-management-systems">3. University Management Systems</a></li>
-  </ul></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a>
-  <ul class="collapse">
-  <li><a href="#community-well-being-tracker" id="toc-community-well-being-tracker" class="nav-link" data-scroll-target="#community-well-being-tracker">1. Community Well-Being Tracker</a></li>
-  <li><a href="#digital-public-opinion-analyzer" id="toc-digital-public-opinion-analyzer" class="nav-link" data-scroll-target="#digital-public-opinion-analyzer">2. Digital Public Opinion Analyzer</a></li>
-  <li><a href="#social-mobility-inequality-tracker" id="toc-social-mobility-inequality-tracker" class="nav-link" data-scroll-target="#social-mobility-inequality-tracker">3. Social Mobility &amp; Inequality Tracker</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
-  <li><a href="#finding-hidden-patterns-relationships" id="toc-finding-hidden-patterns-relationships" class="nav-link" data-scroll-target="#finding-hidden-patterns-relationships">1. Finding Hidden Patterns &amp; Relationships</a></li>
-  <li><a href="#predictive-analytics-forecasting" id="toc-predictive-analytics-forecasting" class="nav-link" data-scroll-target="#predictive-analytics-forecasting">2. Predictive Analytics &amp; Forecasting</a></li>
-  <li><a href="#decision-making-automation" id="toc-decision-making-automation" class="nav-link" data-scroll-target="#decision-making-automation">3. Decision-Making &amp; Automation</a></li>
-  <li><a href="#reducing-complexity-in-big-data" id="toc-reducing-complexity-in-big-data" class="nav-link" data-scroll-target="#reducing-complexity-in-big-data">4. Reducing Complexity in Big Data</a></li>
-  <li><a href="#competitive-advantage-business-intelligence" id="toc-competitive-advantage-business-intelligence" class="nav-link" data-scroll-target="#competitive-advantage-business-intelligence">5. Competitive Advantage &amp; Business Intelligence</a></li>
-  </ul></li>
-  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a>
-  <ul class="collapse">
-  <li><a href="#users-table" id="toc-users-table" class="nav-link" data-scroll-target="#users-table">1. Users Table</a></li>
-  <li><a href="#posts-table" id="toc-posts-table" class="nav-link" data-scroll-target="#posts-table">2. Posts Table</a></li>
-  <li><a href="#followers-table" id="toc-followers-table" class="nav-link" data-scroll-target="#followers-table">3. Followers Table</a></li>
-  </ul></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Project</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="assignment-1" class="level1">
-<h1>Assignment 1</h1>
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<p>Name and describe three applications you have used that employed a database system to store and access persistent data (e.g., airlines, online trade, banking, university system).</p>
-<section id="online-banking" class="level3">
-<h3 class="anchored" data-anchor-id="online-banking">1. Online Banking</h3>
-<ul>
-<li>How it Uses Databases: Stores customer data, transactions, and account details.</li>
-<li>Reasoning: Ensures secure, fast, and reliable access to banking information.</li>
-</ul>
-</section>
-<section id="e-commerce-e.g.-amazon" class="level3">
-<h3 class="anchored" data-anchor-id="e-commerce-e.g.-amazon">2. E-commerce (e.g., Amazon)</h3>
-<ul>
-<li>How it Uses Databases: Manages product listings, customer orders, and payments.</li>
-<li>Reasoning: Uses a relational database to store structured data and provide recommendations.</li>
-</ul>
-</section>
-<section id="university-management-systems" class="level3">
-<h3 class="anchored" data-anchor-id="university-management-systems">3. University Management Systems</h3>
-<ul>
-<li>How it Uses Databases: Stores student records, enrollments, and grades.</li>
-<li>Reasoning: Ensures students and faculty have real-time access to course materials and academic records.</li>
-</ul>
-</section>
-</section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<p>Propose three applications in domain projects (e.g., criminology, economics, brain science, etc.). Be sure to include: 1.Purpose 2.Functions 3.Simple interface design</p>
-<section id="community-well-being-tracker" class="level3">
-<h3 class="anchored" data-anchor-id="community-well-being-tracker">1. Community Well-Being Tracker</h3>
-<ul>
-<li>Purpose: Measures and tracks social well-being indicators like mental health, employment, and community engagement.</li>
-<li>Functions:
-<ul>
-<li>Collects survey responses on life satisfaction, stress levels, and social interactions.</li>
-<li>Tracks changes in employment, education, and local crime rates.</li>
-<li>Provides visual reports and insights for policymakers and community leaders.</li>
-</ul></li>
-<li>Simple Interface Design: A dashboard displays key indicators like mental health scores, employment trends, and community engagement in charts and graphs. Users can fill out surveys to update data, and policymakers can generate reports with visual insights. The interface includes a homepage overview, survey page, and a report export option.</li>
-</ul>
-</section>
-<section id="digital-public-opinion-analyzer" class="level3">
-<h3 class="anchored" data-anchor-id="digital-public-opinion-analyzer">2. Digital Public Opinion Analyzer</h3>
-<ul>
-<li>Purpose: Analyzes public sentiment on social issues by gathering data from social media and news sources.</li>
-<li>Functions:
-<ul>
-<li>Collects and categorizes posts on topics like inequality, human rights, and policy changes.</li>
-<li>Uses sentiment analysis to determine whether opinions are positive, negative, or neutral.</li>
-<li>Generates reports on trending social issues over time.</li>
-</ul></li>
-<li>Simple Interface Design: Users enter keywords to analyze public sentiment from news and social media, displayed through a word cloud, sentiment pie chart, and regional heatmap. A live feed shows relevant posts, and a report generation page allows data exports. The interface is search-focused with real-time insights.</li>
-</ul>
-</section>
-<section id="social-mobility-inequality-tracker" class="level3">
-<h3 class="anchored" data-anchor-id="social-mobility-inequality-tracker">3. Social Mobility &amp; Inequality Tracker</h3>
-<ul>
-<li>Purpose: Tracks data on economic and social mobility to understand inequality trends in different regions.</li>
-<li>Functions:
-<ul>
-<li>Stores data on income, education, and employment trends across communities.</li>
-<li>Provides comparison charts on social mobility rates based on location, gender, and ethnicity.</li>
-<li>Recommends policies and resources to improve access to opportunities.</li>
-</ul></li>
-<li>Simple Interface Design: An interactive heat map and dashboard display income trends, education levels, and employment data by region. Users can compare multiple areas, view bar charts, and access policy recommendations. The interface supports searching, visual comparisons, and report downloads.</li>
-</ul>
-</section>
-<section id="question-3" class="level3">
-<h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
-<p>If data can be retrieved efficiently and effectively, why is data mining needed?</p>
-<p>Data mining is essential because it allows us to extract meaningful insights from large datasets beyond just retrieving stored data. Below are key reasons why data mining is needed:</p>
-</section>
-<section id="finding-hidden-patterns-relationships" class="level3">
-<h3 class="anchored" data-anchor-id="finding-hidden-patterns-relationships">1. Finding Hidden Patterns &amp; Relationships</h3>
-<ul>
-<li>Databases can retrieve data efficiently, but they don’t automatically find patterns or trends.</li>
-</ul>
-</section>
-<section id="predictive-analytics-forecasting" class="level3">
-<h3 class="anchored" data-anchor-id="predictive-analytics-forecasting">2. Predictive Analytics &amp; Forecasting</h3>
-<ul>
-<li>Data mining helps predict future trends based on historical data.</li>
-</ul>
-</section>
-<section id="decision-making-automation" class="level3">
-<h3 class="anchored" data-anchor-id="decision-making-automation">3. Decision-Making &amp; Automation</h3>
-<ul>
-<li>Businesses use data mining to make data-driven decisions rather than relying on intuition.</li>
-</ul>
-</section>
-<section id="reducing-complexity-in-big-data" class="level3">
-<h3 class="anchored" data-anchor-id="reducing-complexity-in-big-data">4. Reducing Complexity in Big Data</h3>
-<ul>
-<li>Big data is too large and complex for traditional database queries alone. Data mining helps extract valuable insights from massive datasets.</li>
-</ul>
-</section>
-<section id="competitive-advantage-business-intelligence" class="level3">
-<h3 class="anchored" data-anchor-id="competitive-advantage-business-intelligence">5. Competitive Advantage &amp; Business Intelligence</h3>
-<ul>
-<li>Companies use data mining to gain a competitive edge by identifying market trends, customer preferences, and business risks.</li>
-</ul>
-</section>
-</section>
-<section id="question-6" class="level2">
-<h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
-<p>Describe at least three tables that might be used to store information in a social network/social media system such as Twitter or Reddit.</p>
-<p>A social media platform like Twitter or Reddit would require multiple tables for structured data management. Below are three essential tables:</p>
-<section id="users-table" class="level3">
-<h3 class="anchored" data-anchor-id="users-table">1. Users Table</h3>
-<ul>
-<li><p>Stores information about users.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Column Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>User ID</td>
-<td>Unique identifier for each user</td>
-</tr>
-<tr class="even">
-<td>Username</td>
-<td>Display name of the user</td>
-</tr>
-<tr class="odd">
-<td>Email</td>
-<td>Contact email</td>
-</tr>
-<tr class="even">
-<td>Password</td>
-<td>Encrypted password</td>
-</tr>
-<tr class="odd">
-<td>Date Joined</td>
-<td>Date when the user registered</td>
-</tr>
-</tbody>
-</table></li>
-</ul>
-</section>
-<section id="posts-table" class="level3">
-<h3 class="anchored" data-anchor-id="posts-table">2. Posts Table</h3>
-<ul>
-<li><p>Stores tweets or Reddit posts.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Column Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Post ID</td>
-<td>Unique identifier for each post</td>
-</tr>
-<tr class="even">
-<td>User ID</td>
-<td>ID of the user who posted</td>
-</tr>
-<tr class="odd">
-<td>Post Content</td>
-<td>Text or media content</td>
-</tr>
-<tr class="even">
-<td>Created At</td>
-<td>Timestamp of post creation</td>
-</tr>
-<tr class="odd">
-<td>Likes Count</td>
-<td>Number of likes</td>
-</tr>
-<tr class="even">
-<td>Comments Count</td>
-<td>Number of comments</td>
-</tr>
-</tbody>
-</table></li>
-</ul>
-</section>
-<section id="followers-table" class="level3">
-<h3 class="anchored" data-anchor-id="followers-table">3. Followers Table</h3>
-<ul>
-<li><p>Stores relationships between users.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Column Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Follower ID</td>
-<td>ID of the user who follows</td>
-</tr>
-<tr class="even">
-<td>Followed ID</td>
-<td>ID of the user being followed</td>
-</tr>
-<tr class="odd">
-<td>Date Followed</td>
-<td>Timestamp of when the follow occurred</td>
-</tr>
-</tbody>
-</table></li>
-</ul>
-<hr>
+    
+  
+    
+  </div>
+  
 
 
-</section>
-</section>
-</section>
+</header>
+
+
+<p>Eman Ajmal is a social analyst.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Project_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
