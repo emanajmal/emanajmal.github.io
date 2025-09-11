@@ -221,6 +221,48 @@
     "href": "CV.html#punjab-commission-on-the-status-of-women",
     "title": "CV",
     "section": "Punjab Commission on the Status of Women",
-    "text": "Punjab Commission on the Status of Women\nResearch & Development Intern\nOctober 2023 – December 2023 | Lahore, Pakistan\n- Conducted qualitative and quantitative research for the Gender Parity Report 2022, analyzing large-scale datasets to identify trends in gender equity across Punjab.\n- Collaborated with cross-functional teams to develop evidence-based policy recommendations aimed at improving gender parity and social outcomes.\n\n\nAcademic Project Experience\nThesis – Legal Awareness Among Female University Students in Lahore\nSeptember 2023 – January 2024\n- Led a comprehensive research study on legal knowledge among female students by surveying over 300 participants, uncovering critical gaps in legal literacy and identifying key opportunities for academic empowerment.\n- Developed and presented data-driven recommendations to academic stakeholders, driving a 25% increase in student engagement with legal literacy initiatives and demonstrating impactful leadership in addressing contemporary societal challenges.\n\n\n\nPublications & Research\nThe Efficacy of Battering Intervention and Prevention Programs\nInstitute for Urban Policy Research (UTD), Texas Council on Family Violence — 2025\n- Contributed as Research Assistant on a statewide evaluation examining the impact of Battering Intervention and Prevention Programs (BIPPs) on reducing domestic violence recidivism across Texas. Analyzed program data and outcomes for over 1,600 participants, supporting evidence-based policy recommendations.\n\n\n\nLeadership Experience\n\nInternational Center Global Ambassador (UTD) — Vice President\n\nArt Junction (FCCU) — Director PR\n\nAghaaz (NGO) — Executive Council\n\n\n\n\nKeywords\nR Studio, SQL, SPSS, Sprinklr, Data Visualization, Policy Research, Public Reporting, Stakeholder Engagement"
+    "text": "Punjab Commission on the Status of Women\nResearch & Development Intern\nOctober 2023 – December 2023 | Lahore, Pakistan\n- Conducted qualitative and quantitative research for the Gender Parity Report 2022, analyzing large-scale datasets to identify trends in gender equity across Punjab.\n- Collaborated with cross-functional teams to develop evidence-based policy recommendations aimed at improving gender parity and social outcomes."
+  },
+  {
+    "objectID": "EPPS6302_Assignment1.html",
+    "href": "EPPS6302_Assignment1.html",
+    "title": "Part 4 — Write a one page note on designing your website",
+    "section": "",
+    "text": "I created my website using Quarto and GitHub Pages to share my assignments, CV, and projects. The layout is simple and professional, with a top navigation bar for easy access to pages like Home, CV, and course assignments. A right-side “On this page” panel helps visitors jump to sections quickly.\nThe site uses the Cosmo theme for clean styling and responsive design. Content is written in Markdown within .qmd files, making it easy to update and maintain. Images and files are stored in organized folders and linked using relative paths. I render the site locally and push updates to GitHub, where it’s automatically deployed.\nMy goal was to build a clear, functional, and easy-to-navigate portfolio that highlights my work while remaining simple to maintain and expand in the future."
+  },
+  {
+    "objectID": "EPPS6302_Assignment1.html#episode-overview",
+    "href": "EPPS6302_Assignment1.html#episode-overview",
+    "title": "Part 4 — Write a one page note on designing your website",
+    "section": "Episode Overview",
+    "text": "Episode Overview\nIn this episode of Data Framed, hosts Adel Nehme and Richie Cotton welcome Karen Ng, Head of Product at HubSpot, to discuss the evolving landscape of team dynamics where humans and AI agents collaborate side by side. The conversation centers on practical strategies for integrating AI agents into workflows and optimizing team performance within this hybrid environment."
+  },
+  {
+    "objectID": "EPPS6302_Assignment1.html#main-theme",
+    "href": "EPPS6302_Assignment1.html#main-theme",
+    "title": "Part 4 — Write a one page note on designing your website",
+    "section": "Main Theme",
+    "text": "Main Theme\nThe central theme of the episode is the rise of human-plus-agent hybrid teams work environments in which AI systems share responsibilities with human workers. Karen Ng breaks down how organizations can effectively blend AI capabilities with human oversight, ensuring both productivity and ethical integrity."
+  },
+  {
+    "objectID": "EPPS6302_Assignment1.html#key-takeaways-insights",
+    "href": "EPPS6302_Assignment1.html#key-takeaways-insights",
+    "title": "Part 4 — Write a one page note on designing your website",
+    "section": "Key Takeaways & Insights",
+    "text": "Key Takeaways & Insights\n\nIntegration Strategy\nHybrid teams succeed when roles are clearly defined, and AI systems are introduced where they augment not replace human judgment.\n\n\nTraining & Evaluation\nEstablishing best practices for training AI agents includes designing them for continuous learning and setting evaluation criteria aligned with team goals.\n\n\nData Quality & Governance\nA robust governance framework is crucial. AI agents must operate on accurate, reliable data while maintaining transparency and ethical standards.\n\n\nPractical Use Cases\nIndustries like customer support, sales, and data processing have seen measurable benefits by integrating AI agents to handle recurring tasks freeing humans to focus on complex, strategic work."
+  },
+  {
+    "objectID": "EPPS6302_Assignment1.html#personal-reflection",
+    "href": "EPPS6302_Assignment1.html#personal-reflection",
+    "title": "Part 4 — Write a one page note on designing your website",
+    "section": "Personal Reflection",
+    "text": "Personal Reflection\nThis episode offers a forward-looking lens into how AI is reshaping team workflows. Karen Ng’s insights are grounded in real-world applications; her role at HubSpot lends credibility and depth to the discussion. I appreciated the balanced approach highlighting AI’s strengths while acknowledging the importance of human judgment, governance, and alignment with ethical standards.\nI find the emphasis on governance particularly impactful. Too often, the conversation around AI overlooks the importance of data integrity and trust. This episode prompts listeners to think critically about implementing AI in a way that enhances not erodes team coherence and accountability."
+  },
+  {
+    "objectID": "EPPS6302_Assignment1.html#conclusion",
+    "href": "EPPS6302_Assignment1.html#conclusion",
+    "title": "Part 4 — Write a one page note on designing your website",
+    "section": "Conclusion",
+    "text": "Conclusion\nEpisode 319 of Data Framed delivers a timely and practical exploration of hybrid human-AI teamwork. It’s especially valuable for product managers, data team leaders, and anyone working at the intersection of AI and organizational design. Whether you’re exploring AI adoption or refining existing deployments, this episode offers a thoughtful roadmap for doing so responsibly and effectively."
   }
 ]
