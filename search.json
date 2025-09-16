@@ -233,35 +233,35 @@
   {
     "objectID": "EPPS6302_Assignment1.html#episode-overview",
     "href": "EPPS6302_Assignment1.html#episode-overview",
-    "title": "Part 4 — Write a one page note on designing your website",
+    "title": "Assignment 1",
     "section": "Episode Overview",
     "text": "Episode Overview\nIn this episode of Data Framed, hosts Adel Nehme and Richie Cotton welcome Karen Ng, Head of Product at HubSpot, to discuss the evolving landscape of team dynamics where humans and AI agents collaborate side by side. The conversation centers on practical strategies for integrating AI agents into workflows and optimizing team performance within this hybrid environment."
   },
   {
     "objectID": "EPPS6302_Assignment1.html#main-theme",
     "href": "EPPS6302_Assignment1.html#main-theme",
-    "title": "Part 4 — Write a one page note on designing your website",
+    "title": "Assignment 1",
     "section": "Main Theme",
     "text": "Main Theme\nThe central theme of the episode is the rise of human-plus-agent hybrid teams work environments in which AI systems share responsibilities with human workers. Karen Ng breaks down how organizations can effectively blend AI capabilities with human oversight, ensuring both productivity and ethical integrity."
   },
   {
     "objectID": "EPPS6302_Assignment1.html#key-takeaways-insights",
     "href": "EPPS6302_Assignment1.html#key-takeaways-insights",
-    "title": "Part 4 — Write a one page note on designing your website",
+    "title": "Assignment 1",
     "section": "Key Takeaways & Insights",
     "text": "Key Takeaways & Insights\n\nIntegration Strategy\nHybrid teams succeed when roles are clearly defined, and AI systems are introduced where they augment not replace human judgment.\n\n\nTraining & Evaluation\nEstablishing best practices for training AI agents includes designing them for continuous learning and setting evaluation criteria aligned with team goals.\n\n\nData Quality & Governance\nA robust governance framework is crucial. AI agents must operate on accurate, reliable data while maintaining transparency and ethical standards.\n\n\nPractical Use Cases\nIndustries like customer support, sales, and data processing have seen measurable benefits by integrating AI agents to handle recurring tasks freeing humans to focus on complex, strategic work."
   },
   {
     "objectID": "EPPS6302_Assignment1.html#personal-reflection",
     "href": "EPPS6302_Assignment1.html#personal-reflection",
-    "title": "Part 4 — Write a one page note on designing your website",
+    "title": "Assignment 1",
     "section": "Personal Reflection",
     "text": "Personal Reflection\nThis episode offers a forward-looking lens into how AI is reshaping team workflows. Karen Ng’s insights are grounded in real-world applications; her role at HubSpot lends credibility and depth to the discussion. I appreciated the balanced approach highlighting AI’s strengths while acknowledging the importance of human judgment, governance, and alignment with ethical standards.\nI find the emphasis on governance particularly impactful. Too often, the conversation around AI overlooks the importance of data integrity and trust. This episode prompts listeners to think critically about implementing AI in a way that enhances not erodes team coherence and accountability."
   },
   {
     "objectID": "EPPS6302_Assignment1.html#conclusion",
     "href": "EPPS6302_Assignment1.html#conclusion",
-    "title": "Part 4 — Write a one page note on designing your website",
+    "title": "Assignment 1",
     "section": "Conclusion",
     "text": "Conclusion\nEpisode 319 of Data Framed delivers a timely and practical exploration of hybrid human-AI teamwork. It’s especially valuable for product managers, data team leaders, and anyone working at the intersection of AI and organizational design. Whether you’re exploring AI adoption or refining existing deployments, this episode offers a thoughtful roadmap for doing so responsibly and effectively."
   },
@@ -277,19 +277,19 @@
     "href": "EPPS6302_Assignment2.html",
     "title": "Overview",
     "section": "",
-    "text": "Search interest for Trump, Kamala Harris, and Election using the Google Trends website and using R (gtrendsR)."
+    "text": "#Assignment 2"
   },
   {
     "objectID": "EPPS6302_Assignment2.html#google-trends-website-export",
     "href": "EPPS6302_Assignment2.html#google-trends-website-export",
-    "title": "Overview",
+    "title": "Assignment 2",
     "section": "1) Google Trends website export",
     "text": "1) Google Trends website export"
   },
   {
     "objectID": "EPPS6302_Assignment2.html#r-gtrendsr-plot",
     "href": "EPPS6302_Assignment2.html#r-gtrendsr-plot",
-    "title": "Overview",
+    "title": "Assignment 2",
     "section": "2) R (gtrendsR) plot",
     "text": "2) R (gtrendsR) plot"
   }
