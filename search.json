@@ -264,5 +264,33 @@
     "title": "Part 4 — Write a one page note on designing your website",
     "section": "Conclusion",
     "text": "Conclusion\nEpisode 319 of Data Framed delivers a timely and practical exploration of hybrid human-AI teamwork. It’s especially valuable for product managers, data team leaders, and anyone working at the intersection of AI and organizational design. Whether you’re exploring AI adoption or refining existing deployments, this episode offers a thoughtful roadmap for doing so responsibly and effectively."
+  },
+  {
+    "objectID": "GTrends.html",
+    "href": "GTrends.html",
+    "title": "GTrends",
+    "section": "",
+    "text": "```## EPPS 6302 Methods of Data Collection and Production ## Google Trends with R\ninstall.packages(“gtrendsR”) library(gtrendsR) TrumpHarrisElection = gtrends(c(“Trump”,“Harris”,“election”), onlyInterest = TRUE, geo = “US”, gprop = “web”, time = “today+5-y”, category = 0, ) # last five years the_df=TrumpHarrisElection$interest_over_time plot(TrumpHarrisElection) tg = gtrends(“tariff”, time = “all”)\n\nExample: Tariff, China military, Taiwan\n\n\n\nplot(gtrends(c(“tariff”), time = “all”)) data(“countries”) plot(gtrends(c(“tariff”), geo = “GB”, time = “all”)) plot(gtrends(c(“tariff”), geo = c(“US”,“GB”,“TW”), time = “all”)) tg_iot = tg\\(interest_over_time\ntct = gtrends(c(\"tariff\",\"China military\", \"Taiwan\"), time = \"all\")\ntct = data.frame(tct\\)interest_over_time) plot(gtrends(c(“tariff”,“China military”, “Taiwan”), time = “all”))"
+  },
+  {
+    "objectID": "EPPS6302_Assignment2.html",
+    "href": "EPPS6302_Assignment2.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Search interest for Trump, Kamala Harris, and Election using the Google Trends website and using R (gtrendsR)."
+  },
+  {
+    "objectID": "EPPS6302_Assignment2.html#google-trends-website-export",
+    "href": "EPPS6302_Assignment2.html#google-trends-website-export",
+    "title": "Overview",
+    "section": "1) Google Trends website export",
+    "text": "1) Google Trends website export"
+  },
+  {
+    "objectID": "EPPS6302_Assignment2.html#r-gtrendsr-plot",
+    "href": "EPPS6302_Assignment2.html#r-gtrendsr-plot",
+    "title": "Overview",
+    "section": "2) R (gtrendsR) plot",
+    "text": "2) R (gtrendsR) plot"
   }
 ]

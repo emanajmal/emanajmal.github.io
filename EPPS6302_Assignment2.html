@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>epps6302_assignment1 – Eman Ajmal</title>
+<title>epps6302_assignment2 – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -163,21 +163,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#part-4-write-a-one-page-note-on-designing-your-website" id="toc-part-4-write-a-one-page-note-on-designing-your-website" class="nav-link active" data-scroll-target="#part-4-write-a-one-page-note-on-designing-your-website">Part 4 — Write a one page note on designing your website</a></li>
-  <li><a href="#podcast-review-episode-319-building-managing-human-agent-hybrid-teams" id="toc-podcast-review-episode-319-building-managing-human-agent-hybrid-teams" class="nav-link" data-scroll-target="#podcast-review-episode-319-building-managing-human-agent-hybrid-teams">Podcast Review: Episode 319 – Building &amp; Managing Human + Agent Hybrid Teams</a>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#a-charts" id="toc-a-charts" class="nav-link" data-scroll-target="#a-charts">a) Charts</a>
   <ul class="collapse">
-  <li><a href="#episode-overview" id="toc-episode-overview" class="nav-link" data-scroll-target="#episode-overview">Episode Overview</a></li>
-  <li><a href="#main-theme" id="toc-main-theme" class="nav-link" data-scroll-target="#main-theme">Main Theme</a></li>
-  <li><a href="#key-takeaways-insights" id="toc-key-takeaways-insights" class="nav-link" data-scroll-target="#key-takeaways-insights">Key Takeaways &amp; Insights</a>
-  <ul class="collapse">
-  <li><a href="#integration-strategy" id="toc-integration-strategy" class="nav-link" data-scroll-target="#integration-strategy">Integration Strategy</a></li>
-  <li><a href="#training-evaluation" id="toc-training-evaluation" class="nav-link" data-scroll-target="#training-evaluation">Training &amp; Evaluation</a></li>
-  <li><a href="#data-quality-governance" id="toc-data-quality-governance" class="nav-link" data-scroll-target="#data-quality-governance">Data Quality &amp; Governance</a></li>
-  <li><a href="#practical-use-cases" id="toc-practical-use-cases" class="nav-link" data-scroll-target="#practical-use-cases">Practical Use Cases</a></li>
+  <li><a href="#google-trends-website-export" id="toc-google-trends-website-export" class="nav-link" data-scroll-target="#google-trends-website-export">1) Google Trends website export</a></li>
+  <li><a href="#r-gtrendsr-plot" id="toc-r-gtrendsr-plot" class="nav-link" data-scroll-target="#r-gtrendsr-plot">2) R (<code>gtrendsR</code>) plot</a></li>
   </ul></li>
-  <li><a href="#personal-reflection" id="toc-personal-reflection" class="nav-link" data-scroll-target="#personal-reflection">Personal Reflection</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  </ul></li>
+  <li><a href="#b-data-code-downloads" id="toc-b-data-code-downloads" class="nav-link" data-scroll-target="#b-data-code-downloads">b) Data &amp; Code Downloads</a></li>
+  <li><a href="#c-dates-intervals-quick-notes" id="toc-c-dates-intervals-quick-notes" class="nav-link" data-scroll-target="#c-dates-intervals-quick-notes">c) Dates &amp; Intervals (quick notes)</a></li>
+  <li><a href="#d-differences-between-the-two-methods" id="toc-d-differences-between-the-two-methods" class="nav-link" data-scroll-target="#d-differences-between-the-two-methods">d) Differences between the two methods</a></li>
   </ul>
 </nav>
     </div>
@@ -187,53 +181,58 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="part-4-write-a-one-page-note-on-designing-your-website" class="level1">
-<h1>Part 4 — Write a one page note on designing your website</h1>
-<p>I created my website using Quarto and GitHub Pages to share my assignments, CV, and projects. The layout is simple and professional, with a top navigation bar for easy access to pages like Home, CV, and course assignments. A right-side “On this page” panel helps visitors jump to sections quickly.</p>
-<p>The site uses the Cosmo theme for clean styling and responsive design. Content is written in Markdown within .qmd files, making it easy to update and maintain. Images and files are stored in organized folders and linked using relative paths. I render the site locally and push updates to GitHub, where it’s automatically deployed.</p>
-<p>My goal was to build a clear, functional, and easy-to-navigate portfolio that highlights my work while remaining simple to maintain and expand in the future.</p>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>Search interest for <strong>Trump</strong>, <strong>Kamala Harris</strong>, and <strong>Election</strong> using the Google Trends <strong>website</strong> and using <strong>R (<code>gtrendsR</code>)</strong>.</p>
 <hr>
 </section>
-<section id="podcast-review-episode-319-building-managing-human-agent-hybrid-teams" class="level1">
-<h1>Podcast Review: Episode 319 – Building &amp; Managing Human + Agent Hybrid Teams</h1>
-<section id="episode-overview" class="level2">
-<h2 class="anchored" data-anchor-id="episode-overview">Episode Overview</h2>
-<p>In this episode of Data Framed, hosts Adel Nehme and Richie Cotton welcome Karen Ng, Head of Product at HubSpot, to discuss the evolving landscape of team dynamics where humans and AI agents collaborate side by side. The conversation centers on practical strategies for integrating AI agents into workflows and optimizing team performance within this hybrid environment.</p>
+<section id="a-charts" class="level1">
+<h1>a) Charts</h1>
+<section id="google-trends-website-export" class="level2">
+<h2 class="anchored" data-anchor-id="google-trends-website-export">1) Google Trends website export</h2>
+<p><img src="./GT .png" class="img-fluid" alt="Google Trends website chart" width="900"></p>
 </section>
-<section id="main-theme" class="level2">
-<h2 class="anchored" data-anchor-id="main-theme">Main Theme</h2>
-<p>The central theme of the episode is the rise of human-plus-agent hybrid teams work environments in which AI systems share responsibilities with human workers. Karen Ng breaks down how organizations can effectively blend AI capabilities with human oversight, ensuring both productivity and ethical integrity.</p>
-</section>
-<section id="key-takeaways-insights" class="level2">
-<h2 class="anchored" data-anchor-id="key-takeaways-insights">Key Takeaways &amp; Insights</h2>
-<section id="integration-strategy" class="level3">
-<h3 class="anchored" data-anchor-id="integration-strategy">Integration Strategy</h3>
-<p>Hybrid teams succeed when roles are clearly defined, and AI systems are introduced where they augment not replace human judgment.</p>
-</section>
-<section id="training-evaluation" class="level3">
-<h3 class="anchored" data-anchor-id="training-evaluation">Training &amp; Evaluation</h3>
-<p>Establishing best practices for training AI agents includes designing them for continuous learning and setting evaluation criteria aligned with team goals.</p>
-</section>
-<section id="data-quality-governance" class="level3">
-<h3 class="anchored" data-anchor-id="data-quality-governance">Data Quality &amp; Governance</h3>
-<p>A robust governance framework is crucial. AI agents must operate on accurate, reliable data while maintaining transparency and ethical standards.</p>
-</section>
-<section id="practical-use-cases" class="level3">
-<h3 class="anchored" data-anchor-id="practical-use-cases">Practical Use Cases</h3>
-<p>Industries like customer support, sales, and data processing have seen measurable benefits by integrating AI agents to handle recurring tasks freeing humans to focus on complex, strategic work.</p>
+<section id="r-gtrendsr-plot" class="level2">
+<h2 class="anchored" data-anchor-id="r-gtrendsr-plot">2) R (<code>gtrendsR</code>) plot</h2>
+<p><img src="./TrumpHarrisElection.png" class="img-fluid" alt="gtrendsR plot" width="900"></p>
+<hr>
 </section>
 </section>
-<section id="personal-reflection" class="level2">
-<h2 class="anchored" data-anchor-id="personal-reflection">Personal Reflection</h2>
-<p>This episode offers a forward-looking lens into how AI is reshaping team workflows. Karen Ng’s insights are grounded in real-world applications; her role at HubSpot lends credibility and depth to the discussion. I appreciated the balanced approach highlighting AI’s strengths while acknowledging the importance of human judgment, governance, and alignment with ethical standards.</p>
-<p>I find the emphasis on governance particularly impactful. Too often, the conversation around AI overlooks the importance of data integrity and trust. This episode prompts listeners to think critically about implementing AI in a way that enhances not erodes team coherence and accountability.</p>
+<section id="b-data-code-downloads" class="level1">
+<h1>b) Data &amp; Code Downloads</h1>
+<ul>
+<li>Website CSV: <a href="./GoogleTrends.csv" download="">GoogleTrends.csv</a><br>
+</li>
+<li>R object (dataframe): <a href="./the_df.rds" download="">the_df.rds</a><br>
+</li>
+<li>R script I used: <a href="./gtrendsR01.R" download="">gtrendsR01.R</a></li>
+</ul>
+<hr>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Episode 319 of Data Framed delivers a timely and practical exploration of hybrid human-AI teamwork. It’s especially valuable for product managers, data team leaders, and anyone working at the intersection of AI and organizational design. Whether you’re exploring AI adoption or refining existing deployments, this episode offers a thoughtful roadmap for doing so responsibly and effectively.</p>
+<section id="c-dates-intervals-quick-notes" class="level1">
+<h1>c) Dates &amp; Intervals (quick notes)</h1>
+<ul>
+<li>Website export returns <strong>weekly or daily</strong> depending on the range chosen in the UI.<br>
+</li>
+<li><code>gtrendsR</code> returns <code>interest_over_time</code> at the <strong>best available granularity</strong> for the chosen <code>time</code> (often daily for short windows, weekly for long).</li>
+</ul>
+<hr>
+</section>
+<section id="d-differences-between-the-two-methods" class="level1">
+<h1>d) Differences between the two methods</h1>
+<ul>
+<li><strong>Workflow:</strong> Website = quick manual; R = scripted &amp; repeatable.<br>
+</li>
+<li><strong>Control:</strong> Website has limited knobs; R lets you set keywords/time/geo and do any post-processing.<br>
+</li>
+<li><strong>Output:</strong> Website gives CSV/PNG; R gives tidy data you can save as CSV/RDS and plot.<br>
+</li>
+<li><strong>Reproducibility:</strong> R wins (same code → same result).<br>
+</li>
+<li><strong>Scaling:</strong> Website is great one-off; R is better for assignments and future reuse.</li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
