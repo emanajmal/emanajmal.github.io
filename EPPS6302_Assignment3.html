@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>epps6302_assignment2 – Eman Ajmal</title>
+<title>Assignment 3: Mapping Census Data – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -163,78 +163,36 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignment-2" id="toc-assignment-2" class="nav-link active" data-scroll-target="#assignment-2">Assignment 2</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#a-charts" id="toc-a-charts" class="nav-link" data-scroll-target="#a-charts">a) Charts</a>
-  <ul class="collapse">
-  <li><a href="#google-trends-website-export" id="toc-google-trends-website-export" class="nav-link" data-scroll-target="#google-trends-website-export">1) Google Trends website export</a></li>
-  <li><a href="#r-gtrendsr-plot" id="toc-r-gtrendsr-plot" class="nav-link" data-scroll-target="#r-gtrendsr-plot">2) R (<code>gtrendsR</code>) plot</a></li>
-  </ul></li>
-  <li><a href="#b-data-code-downloads" id="toc-b-data-code-downloads" class="nav-link" data-scroll-target="#b-data-code-downloads">b) Data &amp; Code Downloads</a></li>
-  <li><a href="#c-dates-intervals-quick-notes" id="toc-c-dates-intervals-quick-notes" class="nav-link" data-scroll-target="#c-dates-intervals-quick-notes">c) Dates &amp; Intervals (quick notes)</a></li>
-  <li><a href="#d-differences-between-the-two-methods" id="toc-d-differences-between-the-two-methods" class="nav-link" data-scroll-target="#d-differences-between-the-two-methods">d) Differences between the two methods</a></li>
+  <li><a href="#map" id="toc-map" class="nav-link active" data-scroll-target="#map">Map</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assignment 3: Mapping Census Data</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="assignment-2" class="level1">
-<h1>Assignment 2</h1>
-</section>
-<section id="overview" class="level1">
-<h1>Overview</h1>
-<p>Search interest for <strong>Trump</strong>, <strong>Kamala Harris</strong>, and <strong>Election</strong> using the Google Trends <strong>website</strong> and using <strong>R (<code>gtrendsR</code>)</strong>.</p>
-<hr>
-</section>
-<section id="a-charts" class="level1">
-<h1>a) Charts</h1>
-<section id="google-trends-website-export" class="level2">
-<h2 class="anchored" data-anchor-id="google-trends-website-export">1) Google Trends website export</h2>
-<p><img src="./GT .png" class="img-fluid" alt="Google Trends website chart" width="900"></p>
-</section>
-<section id="r-gtrendsr-plot" class="level2">
-<h2 class="anchored" data-anchor-id="r-gtrendsr-plot">2) R (<code>gtrendsR</code>) plot</h2>
-<p><img src="./TrumpHarrisElection.png" class="img-fluid" alt="gtrendsR plot" width="900"></p>
-<hr>
-</section>
-</section>
-<section id="b-data-code-downloads" class="level1">
-<h1>b) Data &amp; Code Downloads</h1>
-<ul>
-<li>Website CSV: <a href="./GoogleTrends.csv" download="">GoogleTrends.csv</a><br>
-</li>
-<li>R object (dataframe): <a href="./the_df.zip" download="">the_df.zip</a><br>
-</li>
-<li>R script I used: <a href="./gtrendsR01.R" download="">gtrendsR01.R</a></li>
-</ul>
-<hr>
-</section>
-<section id="c-dates-intervals-quick-notes" class="level1">
-<h1>c) Dates &amp; Intervals (quick notes)</h1>
-<ul>
-<li>Website export returns <strong>weekly or daily</strong> depending on the range chosen in the UI.<br>
-</li>
-<li><code>gtrendsR</code> returns <code>interest_over_time</code> at the <strong>best available granularity</strong> for the chosen <code>time</code> (often daily for short windows, weekly for long).</li>
-</ul>
-<hr>
-</section>
-<section id="d-differences-between-the-two-methods" class="level1">
-<h1>d) Differences between the two methods</h1>
-<ul>
-<li><strong>Workflow:</strong> Website = quick manual; R = scripted &amp; repeatable.<br>
-</li>
-<li><strong>Control:</strong> Website has limited knobs; R lets you set keywords/time/geo and do any post-processing.<br>
-</li>
-<li><strong>Output:</strong> Website gives CSV/PNG; R gives tidy data you can save as CSV/RDS and plot.<br>
-</li>
-<li><strong>Reproducibility:</strong> R wins (same code → same result).<br>
-</li>
-<li><strong>Scaling:</strong> Website is great one-off; R is better for assignments and future reuse.</li>
-</ul>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="map" class="level2">
+<h2 class="anchored" data-anchor-id="map">Map</h2>
+<p><img src="./income_map_tx.png" class="img-fluid"></p>
+<p><em>Source: U.S. Census Bureau, ACS 2023 5-year via tidycensus.</em></p>
 
 
 </section>
