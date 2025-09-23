@@ -306,5 +306,33 @@
     "title": "Assignment 3: Mapping Census Data",
     "section": "",
     "text": "Source: U.S. Census Bureau, ACS 2023 5-year via tidycensus."
+  },
+  {
+    "objectID": "EPPS6356_Assignment1.html",
+    "href": "EPPS6356_Assignment1.html",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "The classic Anscombe’s quartet consists of four (x, y) datasets that share the same means, variances, correlations, and regression coefficients — yet their scatterplots are visually very different. Below is my reproduction of the four datasets with their common least-squares line.\n\n\n\n\nAnscombe’s quartet demonstrates that datasets with identical statistical summaries can tell very different stories when visualized. While all four share the same means, variances, correlations, and regression lines, their scatterplots reveal distinct problems: a roughly linear set, a curved relationship, a single extreme outlier, and a high-leverage point that determines the slope. Without visualization, these issues remain hidden and lead to incorrect conclusions. To address this, start with graphs (scatterplots plus a smooth), then check residuals, leverage, and Cook’s distance to test assumptions. When assumptions are violated, use robust regression, apply transformations, add nonlinear terms (e.g., a quadratic), or collect additional data to improve coverage across (x). This workflow ensures models reflect the true pattern rather than just matching aggregates."
+  },
+  {
+    "objectID": "EPPS6356_Assignment1.html#anscombe-1973-analysis-solutions",
+    "href": "EPPS6356_Assignment1.html#anscombe-1973-analysis-solutions",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "The classic Anscombe’s quartet consists of four (x, y) datasets that share the same means, variances, correlations, and regression coefficients — yet their scatterplots are visually very different. Below is my reproduction of the four datasets with their common least-squares line.\n\n\n\n\nAnscombe’s quartet demonstrates that datasets with identical statistical summaries can tell very different stories when visualized. While all four share the same means, variances, correlations, and regression lines, their scatterplots reveal distinct problems: a roughly linear set, a curved relationship, a single extreme outlier, and a high-leverage point that determines the slope. Without visualization, these issues remain hidden and lead to incorrect conclusions. To address this, start with graphs (scatterplots plus a smooth), then check residuals, leverage, and Cook’s distance to test assumptions. When assumptions are violated, use robust regression, apply transformations, add nonlinear terms (e.g., a quadratic), or collect additional data to improve coverage across (x). This workflow ensures models reflect the true pattern rather than just matching aggregates."
+  },
+  {
+    "objectID": "EPPS6356_Assignment1.html#seasonal-plot-custom-winter-palette",
+    "href": "EPPS6356_Assignment1.html#seasonal-plot-custom-winter-palette",
+    "title": "Assignment 1",
+    "section": "2) Seasonal Plot — Custom “Winter” Palette",
+    "text": "2) Seasonal Plot — Custom “Winter” Palette\nI re-themed the plot by replacing the original fall color with a cool-tone winter palette."
+  },
+  {
+    "objectID": "EPPS6356_Assignment1.html#critique-of-a-published-chart",
+    "href": "EPPS6356_Assignment1.html#critique-of-a-published-chart",
+    "title": "Assignment 1",
+    "section": "3) Critique of a Published Chart",
+    "text": "3) Critique of a Published Chart\nSource: The New York Times — “COVID-19 in the U.S.: Latest Map and Case Counts”\nhttps://www.nytimes.com/interactive/2021/us/covid-cases.html\nClaim & audience. The interactive aims to show how COVID-19 cases evolve across U.S. geographies over time, serving a general audience tracking regional surges and declines.\nWhat works. - The map + time-series pairing supports both geographic and temporal exploration. - Clean styling minimizes clutter; hover interactions surface detail on demand.\nIssues.\n\nColor encoding/contrast. Mid-range shades can be hard to distinguish on some displays, reducing perceptual separation between moderate and high values.\n\nAxis/baseline clarity. In some views the y-axis does not start at zero; if truncation isn’t explicitly noted, fluctuations can appear exaggerated.\n\nContext/annotation. Major events (e.g., vaccine rollout, variant waves) are not annotated on timelines, forcing readers to infer causes of spikes.\n\nLegend proximity & cognitive load. Legends/scales can sit far from the immediate focus, increasing eye travel during comparison.\n\nAccessibility. Palette choices may challenge color-vision deficiencies; thin strokes lower legibility on mobile.\n\nStatic use case. Exporting a static image removes tooltips/hover states, so meaning can be lost without added labels.\n\nImprovements.\n\nAdopt a colorblind-safe, high-contrast sequential palette (e.g., viridis) to better separate mid/high values.\n\nStart y-axes at zero where feasible, or clearly mark breaks when truncation is necessary.\n\nAdd lightweight annotations at key dates (eligibility expansions, variant peaks) to anchor interpretation.\n\nMove legend/scale closer to the plot area or directly label lines/peaks to reduce eye travel.\n\nUse slightly thicker strokes and on-chart labels to retain meaning in static exports."
   }
 ]

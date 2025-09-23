@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 3: Mapping Census Data – Eman Ajmal</title>
+<title>Assignment 1 – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -174,7 +174,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#map" id="toc-map" class="nav-link active" data-scroll-target="#map">Map</a></li>
+  <li><a href="#anscombe-1973-analysis-solutions" id="toc-anscombe-1973-analysis-solutions" class="nav-link active" data-scroll-target="#anscombe-1973-analysis-solutions">1) Anscombe (1973): Analysis + Solutions</a>
+  <ul class="collapse">
+  <li><a href="#a-reproduction-plots" id="toc-a-reproduction-plots" class="nav-link" data-scroll-target="#a-reproduction-plots">a) Reproduction (plots)</a></li>
+  <li><a href="#b-one-paragraph-analysis-solutions" id="toc-b-one-paragraph-analysis-solutions" class="nav-link" data-scroll-target="#b-one-paragraph-analysis-solutions">b) One-paragraph analysis + solutions</a></li>
+  </ul></li>
+  <li><a href="#seasonal-plot-custom-winter-palette" id="toc-seasonal-plot-custom-winter-palette" class="nav-link" data-scroll-target="#seasonal-plot-custom-winter-palette">2) Seasonal Plot — Custom “Winter” Palette</a></li>
+  <li><a href="#critique-of-a-published-chart" id="toc-critique-of-a-published-chart" class="nav-link" data-scroll-target="#critique-of-a-published-chart">3) Critique of a Published Chart</a></li>
   </ul>
 </nav>
     </div>
@@ -183,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 3: Mapping Census Data</h1>
+<h1 class="title">Assignment 1</h1>
 </div>
 
 
@@ -200,10 +206,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="map" class="level2">
-<h2 class="anchored" data-anchor-id="map">Map</h2>
-<p><img src="./income_map_tx.png" class="img-fluid"></p>
-<p><em>Source: U.S. Census Bureau, ACS 2023 5-year via tidycensus.</em></p>
+<section id="anscombe-1973-analysis-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="anscombe-1973-analysis-solutions">1) Anscombe (1973): Analysis + Solutions</h2>
+<section id="a-reproduction-plots" class="level3">
+<h3 class="anchored" data-anchor-id="a-reproduction-plots">a) Reproduction (plots)</h3>
+<p>The classic <strong>Anscombe’s quartet</strong> consists of four (x, y) datasets that share the <strong>same</strong> means, variances, correlations, and regression coefficients — yet their scatterplots are <strong>visually very different</strong>. Below is my reproduction of the four datasets with their common least-squares line.</p>
+<p><img src="./anscombe.png" class="img-fluid" alt="Four scatterplots of Anscombe's quartet with identical linear fits but different shapes" width="400"></p>
+</section>
+<section id="b-one-paragraph-analysis-solutions" class="level3">
+<h3 class="anchored" data-anchor-id="b-one-paragraph-analysis-solutions">b) One-paragraph analysis + solutions</h3>
+<p>Anscombe’s quartet demonstrates that datasets with identical statistical summaries can tell very different stories when visualized. While all four share the same means, variances, correlations, and regression lines, their scatterplots reveal distinct problems: a roughly linear set, a curved relationship, a single extreme outlier, and a high-leverage point that determines the slope. Without visualization, these issues remain hidden and lead to incorrect conclusions. To address this, start with graphs (scatterplots plus a smooth), then check residuals, leverage, and Cook’s distance to test assumptions. When assumptions are violated, use robust regression, apply transformations, add nonlinear terms (e.g., a quadratic), or collect additional data to improve coverage across (x). This workflow ensures models reflect the true pattern rather than just matching aggregates.</p>
+<hr>
+</section>
+</section>
+<section id="seasonal-plot-custom-winter-palette" class="level2">
+<h2 class="anchored" data-anchor-id="seasonal-plot-custom-winter-palette">2) Seasonal Plot — Custom “Winter” Palette</h2>
+<p>I re-themed the plot by replacing the original fall color with a cool-tone <strong>winter</strong> palette.</p>
+<p><img src="winter_plot.png" class="img-fluid" alt="Fractal branch drawn with a winter blue palette" width="400"></p>
+<hr>
+</section>
+<section id="critique-of-a-published-chart" class="level2">
+<h2 class="anchored" data-anchor-id="critique-of-a-published-chart">3) Critique of a Published Chart</h2>
+<p><strong>Source:</strong> <em>The New York Times — “COVID-19 in the U.S.: Latest Map and Case Counts”</em><br>
+<a href="https://www.nytimes.com/interactive/2021/us/covid-cases.html" class="uri">https://www.nytimes.com/interactive/2021/us/covid-cases.html</a></p>
+<p><strong>Claim &amp; audience.</strong> The interactive aims to show how COVID-19 cases evolve across U.S. geographies over time, serving a general audience tracking regional surges and declines.</p>
+<p><strong>What works.</strong> - The <strong>map + time-series</strong> pairing supports both geographic and temporal exploration. - Clean styling minimizes clutter; hover interactions surface detail on demand.</p>
+<p><strong>Issues.</strong></p>
+<ol type="1">
+<li><strong>Color encoding/contrast.</strong> Mid-range shades can be hard to distinguish on some displays, reducing perceptual separation between moderate and high values.<br>
+</li>
+<li><strong>Axis/baseline clarity.</strong> In some views the y-axis does not start at zero; if truncation isn’t explicitly noted, fluctuations can appear exaggerated.<br>
+</li>
+<li><strong>Context/annotation.</strong> Major events (e.g., vaccine rollout, variant waves) are not annotated on timelines, forcing readers to infer causes of spikes.<br>
+</li>
+<li><strong>Legend proximity &amp; cognitive load.</strong> Legends/scales can sit far from the immediate focus, increasing eye travel during comparison.<br>
+</li>
+<li><strong>Accessibility.</strong> Palette choices may challenge color-vision deficiencies; thin strokes lower legibility on mobile.<br>
+</li>
+<li><strong>Static use case.</strong> Exporting a static image removes tooltips/hover states, so meaning can be lost without added labels.</li>
+</ol>
+<p><strong>Improvements.</strong></p>
+<ul>
+<li>Adopt a <strong>colorblind-safe, high-contrast sequential palette</strong> (e.g., <code>viridis</code>) to better separate mid/high values.<br>
+</li>
+<li>Start y-axes at zero where feasible, or <strong>clearly mark breaks</strong> when truncation is necessary.<br>
+</li>
+<li>Add lightweight <strong>annotations</strong> at key dates (eligibility expansions, variant peaks) to anchor interpretation.<br>
+</li>
+<li>Move legend/scale <strong>closer to the plot area</strong> or directly label lines/peaks to reduce eye travel.<br>
+</li>
+<li>Use slightly <strong>thicker strokes</strong> and on-chart labels to retain meaning in static exports.</li>
+</ul>
 
 
 </section>
