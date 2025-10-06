@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>epps6302_assignment1 – Eman Ajmal</title>
+<title>Assignment 3 — Base R and ggplot2 – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -182,81 +182,114 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignment-1" id="toc-assignment-1" class="nav-link active" data-scroll-target="#assignment-1">Assignment 1</a></li>
-  <li><a href="#part-4-write-a-one-page-note-on-designing-your-website" id="toc-part-4-write-a-one-page-note-on-designing-your-website" class="nav-link" data-scroll-target="#part-4-write-a-one-page-note-on-designing-your-website">Part 4 — Write a one page note on designing your website</a></li>
-  <li><a href="#podcast-review-episode-319-building-managing-human-agent-hybrid-teams" id="toc-podcast-review-episode-319-building-managing-human-agent-hybrid-teams" class="nav-link" data-scroll-target="#podcast-review-episode-319-building-managing-human-agent-hybrid-teams">Podcast Review: Episode 319 – Building &amp; Managing Human + Agent Hybrid Teams</a>
+  <li><a href="#rerun-murrell01.r" id="toc-rerun-murrell01.r" class="nav-link active" data-scroll-target="#rerun-murrell01.r">1. Rerun murrell01.R</a>
   <ul class="collapse">
-  <li><a href="#episode-overview" id="toc-episode-overview" class="nav-link" data-scroll-target="#episode-overview">Episode Overview</a></li>
-  <li><a href="#main-theme" id="toc-main-theme" class="nav-link" data-scroll-target="#main-theme">Main Theme</a></li>
-  <li><a href="#key-takeaways-insights" id="toc-key-takeaways-insights" class="nav-link" data-scroll-target="#key-takeaways-insights">Key Takeaways &amp; Insights</a>
+  <li><a href="#a-explain-one-chart-boxplot-toothgrowth" id="toc-a-explain-one-chart-boxplot-toothgrowth" class="nav-link" data-scroll-target="#a-explain-one-chart-boxplot-toothgrowth">1(a) Explain one chart — Boxplot (ToothGrowth)</a></li>
+  </ul></li>
+  <li><a href="#rerun-anscombe01.r" id="toc-rerun-anscombe01.r" class="nav-link" data-scroll-target="#rerun-anscombe01.r">2. Rerun anscombe01.R</a>
   <ul class="collapse">
-  <li><a href="#integration-strategy" id="toc-integration-strategy" class="nav-link" data-scroll-target="#integration-strategy">Integration Strategy</a></li>
-  <li><a href="#training-evaluation" id="toc-training-evaluation" class="nav-link" data-scroll-target="#training-evaluation">Training &amp; Evaluation</a></li>
-  <li><a href="#data-quality-governance" id="toc-data-quality-governance" class="nav-link" data-scroll-target="#data-quality-governance">Data Quality &amp; Governance</a></li>
-  <li><a href="#practical-use-cases" id="toc-practical-use-cases" class="nav-link" data-scroll-target="#practical-use-cases">Practical Use Cases</a></li>
+  <li><a href="#a-compare-the-regression-models" id="toc-a-compare-the-regression-models" class="nav-link" data-scroll-target="#a-compare-the-regression-models">2(a) Compare the regression models</a></li>
+  <li><a href="#b-compare-different-plotting-styles" id="toc-b-compare-different-plotting-styles" class="nav-link" data-scroll-target="#b-compare-different-plotting-styles">2(b) Compare different plotting styles</a></li>
   </ul></li>
-  <li><a href="#personal-reflection" id="toc-personal-reflection" class="nav-link" data-scroll-target="#personal-reflection">Personal Reflection</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  </ul></li>
+  <li><a href="#finetune-the-charts-base-r-only" id="toc-finetune-the-charts-base-r-only" class="nav-link" data-scroll-target="#finetune-the-charts-base-r-only">3. Finetune the charts (Base R only)</a></li>
+  <li><a href="#ggplot2-tidyverse" id="toc-ggplot2-tidyverse" class="nav-link" data-scroll-target="#ggplot2-tidyverse">4. ggplot2 (tidyverse)</a></li>
+  <li><a href="#comparison-of-all-four-anscombe-datasets-in-one-figure" id="toc-comparison-of-all-four-anscombe-datasets-in-one-figure" class="nav-link" data-scroll-target="#comparison-of-all-four-anscombe-datasets-in-one-figure">Comparison of All Four Anscombe Datasets (in One Figure)</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assignment 3 — Base R and ggplot2</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="assignment-1" class="level1">
-<h1>Assignment 1</h1>
-</section>
-<section id="part-4-write-a-one-page-note-on-designing-your-website" class="level1">
-<h1>Part 4 — Write a one page note on designing your website</h1>
-<p>I created my website using Quarto and GitHub Pages to share my assignments, CV, and projects. The layout is simple and professional, with a top navigation bar for easy access to pages like Home, CV, and course assignments. A right-side “On this page” panel helps visitors jump to sections quickly.</p>
-<p>The site uses the Cosmo theme for clean styling and responsive design. Content is written in Markdown within .qmd files, making it easy to update and maintain. Images and files are stored in organized folders and linked using relative paths. I render the site locally and push updates to GitHub, where it’s automatically deployed.</p>
-<p>My goal was to build a clear, functional, and easy-to-navigate portfolio that highlights my work while remaining simple to maintain and expand in the future.</p>
-<hr>
-</section>
-<section id="podcast-review-episode-319-building-managing-human-agent-hybrid-teams" class="level1">
-<h1>Podcast Review: Episode 319 – Building &amp; Managing Human + Agent Hybrid Teams</h1>
-<section id="episode-overview" class="level2">
-<h2 class="anchored" data-anchor-id="episode-overview">Episode Overview</h2>
-<p>In this episode of Data Framed, hosts Adel Nehme and Richie Cotton welcome Karen Ng, Head of Product at HubSpot, to discuss the evolving landscape of team dynamics where humans and AI agents collaborate side by side. The conversation centers on practical strategies for integrating AI agents into workflows and optimizing team performance within this hybrid environment.</p>
-</section>
-<section id="main-theme" class="level2">
-<h2 class="anchored" data-anchor-id="main-theme">Main Theme</h2>
-<p>The central theme of the episode is the rise of human-plus-agent hybrid teams work environments in which AI systems share responsibilities with human workers. Karen Ng breaks down how organizations can effectively blend AI capabilities with human oversight, ensuring both productivity and ethical integrity.</p>
-</section>
-<section id="key-takeaways-insights" class="level2">
-<h2 class="anchored" data-anchor-id="key-takeaways-insights">Key Takeaways &amp; Insights</h2>
-<section id="integration-strategy" class="level3">
-<h3 class="anchored" data-anchor-id="integration-strategy">Integration Strategy</h3>
-<p>Hybrid teams succeed when roles are clearly defined, and AI systems are introduced where they augment not replace human judgment.</p>
-</section>
-<section id="training-evaluation" class="level3">
-<h3 class="anchored" data-anchor-id="training-evaluation">Training &amp; Evaluation</h3>
-<p>Establishing best practices for training AI agents includes designing them for continuous learning and setting evaluation criteria aligned with team goals.</p>
-</section>
-<section id="data-quality-governance" class="level3">
-<h3 class="anchored" data-anchor-id="data-quality-governance">Data Quality &amp; Governance</h3>
-<p>A robust governance framework is crucial. AI agents must operate on accurate, reliable data while maintaining transparency and ethical standards.</p>
-</section>
-<section id="practical-use-cases" class="level3">
-<h3 class="anchored" data-anchor-id="practical-use-cases">Practical Use Cases</h3>
-<p>Industries like customer support, sales, and data processing have seen measurable benefits by integrating AI agents to handle recurring tasks freeing humans to focus on complex, strategic work.</p>
-</section>
-</section>
-<section id="personal-reflection" class="level2">
-<h2 class="anchored" data-anchor-id="personal-reflection">Personal Reflection</h2>
-<p>This episode offers a forward-looking lens into how AI is reshaping team workflows. Karen Ng’s insights are grounded in real-world applications; her role at HubSpot lends credibility and depth to the discussion. I appreciated the balanced approach highlighting AI’s strengths while acknowledging the importance of human judgment, governance, and alignment with ethical standards.</p>
-<p>I find the emphasis on governance particularly impactful. Too often, the conversation around AI overlooks the importance of data integrity and trust. This episode prompts listeners to think critically about implementing AI in a way that enhances not erodes team coherence and accountability.</p>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Episode 319 of Data Framed delivers a timely and practical exploration of hybrid human-AI teamwork. It’s especially valuable for product managers, data team leaders, and anyone working at the intersection of AI and organizational design. Whether you’re exploring AI adoption or refining existing deployments, this episode offers a thoughtful roadmap for doing so responsibly and effectively.</p>
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<section id="rerun-murrell01.r" class="level1">
+<h1>1. Rerun murrell01.R</h1>
+<p>The six classic base R plots were recreated and displayed together in a 3×2 layout.<br>
+The figure below includes:<br>
+- A manually constructed <strong>scatterplot</strong> (“Bird 131”) with customized axes and dual labels.<br>
+- A <strong>histogram</strong> showing normally distributed data with a superimposed normal curve.<br>
+- A <strong>stacked bar chart</strong> for the <em>VADeaths</em> dataset with values labeled within each segment.<br>
+- <strong>Boxplots</strong> comparing ToothGrowth length by supplement type (OJ vs VC) and dose.<br>
+- A <strong>3D perspective surface</strong> generated using the <code>persp()</code> function.<br>
+- A <strong>pie chart</strong> illustrating category shares using a gray tone color ramp.</p>
+<p><img src="./Murrell01.png" class="img-fluid" data-fig-cap="Six base R plots — recreation of murrell01.R example." width="400"></p>
+<section id="a-explain-one-chart-boxplot-toothgrowth" class="level2">
+<h2 class="anchored" data-anchor-id="a-explain-one-chart-boxplot-toothgrowth">1(a) Explain one chart — Boxplot (ToothGrowth)</h2>
+<p>I chose the <strong>ToothGrowth boxplot</strong>. It compares tooth length across <strong>Vitamin C doses</strong> (0.5, 1, 2 mg) and <strong>supplement type</strong> (<strong>OJ</strong> vs <strong>VC</strong>).<br>
+Each box shows the <strong>median</strong> (center line) and <strong>IQR</strong> (box height), with <strong>whiskers</strong> extending to data within 1.5×IQR; any points beyond would be outliers.<br>
+From the figure, <strong>tooth length increases with dose</strong>, and at <strong>lower doses (0.5, 1 mg)</strong>, <strong>OJ</strong> often shows <strong>higher medians</strong> than <strong>VC</strong>; by <strong>2 mg</strong>, the two supplements are <strong>similar</strong>, indicating a diminishing difference at the highest dose.</p>
+<p><img src="./1a BoxPlot.png" class="img-fluid" data-fig-cap="Histogram with density scale, normal curve, and mean marker." width="400"></p>
 </section>
+</section>
+<section id="rerun-anscombe01.r" class="level1">
+<h1>2. Rerun anscombe01.R</h1>
+<section id="a-compare-the-regression-models" class="level2">
+<h2 class="anchored" data-anchor-id="a-compare-the-regression-models">2(a) Compare the regression models</h2>
+<p>All four datasets in <strong>Anscombe’s Quartet</strong> produce nearly identical regression statistics — similar slopes, intercepts, and (R^2) values (approximately 0.67).<br>
+However, their <strong>visual patterns are completely different</strong>.<br>
+Set 1 represents a true linear relationship, Set 2 has a curved (nonlinear) trend, Set 3 contains a strong outlier that influences the regression, and Set 4 includes one high-leverage point that distorts the fitted line.<br>
+This demonstrates that numerical summaries alone can be misleading and highlights the importance of data visualization.</p>
+</section>
+<section id="b-compare-different-plotting-styles" class="level2">
+<h2 class="anchored" data-anchor-id="b-compare-different-plotting-styles">2(b) Compare different plotting styles</h2>
+<p>The first figure shows the <strong>default base plots</strong> for the four Anscombe datasets, while the second uses <strong>customized colors, symbols, and line types</strong> for clearer differentiation and readability.</p>
+<p><img src="./2a.png" class="img-fluid" data-fig-cap="Anscombe: Default base plots (2×2 grid)." width="400"></p>
+<p><img src="./2b.png" class="img-fluid" data-fig-cap="Anscombe: Styled base plots using color and shape distinctions." width="400"></p>
+<p><strong>Comparison paragraph:</strong><br>
+The styled version communicates the differences between datasets much more effectively.<br>
+In Set 1, the linear trend is clear; in Set 2, curvature is visible; in Set 3, an outlier becomes obvious; and in Set 4, one leverage point dominates.<br>
+This comparison shows that <strong>thoughtful visual design</strong> — through colors, line types, and shapes — enhances interpretability and brings out patterns hidden in plain summaries.</p>
+</section>
+</section>
+<section id="finetune-the-charts-base-r-only" class="level1">
+<h1>3. Finetune the charts (Base R only)</h1>
+<p>This section demonstrates how base R graphics can be refined without additional packages.<br>
+All charts below were customized using:<br>
+- <strong>Serif fonts</strong> for a more professional look,<br>
+- <strong>Non-default colors</strong> to increase visual contrast, and<br>
+- A <strong>custom plotting symbol (pch = 17)</strong> for distinctive markers.</p>
+<p>The resulting grid contains a clean scatterplot, a histogram with density and mean reference, a boxplot with jittered points, and a soft-toned pie chart.</p>
+<p><img src="./3abc.png" class="img-fluid" data-fig-cap="Finetuned base R charts — serif font, custom colors, and refined layout." width="400"></p>
+</section>
+<section id="ggplot2-tidyverse" class="level1">
+<h1>4. ggplot2 (tidyverse)</h1>
+<p>The same four visualizations were recreated using <strong>ggplot2</strong>, ensuring consistent theming and improved readability.<br>
+This layout displays:<br>
+1. <strong>Anscombe’s Quartet</strong> with regression lines for each dataset.<br>
+2. A <strong>histogram</strong> of random normal data with density and mean line.<br>
+3. <strong>Boxplots</strong> for ToothGrowth by supplement and dose.<br>
+4. A <strong>donut-style pie chart</strong> visualizing flavor proportions.</p>
+<p><img src="./4.png" class="img-fluid" data-fig-cap="Four ggplot2 charts arranged together (2×2 grid)." width="400"></p>
+</section>
+<section id="comparison-of-all-four-anscombe-datasets-in-one-figure" class="level1">
+<h1>Comparison of All Four Anscombe Datasets (in One Figure)</h1>
+<p>This combined plot displays all four Anscombe datasets in a <strong>single faceted layout</strong> for direct comparison.<br>
+Each panel includes its own regression line, revealing that although all datasets share nearly identical regression summaries, their actual <strong>distributions and relationships differ drastically</strong>:<br>
+- Set 1: Linear trend.<br>
+- Set 2: Nonlinear curvature.<br>
+- Set 3: Outlier influencing slope.<br>
+- Set 4: High-leverage point altering the fit.</p>
+<p><img src="./anscombe.png" class="img-fluid" width="400"></p>
+<p>This clearly illustrates the famous message of Anscombe’s Quartet — <strong>data visualization is essential to understand the true nature of relationships beyond numbers</strong>.</p>
+
+
 </section>
 
 </main> <!-- /main -->
