@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 4 – Eman Ajmal</title>
+<title>Prepare for Class 4 – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -210,9 +210,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#one-page-review-the-future-of-data-analysis-edward-tufte-2016" id="toc-one-page-review-the-future-of-data-analysis-edward-tufte-2016" class="nav-link active" data-scroll-target="#one-page-review-the-future-of-data-analysis-edward-tufte-2016">One-Page Review: <em>The Future of Data Analysis</em> — Edward Tufte (2016)</a></li>
   </ul>
 </nav>
     </div>
@@ -221,7 +219,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 4</h1>
+<h1 class="title">Prepare for Class 4</h1>
+<p class="subtitle lead">Edward Tufte: The Future of Data Analysis (2016)</p>
 </div>
 
 
@@ -238,37 +237,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<p>Difference between a weak and a strong entity set:</p>
-<ul>
-<li>A strong entity set can be identified uniquely by its own attributes, such as an Employee with an Employee ID.</li>
-<li>A weak entity set on the other hand, cannot be identified by its own attributes alone and depends on a strong entity (also known as the owner entity) for identification. An example could be a Dependent entity that relies on the Employee entity for its identification (e.g., an employee’s dependent might be identified by the Employee ID and Dependent’s name).</li>
-</ul>
-</section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<p>Design an E-R diagram for keeping track of the scoring statistics of your favorite sports team. You should store the matches played, the scores in each match, the players in each match, and individual player scoring statistics for each match. Summary statistics should be modeled as derived attributes with an explanation as to how they are computed.</p>
-<ol type="i">
-<li><p>Draw the E-R diagram using draw.io.</p></li>
-<li><p>Expand to all teams in the league (Hint: add team entity)</p></li>
-</ol>
-<p><img src="Images/Q2Assignment4.png" class="img-fluid"></p>
-</section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<p>SQL exercise:</p>
-<ol start="2" type="i">
-<li>Write an SQL query using the university schema to find the ID of each student who has never taken a course at the university. Do this using no subqueries and no set operations (use an outer join).</li>
-</ol>
-<p><img src="Images/Q3bAssignment4.png" class="img-fluid"></p>
-<ol start="3" type="i">
-<li>Consider the following database, write a query to find the ID of each employee with no manager. Note that an employee may simply have no manager listed or may have a null manager(use natural left outer join).</li>
-</ol>
-<p>SELECT e.ID</p>
-<p>FROM employee e</p>
-<p>OUTER JOIN manages m ON e.ID = m.ID</p>
-<p>WHERE m.manager_id IS NULL;</p>
+<section id="one-page-review-the-future-of-data-analysis-edward-tufte-2016" class="level2">
+<h2 class="anchored" data-anchor-id="one-page-review-the-future-of-data-analysis-edward-tufte-2016">One-Page Review: <em>The Future of Data Analysis</em> — Edward Tufte (2016)</h2>
+<p>Edward Tufte’s lecture <em>The Future of Data Analysis</em> extends his lifelong campaign for clarity and integrity in how information is displayed. He opens with a simple but radical idea: <em>seeing well is thinking well</em>. In a world overflowing with dashboards, metrics, and automated analytics, Tufte argues that the next frontier of data analysis is not technological—it is philosophical. What matters most is cultivating the human capacity to notice patterns, relationships, and meaning hidden within complexity. Tools can calculate, but only the human mind can interpret.</p>
+<p>Throughout the talk, Tufte revisits his central design principles—truthfulness, precision, and beauty—and re-frames them for an era dominated by algorithms. He traces a line from Galileo’s telescopic sketches to today’s interactive data dashboards, reminding the audience that visualization has always been a <em>cognitive technology</em>: a way to extend perception and reasoning. When we visualize data, we are literally “making thought visible.” Yet he warns that as graphics become more automated, the analyst’s curiosity and skepticism can erode. “Never let the software think for you,” he says, stressing that each chart must emerge from a clear analytical question rather than a template.</p>
+<p>A major theme is <strong>integration</strong>—of quantitative accuracy with qualitative understanding. Tufte envisions the analyst of the future as both scientist and artist, someone who can write statistical code and also judge visual proportion, hierarchy, and rhythm. This combination of reasoning and design, he suggests, produces visualizations that <em>work</em>—they inform without distorting and persuade without manipulating. He calls for “high data density with low noise,” meaning that every pixel should carry meaning and every visual choice should serve evidence, not decoration.</p>
+<p>The talk also critiques the overuse of dashboards and “chartjunk.” When organizations rely on flashy but shallow summaries, they risk mistaking performance metrics for knowledge. Tufte argues that genuine understanding requires context: side-by-side comparisons, annotated evidence, and time-series continuity. His principle of <strong>small multiples</strong>—repeated, comparable views—remains one of the most powerful ways to show change without exaggeration. He contrasts this disciplined approach with sensational graphs that truncate axes or hide uncertainty, calling such distortions <em>ethical failures</em>, not mere design flaws.</p>
+<p>Another striking idea is the role of narrative in analysis. Tufte insists that visualization should not replace verbal explanation but enhance it. Numbers and stories must coexist: data show <em>what</em> happened, while narrative clarifies <em>why</em> it matters. The most effective visualizations invite the viewer to reason, not just react. They slow perception down enough for reflection—a quality increasingly rare in the fast-scroll world of media and business intelligence tools.</p>
+<p>By the end, Tufte situates the “future” of data analysis in a moral framework. The abundance of data amplifies both our power and our responsibility. Analysts and designers are now interpreters of reality; their choices can clarify truth or conceal it. He challenges his audience to treat every visualization as an ethical document—something that must earn trust through accuracy, transparency, and aesthetic restraint.</p>
+<p>Ultimately, Tufte’s message is timeless: technology may evolve, but the principles of clear thinking do not. The real progress in data analysis will come not from more dashboards, but from deeper attention. The analyst of the future is not a technician running models, but a human observer capable of transforming raw information into understanding.</p>
+<hr>
+<blockquote class="blockquote">
+<p>“The future of data analysis is not a machine. It’s a human being with better eyesight.” — <em>Edward Tufte</em></p>
+</blockquote>
 
 
 </section>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 4 – Eman Ajmal</title>
+<title>Prepare for Class 5 – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -210,9 +210,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#one-page-note-big-data-pitfalls-and-overfitting" id="toc-one-page-note-big-data-pitfalls-and-overfitting" class="nav-link active" data-scroll-target="#one-page-note-big-data-pitfalls-and-overfitting">One-Page Note: <em>Big Data Pitfalls and Overfitting</em></a></li>
+  <li><a href="#hadley-wickham-data-visualization-and-data-science-embl-summary-and-commentary" id="toc-hadley-wickham-data-visualization-and-data-science-embl-summary-and-commentary" class="nav-link" data-scroll-target="#hadley-wickham-data-visualization-and-data-science-embl-summary-and-commentary">Hadley Wickham: <em>Data Visualization and Data Science (EMBL)</em> — Summary and Commentary</a></li>
   </ul>
 </nav>
     </div>
@@ -221,7 +220,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 4</h1>
+<h1 class="title">Prepare for Class 5</h1>
+<p class="subtitle lead">Big Data Pitfalls, Overfitting, and Hadley Wickham’s Visualization Principles</p>
 </div>
 
 
@@ -238,37 +238,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<p>Difference between a weak and a strong entity set:</p>
-<ul>
-<li>A strong entity set can be identified uniquely by its own attributes, such as an Employee with an Employee ID.</li>
-<li>A weak entity set on the other hand, cannot be identified by its own attributes alone and depends on a strong entity (also known as the owner entity) for identification. An example could be a Dependent entity that relies on the Employee entity for its identification (e.g., an employee’s dependent might be identified by the Employee ID and Dependent’s name).</li>
-</ul>
+<section id="one-page-note-big-data-pitfalls-and-overfitting" class="level2">
+<h2 class="anchored" data-anchor-id="one-page-note-big-data-pitfalls-and-overfitting">One-Page Note: <em>Big Data Pitfalls and Overfitting</em></h2>
+<p>Big data has reshaped how we understand social behavior, public health, and markets—but with its scale comes illusion. <em>The Parable of Google Flu</em>, published in <em>Nature</em>, remains a cautionary tale. In 2008, Google’s algorithm predicted flu outbreaks by analyzing search queries, claiming to forecast epidemics faster than the CDC. For a brief period, the results looked revolutionary—until they stopped working. The algorithm overestimated flu cases by more than 140%, revealing that the apparent success of “big data” can mask deeper analytical flaws.</p>
+<p>The first pitfall is <strong>data without theory</strong>. Massive datasets tempt analysts to treat correlation as causation. Without grounding in domain knowledge, we misinterpret noise as signal. In the Google Flu case, rising media attention and public anxiety—rather than infection rates—drove search trends. This created a self-reinforcing feedback loop that the model mistook for real-world growth. Tufte’s warning about “seeing without thinking” echoes here: visualization and data alike require interpretation, not just computation.</p>
+<p>Another pitfall is <strong>algorithmic opacity</strong>. Big data often relies on proprietary, ever-changing systems. When inputs, models, or weighting methods are unknown, replication becomes impossible. This erodes scientific transparency and accountability—two pillars of credible data analysis. Furthermore, as datasets grow, <strong>bias does not disappear; it scales</strong>. If underlying data are incomplete, unrepresentative, or contextually skewed, bigger datasets simply reproduce error with greater confidence.</p>
+<p>Closely related is the danger of <strong>overfitting and overparameterization</strong>. In large models, especially machine learning systems, it’s easy to fit data so perfectly that the model memorizes patterns rather than generalizes them. This creates high accuracy in training but failure in prediction. Overfitting is a form of overconfidence disguised as precision—it reflects modeling power used without restraint. The solution, as both Hadley Wickham and Andrew Gelman emphasize, lies in simplicity, cross-validation, and clarity: build models that explain rather than impress.</p>
+<p>Ethically, the pitfalls of big data remind us that quantity does not equal quality. A million observations cannot compensate for poor measurement, biased sampling, or conceptual confusion. The role of the analyst is to filter wisely, visualize responsibly, and remain skeptical of “too-good-to-be-true” correlations. In the end, meaningful data analysis depends not on how much data we have, but on how thoughtfully we use it.</p>
+<hr>
 </section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<p>Design an E-R diagram for keeping track of the scoring statistics of your favorite sports team. You should store the matches played, the scores in each match, the players in each match, and individual player scoring statistics for each match. Summary statistics should be modeled as derived attributes with an explanation as to how they are computed.</p>
-<ol type="i">
-<li><p>Draw the E-R diagram using draw.io.</p></li>
-<li><p>Expand to all teams in the league (Hint: add team entity)</p></li>
-</ol>
-<p><img src="Images/Q2Assignment4.png" class="img-fluid"></p>
-</section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<p>SQL exercise:</p>
-<ol start="2" type="i">
-<li>Write an SQL query using the university schema to find the ID of each student who has never taken a course at the university. Do this using no subqueries and no set operations (use an outer join).</li>
-</ol>
-<p><img src="Images/Q3bAssignment4.png" class="img-fluid"></p>
-<ol start="3" type="i">
-<li>Consider the following database, write a query to find the ID of each employee with no manager. Note that an employee may simply have no manager listed or may have a null manager(use natural left outer join).</li>
-</ol>
-<p>SELECT e.ID</p>
-<p>FROM employee e</p>
-<p>OUTER JOIN manages m ON e.ID = m.ID</p>
-<p>WHERE m.manager_id IS NULL;</p>
+<section id="hadley-wickham-data-visualization-and-data-science-embl-summary-and-commentary" class="level2">
+<h2 class="anchored" data-anchor-id="hadley-wickham-data-visualization-and-data-science-embl-summary-and-commentary">Hadley Wickham: <em>Data Visualization and Data Science (EMBL)</em> — Summary and Commentary</h2>
+<p>In his EMBL talk, Hadley Wickham explains that <strong>data visualization is the bridge between data and understanding</strong>. He introduces the “grammar of graphics” — a structured way to describe visualizations as combinations of <em>data</em>, <em>aesthetic mappings</em>, and <em>geometries</em>. This framework, implemented in his <code>ggplot2</code> package, allows analysts to move from ad-hoc plotting to reproducible, composable graphics. Every visual element in a chart—points, lines, bars, colors, or facets—corresponds to a decision in the grammar, making visual design transparent and logical.</p>
+<p>Wickham also connects visualization to the broader workflow of <strong>data science</strong>: importing, tidying, transforming, visualizing, and modeling. He emphasizes that visualization is not the end of analysis but the <strong>middle of thinking</strong>—a feedback loop that helps analysts notice patterns, spot errors, and refine questions. The best insights often emerge while visualizing, not after modeling.</p>
+<p>Another key contribution is his advocacy for <strong>tidy data principles</strong>, where each variable forms a column, each observation a row, and each dataset a table. This structure allows visualization tools and analytical packages to interoperate seamlessly. Combined with <code>ggplot2</code>, <code>dplyr</code>, and <code>tidyr</code>, the tidyverse creates an ecosystem where clarity, readability, and reproducibility come first.</p>
+<p>Wickham’s main message parallels Tufte’s: <strong>clarity is ethics in data visualization</strong>. The goal is not to impress audiences with complexity but to reveal truth with simplicity. In practice, this means designing graphics that emphasize structure over style, accuracy over decoration, and transparency over spectacle. His work has transformed visualization from a craft of intuition into a system of reasoning—a grammar that turns data into readable, trustworthy stories.</p>
+<hr>
+<blockquote class="blockquote">
+<p>“The purpose of visualization is not to show data; it’s to make people think about data.” — <em>Hadley Wickham</em></p>
+</blockquote>
 
 
 </section>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 4 – Eman Ajmal</title>
+<title>Prepare for Class 3 – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -210,9 +210,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#one-page-review-journalism-in-the-age-of-data-geoff-mcghee-2011" id="toc-one-page-review-journalism-in-the-age-of-data-geoff-mcghee-2011" class="nav-link active" data-scroll-target="#one-page-review-journalism-in-the-age-of-data-geoff-mcghee-2011">One-Page Review: <em>Journalism in the Age of Data</em> (Geoff McGhee, 2011)</a></li>
   </ul>
 </nav>
     </div>
@@ -221,7 +219,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 4</h1>
+<h1 class="title">Prepare for Class 3</h1>
+<p class="subtitle lead">Journalism in the Age of Data</p>
 </div>
 
 
@@ -238,37 +237,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<p>Difference between a weak and a strong entity set:</p>
-<ul>
-<li>A strong entity set can be identified uniquely by its own attributes, such as an Employee with an Employee ID.</li>
-<li>A weak entity set on the other hand, cannot be identified by its own attributes alone and depends on a strong entity (also known as the owner entity) for identification. An example could be a Dependent entity that relies on the Employee entity for its identification (e.g., an employee’s dependent might be identified by the Employee ID and Dependent’s name).</li>
-</ul>
-</section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<p>Design an E-R diagram for keeping track of the scoring statistics of your favorite sports team. You should store the matches played, the scores in each match, the players in each match, and individual player scoring statistics for each match. Summary statistics should be modeled as derived attributes with an explanation as to how they are computed.</p>
-<ol type="i">
-<li><p>Draw the E-R diagram using draw.io.</p></li>
-<li><p>Expand to all teams in the league (Hint: add team entity)</p></li>
-</ol>
-<p><img src="Images/Q2Assignment4.png" class="img-fluid"></p>
-</section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<p>SQL exercise:</p>
-<ol start="2" type="i">
-<li>Write an SQL query using the university schema to find the ID of each student who has never taken a course at the university. Do this using no subqueries and no set operations (use an outer join).</li>
-</ol>
-<p><img src="Images/Q3bAssignment4.png" class="img-fluid"></p>
-<ol start="3" type="i">
-<li>Consider the following database, write a query to find the ID of each employee with no manager. Note that an employee may simply have no manager listed or may have a null manager(use natural left outer join).</li>
-</ol>
-<p>SELECT e.ID</p>
-<p>FROM employee e</p>
-<p>OUTER JOIN manages m ON e.ID = m.ID</p>
-<p>WHERE m.manager_id IS NULL;</p>
+<section id="one-page-review-journalism-in-the-age-of-data-geoff-mcghee-2011" class="level2">
+<h2 class="anchored" data-anchor-id="one-page-review-journalism-in-the-age-of-data-geoff-mcghee-2011">One-Page Review: <em>Journalism in the Age of Data</em> (Geoff McGhee, 2011)</h2>
+<p>Geoff McGhee’s documentary <em>Journalism in the Age of Data</em> explores how visualization became central to modern storytelling. Through interviews with data journalists at <em>The New York Times</em>, <em>The Guardian</em>, and Gapminder, the film reveals a shift: journalists no longer just write stories—they design arguments that readers can explore visually. The craft moves beyond illustration; graphics <em>are</em> the narrative.</p>
+<p>Academic visualization, by contrast, tends to emphasize analytical precision, statistical rigor, and reproducibility. In scholarly work, clarity and neutrality are paramount; visuals must represent data truthfully, often at the expense of aesthetic engagement. Journalistic visualization, on the other hand, embraces emotion and immediacy. It borrows from design to guide attention—using color, motion, and annotation to shape interpretation. McGhee frames this as a collaboration between <em>story</em> and <em>structure</em>: the journalist curates context so that readers can navigate complex issues like climate change or budgets intuitively.</p>
+<p>Another key distinction lies in <strong>audience</strong>. Academic visualizations address expert readers who can decode abstract charts; journalistic ones target general publics who need the visualization to <em>invite curiosity</em> rather than prove a hypothesis. Yet both domains share a mission: to make invisible systems visible. As McGhee notes, good visualization demands technical literacy <em>and</em> moral restraint—knowing what to emphasize and what to omit.</p>
+<p>Ultimately, <em>Journalism in the Age of Data</em> bridges the gap between scientific visualization and narrative design. It argues that the journalist’s role has expanded from storyteller to explainer, translator, and data designer. When done well, this synthesis turns raw information into understanding—an act both analytic and artistic.</p>
+<hr>
 
 
 </section>
