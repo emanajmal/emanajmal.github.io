@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 4 — Data Visualization Hackathon – Eman Ajmal</title>
+<title>Assignment 4 – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -245,12 +245,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#reusable-setup" id="toc-reusable-setup" class="nav-link" data-scroll-target="#reusable-setup">Reusable Setup</a></li>
-  <li><a href="#chart-1-scatter-with-trend-annotation" id="toc-chart-1-scatter-with-trend-annotation" class="nav-link" data-scroll-target="#chart-1-scatter-with-trend-annotation">Chart 1 — Scatter with trend &amp; annotation</a></li>
-  <li><a href="#chart-2-ranked-bars-with-labels" id="toc-chart-2-ranked-bars-with-labels" class="nav-link" data-scroll-target="#chart-2-ranked-bars-with-labels">Chart 2 — Ranked bars with labels</a></li>
-  <li><a href="#chart-3-time-series-with-recession-bands" id="toc-chart-3-time-series-with-recession-bands" class="nav-link" data-scroll-target="#chart-3-time-series-with-recession-bands">Chart 3 — Time series with recession bands</a></li>
-  <li><a href="#chart-4-distribution-boxviolin" id="toc-chart-4-distribution-boxviolin" class="nav-link" data-scroll-target="#chart-4-distribution-boxviolin">Chart 4 — Distribution (box/violin)</a></li>
+  <li><a href="#variable-width-column-chart" id="toc-variable-width-column-chart" class="nav-link active" data-scroll-target="#variable-width-column-chart">1) Variable-Width Column Chart</a></li>
+  <li><a href="#table-with-embedded-charts" id="toc-table-with-embedded-charts" class="nav-link" data-scroll-target="#table-with-embedded-charts">2) Table with Embedded Charts</a></li>
+  <li><a href="#bar-chart" id="toc-bar-chart" class="nav-link" data-scroll-target="#bar-chart">3) Bar Chart</a></li>
+  <li><a href="#column-chart" id="toc-column-chart" class="nav-link" data-scroll-target="#column-chart">4) Column Chart</a></li>
   </ul>
 </nav>
     </div>
@@ -259,7 +257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 4 — Data Visualization Hackathon</h1>
+<h1 class="title">Assignment 4</h1>
 </div>
 
 
@@ -276,151 +274,197 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="overview" class="level1">
-<h1>Overview</h1>
-<p>This page presents <strong>four charts</strong> produced in R for the Assignment 4 hackathon. The structure mirrors the reference example, with each chart in its own section containing:</p>
-<ul>
-<li>A short design rationale (goal, audience, design choices),</li>
-<li>Reproducible R code (using <strong>ggplot2</strong>), and</li>
-<li>The rendered figure.</li>
-</ul>
-<blockquote class="blockquote">
-<p><strong>Note on datasets:</strong> To ensure this renders anywhere without external files, this page uses built-in R datasets (<code>mpg</code>, <code>economics</code>) that ship with <strong>ggplot2</strong>. You can swap in your own data later while keeping the same structure.</p>
-</blockquote>
-<hr>
-</section>
-<section id="reusable-setup" class="level1">
-<h1>Reusable Setup</h1>
-<hr>
-</section>
-<section id="chart-1-scatter-with-trend-annotation" class="level1">
-<h1>Chart 1 — Scatter with trend &amp; annotation</h1>
+<section id="variable-width-column-chart" class="level2">
+<h2 class="anchored" data-anchor-id="variable-width-column-chart">1) Variable-Width Column Chart</h2>
+<p><strong>Height</strong> = mean flipper length (mm); <strong>Width</strong> = sample share per species.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.8</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Bigger Engines, Lower MPG"</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Highway MPGs generally decrease as engine displacement increases"</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Engine Displacement (liters)"</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Highway MPG"</span>,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: ggplot2::mpg"</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">viz_theme</span>()</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>vw <span class="ot">&lt;-</span> peng <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_flipper =</span> <span class="fu">mean</span>(flipper_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">|&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">w_share =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">xmax =</span> <span class="fu">cumsum</span>(w_share),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">xmin =</span> <span class="fu">lag</span>(xmax, <span class="at">default =</span> <span class="dv">0</span>),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">xmid =</span> (xmin <span class="sc">+</span> xmax)<span class="sc">/</span><span class="dv">2</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">fill =</span> <span class="fu">c</span>(col_setosa, col_versicolor, col_virginica))</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>p1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(vw) <span class="sc">+</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> xmin, <span class="at">xmax =</span> xmax, <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> mean_flipper),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            <span class="at">fill =</span> col_fill_soft, <span class="at">color =</span> <span class="st">"#8C9A96"</span>, <span class="at">linewidth =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x =</span> xmid, <span class="at">y =</span> mean_flipper <span class="sc">+</span> <span class="dv">5</span>, <span class="at">label =</span> species),</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="dv">4</span>, <span class="at">color =</span> <span class="st">"#333333"</span>) <span class="sc">+</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="st">"Mean flipper length (mm)"</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                     <span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="dv">0</span>, .<span class="dv">12</span>))) <span class="sc">+</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="st">"Share of samples"</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">accuracy =</span> <span class="dv">1</span>),</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                     <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="fl">0.2</span>),</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                     <span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>))) <span class="sc">+</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Average Flipper Length with Population-Weighted Widths"</span>,</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Each column's width is proportional to species' sample share"</span>,</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Data: palmerpenguins"</span>) <span class="sc">+</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">clip =</span> <span class="st">"off"</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>p1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="EPPS6356_Assignment4_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="table-with-embedded-charts" class="level2">
+<h2 class="anchored" data-anchor-id="table-with-embedded-charts">2) Table with Embedded Charts</h2>
+<p>Small-multiple histograms (<strong>Species × Measurement</strong>). Muted fills; units shown in facet labels.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>peng_long <span class="ot">&lt;-</span> peng <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(species, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g) <span class="sc">|&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>species, <span class="at">names_to =</span> <span class="st">"measurement"</span>, <span class="at">values_to =</span> <span class="st">"value"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">measurement =</span> <span class="fu">factor</span>(measurement,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"bill_length_mm"</span>,<span class="st">"bill_depth_mm"</span>,<span class="st">"sepal_dummy"</span>,<span class="st">"flipper_length_mm"</span>,<span class="st">"body_mass_g"</span>),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Bill length (mm)"</span>,<span class="st">"Bill depth (mm)"</span>,<span class="st">"_"</span>,<span class="st">"Flipper length (mm)"</span>,<span class="st">"Body mass (g)"</span>)))</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Use species-specific muted colors</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>fill_map <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Adelie"</span> <span class="ot">=</span> col_setosa, <span class="st">"Chinstrap"</span> <span class="ot">=</span> col_versicolor, <span class="st">"Gentoo"</span> <span class="ot">=</span> col_virginica)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(peng_long, <span class="fu">aes</span>(value, <span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">bins =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(species <span class="sc">~</span> measurement, <span class="at">scales =</span> <span class="st">"free_x"</span>) <span class="sc">+</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> fill_map, <span class="at">guide =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distributions of Penguin Measurements"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Measurement Value"</span>, <span class="at">y =</span> <span class="st">"Count"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Each row is a species; each column is a measurement"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Data: palmerpenguins"</span>) <span class="sc">+</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="st">"#E6E6E6"</span>, <span class="at">fill =</span> <span class="cn">NA</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+<pre><code>Warning: Removed 8 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="EPPS6356_Assignment4_files/figure-html/chart-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="EPPS6356_Assignment4_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="1056"></p>
 </figure>
 </div>
 </div>
 </div>
-<hr>
 </section>
-<section id="chart-2-ranked-bars-with-labels" class="level1">
-<h1>Chart 2 — Ranked bars with labels</h1>
+<section id="bar-chart" class="level2">
+<h2 class="anchored" data-anchor-id="bar-chart">3) Bar Chart</h2>
+<p>Two parallel charts (same design) so it’s easier to read — <strong>Adelie</strong> and <strong>Chinstrap</strong> body mass for every observed penguin.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>rank_dat <span class="ot">&lt;-</span> mpg <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(manufacturer) <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_cty =</span> <span class="fu">mean</span>(cty, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_cty)) <span class="sc">%&gt;%</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">12</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">manufacturer =</span> <span class="fu">reorder</span>(manufacturer, avg_cty))</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(rank_dat, <span class="fu">aes</span>(<span class="at">x =</span> manufacturer, <span class="at">y =</span> avg_cty)) <span class="sc">+</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(avg_cty, <span class="dv">1</span>)), <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.05</span>, <span class="at">size =</span> <span class="fl">3.2</span>) <span class="sc">+</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand_limits</span>(<span class="at">y =</span> <span class="fu">max</span>(rank_dat<span class="sc">$</span>avg_cty) <span class="sc">*</span> <span class="fl">1.12</span>) <span class="sc">+</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Who’s Most Efficient in the City?"</span>,</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Average city MPG by manufacturer (top 12)"</span>,</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Avg City MPG"</span>,</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: ggplot2::mpg"</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">viz_theme</span>()</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>p2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>many <span class="ot">&lt;-</span> peng <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(species <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Adelie"</span>,<span class="st">"Chinstrap"</span>), <span class="sc">!</span><span class="fu">is.na</span>(body_mass_g)) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(species) <span class="sc">|&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">arrange</span>(body_mass_g, <span class="at">.by_group =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">id =</span> <span class="fu">factor</span>(<span class="fu">row_number</span>())) <span class="sc">|&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">ungroup</span>()</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>fill_map <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Adelie"</span> <span class="ot">=</span> col_setosa, <span class="st">"Chinstrap"</span> <span class="ot">=</span> col_versicolor)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(many, <span class="fu">aes</span>(id, body_mass_g, <span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="fl">0.65</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> species, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> fill_map, <span class="at">guide =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="st">"Body mass (g)"</span>,</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                     <span class="at">breaks =</span> scales<span class="sc">::</span><span class="fu">pretty_breaks</span>(<span class="at">n =</span> <span class="dv">6</span>),</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">label_number</span>(<span class="at">accuracy =</span> <span class="dv">1</span>, <span class="at">scale_cut =</span> <span class="fu">cut_si</span>(<span class="st">""</span>)),</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>                     <span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="fl">0.02</span>, <span class="fl">0.06</span>))) <span class="sc">+</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Body Mass by Individual — Many Items, Few Categories"</span>,</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Each panel shows one species; bars ordered by body mass"</span>,</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">caption =</span> <span class="st">"Data: palmerpenguins"</span>) <span class="sc">+</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(), <span class="at">axis.ticks.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"#333333"</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>p3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="EPPS6356_Assignment4_files/figure-html/chart-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="EPPS6356_Assignment4_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="1152"></p>
 </figure>
 </div>
 </div>
 </div>
-<hr>
 </section>
-<section id="chart-3-time-series-with-recession-bands" class="level1">
-<h1>Chart 3 — Time series with recession bands</h1>
+<section id="column-chart" class="level2">
+<h2 class="anchored" data-anchor-id="column-chart">4) Column Chart</h2>
+<p>Few items shown cleanly: means of four measurements by species, faceted to respect units.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>recessions <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">start =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">"1973-11-01"</span>, <span class="st">"1980-01-01"</span>, <span class="st">"1981-07-01"</span>, <span class="st">"1990-07-01"</span>, <span class="st">"2001-03-01"</span>, <span class="st">"2007-12-01"</span>)),</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">end   =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">"1975-03-01"</span>, <span class="st">"1980-07-01"</span>, <span class="st">"1982-11-01"</span>, <span class="st">"1991-03-01"</span>, <span class="st">"2001-11-01"</span>, <span class="st">"2009-06-01"</span>))</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(economics, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> unemploy)) <span class="sc">+</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="at">data =</span> recessions, <span class="at">inherit.aes =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">xmin =</span> start, <span class="at">xmax =</span> end, <span class="at">ymin =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">ymax =</span> <span class="cn">Inf</span>),</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">alpha =</span> <span class="fl">0.12</span>) <span class="sc">+</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_number</span>(<span class="at">scale_cut =</span> <span class="fu">cut_si</span>(<span class="st">""</span>))) <span class="sc">+</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Unemployment Rises in Downturns"</span>,</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Shaded bands show select recession periods"</span>,</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Unemployed persons"</span>,</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: ggplot2::economics; recessions illustrative"</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">viz_theme</span>()</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>p3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>means_long <span class="ot">&lt;-</span> peng <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(species) <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Bill depth (mm)</span><span class="st">`</span>     <span class="ot">=</span> <span class="fu">mean</span>(bill_depth_mm,     <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Bill length (mm)</span><span class="st">`</span>    <span class="ot">=</span> <span class="fu">mean</span>(bill_length_mm,    <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Body mass (g)</span><span class="st">`</span>       <span class="ot">=</span> <span class="fu">mean</span>(body_mass_g,       <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Flipper length (mm)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(flipper_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="sc">-</span>species, <span class="at">names_to =</span> <span class="st">"measurement"</span>, <span class="at">values_to =</span> <span class="st">"mean_value"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(measurement) <span class="sc">|&gt;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">index =</span> <span class="dv">100</span> <span class="sc">*</span> mean_value <span class="sc">/</span> <span class="fu">mean</span>(mean_value, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">ungroup</span>()</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Manual x positions -&gt; bars touch inside each trio, gap between trios</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>meas_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Bill depth (mm)"</span>, <span class="st">"Bill length (mm)"</span>, <span class="st">"Body mass (g)"</span>, <span class="st">"Flipper length (mm)"</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>spec_levels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Adelie"</span>,<span class="st">"Chinstrap"</span>,<span class="st">"Gentoo"</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>bars_per_group <span class="ot">&lt;-</span> <span class="fu">length</span>(spec_levels)  <span class="co"># 3</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>gap_units      <span class="ot">&lt;-</span> <span class="dv">1</span>                    <span class="co"># tweak this to widen/narrow gaps between categories</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>plot_df <span class="ot">&lt;-</span> means_long <span class="sc">|&gt;</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">measurement =</span> <span class="fu">factor</span>(measurement, <span class="at">levels =</span> meas_levels),</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">species     =</span> <span class="fu">factor</span>(species,     <span class="at">levels =</span> spec_levels),</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">g_idx =</span> <span class="fu">as.integer</span>(measurement) <span class="sc">-</span> <span class="dv">1</span>,</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">s_idx =</span> <span class="fu">as.integer</span>(species)     <span class="sc">-</span> <span class="dv">1</span>,</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">x     =</span> g_idx <span class="sc">*</span> (bars_per_group <span class="sc">+</span> gap_units) <span class="sc">+</span> s_idx</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="co"># axis breaks at the center of each trio</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>breaks <span class="ot">&lt;-</span> ((<span class="dv">0</span><span class="sc">:</span>(<span class="fu">length</span>(meas_levels)<span class="sc">-</span><span class="dv">1</span>)) <span class="sc">*</span> (bars_per_group <span class="sc">+</span> gap_units)) <span class="sc">+</span> (bars_per_group <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">/</span><span class="dv">2</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> meas_levels</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Muted palette</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>pal_grouped <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Adelie"</span><span class="ot">=</span><span class="st">"#5B7EA3"</span>, <span class="st">"Chinstrap"</span><span class="ot">=</span><span class="st">"#B58B45"</span>, <span class="st">"Gentoo"</span><span class="ot">=</span><span class="st">"#6BAA75"</span>)</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>p4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> index, <span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="cn">NA</span>) <span class="sc">+</span>  <span class="co"># 0.98 so bars in a trio visually touch</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> breaks, <span class="at">labels =</span> labels, <span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="fl">0.02</span>, <span class="fl">0.04</span>))) <span class="sc">+</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> pal_grouped, <span class="at">name =</span> <span class="st">"Species"</span>) <span class="sc">+</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="st">"Index (measurement mean = 100)"</span>, <span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.05</span>))) <span class="sc">+</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Mean Penguin Measurements by Species (Indexed)"</span>,</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Measurement"</span>,</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Data: palmerpenguins"</span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title  =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">18</span>),</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">12</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">vjust =</span> <span class="dv">1</span>),</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>p4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="EPPS6356_Assignment4_files/figure-html/chart-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="EPPS6356_Assignment4_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="912"></p>
 </figure>
 </div>
 </div>
 </div>
-<hr>
-</section>
-<section id="chart-4-distribution-boxviolin" class="level1">
-<h1>Chart 4 — Distribution (box/violin)</h1>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mpg2 <span class="ot">&lt;-</span> mpg <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">cyl_f =</span> <span class="fu">factor</span>(cyl))</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>p4 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mpg2, <span class="fu">aes</span>(<span class="at">x =</span> drv, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>(<span class="at">trim =</span> <span class="cn">TRUE</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width =</span> <span class="fl">0.12</span>, <span class="at">outlier.alpha =</span> <span class="fl">0.25</span>) <span class="sc">+</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> cyl_f, <span class="at">nrow =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Efficiency Differs by Drivetrain &amp; Cylinders"</span>,</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Distributions of highway MPG across drive types, split by cylinder count"</span>,</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Drivetrain (f = FWD, r = RWD, 4 = 4WD)"</span>,</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Highway MPG"</span>,</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: ggplot2::mpg"</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">viz_theme</span>()</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>p4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Groups with fewer than two datapoints have been dropped.
-ℹ Set `drop = FALSE` to consider such groups for position adjustment purposes.</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="EPPS6356_Assignment4_files/figure-html/chart-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
 
 
 </section>
