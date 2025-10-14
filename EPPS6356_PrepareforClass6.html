@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>assignment3 – Eman Ajmal</title>
+<title>Prepare for Class 6 – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -219,74 +254,246 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignment-3" id="toc-assignment-3" class="nav-link active" data-scroll-target="#assignment-3">Assignment 3</a>
+  <li><a href="#reading-notes" id="toc-reading-notes" class="nav-link active" data-scroll-target="#reading-notes">1. Reading Notes</a>
   <ul class="collapse">
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
-  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  <li><a href="#core-ideas-35-bullets" id="toc-core-ideas-35-bullets" class="nav-link" data-scroll-target="#core-ideas-35-bullets">1.1 Core Ideas (3–5 bullets)</a></li>
+  <li><a href="#examples-good-vs.-weak" id="toc-examples-good-vs.-weak" class="nav-link" data-scroll-target="#examples-good-vs.-weak">1.2 Examples (good vs.&nbsp;weak)</a></li>
   </ul></li>
+  <li><a href="#mckinsey-week-in-charts-year-in-charts-2024" id="toc-mckinsey-week-in-charts-year-in-charts-2024" class="nav-link" data-scroll-target="#mckinsey-week-in-charts-year-in-charts-2024">2. McKinsey “Week in Charts” &amp; “Year in Charts” (2024)</a>
+  <ul class="collapse">
+  <li><a href="#quick-scan-what-they-do-well" id="toc-quick-scan-what-they-do-well" class="nav-link" data-scroll-target="#quick-scan-what-they-do-well">2.1 Quick Scan — What they do well</a></li>
+  <li><a href="#side-by-side-compare-picked-representative-patterns" id="toc-side-by-side-compare-picked-representative-patterns" class="nav-link" data-scroll-target="#side-by-side-compare-picked-representative-patterns">2.2 Side-by-Side Compare (Picked representative patterns)</a></li>
+  <li><a href="#what-could-be-better-actionable-fixes" id="toc-what-could-be-better-actionable-fixes" class="nav-link" data-scroll-target="#what-could-be-better-actionable-fixes">2.3 What could be better (actionable fixes)</a></li>
+  </ul></li>
+  <li><a href="#library-guides-what-to-borrow" id="toc-library-guides-what-to-borrow" class="nav-link" data-scroll-target="#library-guides-what-to-borrow">3. Library Guides — What to Borrow</a>
+  <ul class="collapse">
+  <li><a href="#takeaways-from-duke" id="toc-takeaways-from-duke" class="nav-link" data-scroll-target="#takeaways-from-duke">3.1 Takeaways from Duke</a></li>
+  <li><a href="#takeaways-from-berkeley" id="toc-takeaways-from-berkeley" class="nav-link" data-scroll-target="#takeaways-from-berkeley">3.2 Takeaways from Berkeley</a></li>
+  <li><a href="#answer-what-are-the-four-pillars-of-visualization" id="toc-answer-what-are-the-four-pillars-of-visualization" class="nav-link" data-scroll-target="#answer-what-are-the-four-pillars-of-visualization">3.3 <strong>Answer:</strong> What are the “Four Pillars of Visualization”?</a></li>
+  </ul></li>
+  <li><a href="#my-design-checklist-for-upcoming-assignments" id="toc-my-design-checklist-for-upcoming-assignments" class="nav-link" data-scroll-target="#my-design-checklist-for-upcoming-assignments">4. My Design Checklist (for upcoming assignments)</a></li>
+  <li><a href="#optional-quick-r-setup-chunk" id="toc-optional-quick-r-setup-chunk" class="nav-link" data-scroll-target="#optional-quick-r-setup-chunk">5. (Optional) Quick R Setup Chunk</a></li>
+  <li><a href="#reflection-35-sentences" id="toc-reflection-35-sentences" class="nav-link" data-scroll-target="#reflection-35-sentences">6. Reflection (3–5 sentences)</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Prepare for Class 6</h1>
+<p class="subtitle lead">Graphical Perception &amp; Design Reviews</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="assignment-3" class="level1">
-<h1>Assignment 3</h1>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<p>Write SQL codes to get a list of:</p>
-<ol type="i">
-<li>Students IDs (hint: from the takes relation)</li>
-</ol>
-<p><img src="Images/Q1Assignment3.png" class="img-fluid"></p>
-<ol start="2" type="i">
-<li>Instructors</li>
-</ol>
-<p><img src="Images/Q2bAssignment3.png" class="img-fluid"></p>
-<ol start="3" type="i">
-<li>Departments</li>
-</ol>
-<p><img src="Images/Q2cAssignment3.png" class="img-fluid"></p>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<blockquote class="blockquote">
+<p><strong>How to use this file:</strong> These are my completed notes and answers for discussion. I kept them concise, specific, and actionable.</p>
+</blockquote>
+<section id="reading-notes" class="level2">
+<h2 class="anchored" data-anchor-id="reading-notes">1. Reading Notes</h2>
+<p><strong>Required:</strong> Cleveland, W. S., &amp; McGill, R. (1984). <em>Graphical perception: Theory, experimentation, and application to the development of graphical methods.</em> <strong>JASA, 79(387)</strong>, 531–554.</p>
+<p><strong>Optional:</strong> Cleveland (1993) <em>Visualizing Data</em>; KH Ch. 2–4.</p>
+<section id="core-ideas-35-bullets" class="level3">
+<h3 class="anchored" data-anchor-id="core-ideas-35-bullets">1.1 Core Ideas (3–5 bullets)</h3>
+<ul>
+<li><strong>Perceptual task hierarchy:</strong> Judgments are most accurate with <strong>position on a common scale</strong>, then <strong>position on nonaligned scales</strong>, <strong>length</strong>, <strong>angle/slope</strong>, <strong>area</strong>, <strong>volume</strong>, and finally <strong>color hue/saturation</strong>. Design should push comparisons toward the top of this ladder.</li>
+<li><strong>Experimental method:</strong> Subjects made pairwise quantitative judgments across encodings. <strong>Error increased</strong> as encodings moved down the hierarchy; <strong>direct labeling and consistent baselines</strong> improved accuracy.</li>
+<li><strong>Implications:</strong> Prefer <strong>dot plots, bars (zero baseline), and aligned lines</strong> over pies, bubbles, and 3D shapes. Use <strong>small multiples</strong> for multi-category trends instead of dual y-axes.</li>
+<li><strong>Caveats:</strong> Context matters—<strong>range, aspect ratio, and scale choice</strong> can change difficulty; over-aggregation and clutter add cognitive load even with “good” encodings.</li>
+</ul>
 </section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<p>Write in SQL codes to do following queries:</p>
-<ol type="i">
-<li>Find the ID and name of each student who has taken at least one Comp. Sci. course; make sure there are no duplicate names in the result.</li>
-</ol>
-<p><img src="Images/Q3aAssignment3.png" class="img-fluid"></p>
-<ol start="2" type="i">
-<li>Add grades to the list</li>
-</ol>
-<p><img src="Images/Q3bAssignment3.png" class="img-fluid"></p>
-<ol start="3" type="i">
-<li>Find the ID and name of each student who has not taken any course offered before 2017.</li>
-</ol>
-<p><img src="Images/Q3cAssignment3.png" class="img-fluid"></p>
-<ol start="4" type="i">
-<li>For each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor.</li>
-</ol>
-<p><img src="Images/Q3dAssignment3.png" class="img-fluid"></p>
-<ol start="22" type="a">
-<li>Find the lowest, across all departments, of the per-department maximum salary computed by the preceding query.</li>
-</ol>
-<p><img src="Images/Q3eAssignment3.png" class="img-fluid"></p>
-<ol start="6" type="i">
-<li>Add names to the list</li>
-</ol>
-<p><img src="Images/Q3fAssignment3.png" class="img-fluid"></p>
+<section id="examples-good-vs.-weak" class="level3">
+<h3 class="anchored" data-anchor-id="examples-good-vs.-weak">1.2 Examples (good vs.&nbsp;weak)</h3>
+<ul>
+<li><strong>Good:</strong> A small-multiple <strong>dot plot</strong> comparing graduation rates by district and year on a <strong>shared x-axis</strong>. Viewers compare <strong>position</strong> quickly and precisely.</li>
+<li><strong>Weak:</strong> A <strong>pie chart</strong> showing six programs’ budget shares that differ by only 1–3%. Angles are hard to discriminate; replace with a <strong>sorted bar chart</strong> (0 baseline), add <strong>direct labels</strong> and <strong>percent signs</strong>, and show <strong>total n</strong> for context.</li>
+</ul>
+<hr>
 </section>
-<section id="question-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
-<p>Find instructor (with name and ID) who has never given an A grade in any course she or he has taught. (Instructors who have never taught a course trivially satisfy this condition.)</p>
-<p><img src="Images/Q4Assignment3.png" class="img-fluid"></p>
+</section>
+<section id="mckinsey-week-in-charts-year-in-charts-2024" class="level2">
+<h2 class="anchored" data-anchor-id="mckinsey-week-in-charts-year-in-charts-2024">2. McKinsey “Week in Charts” &amp; “Year in Charts” (2024)</h2>
+<p><em>(I reviewed multiple pieces from each series and focused on recurring design patterns rather than one-off exceptions.)</em></p>
+<section id="quick-scan-what-they-do-well" class="level3">
+<h3 class="anchored" data-anchor-id="quick-scan-what-they-do-well">2.1 Quick Scan — What they do well</h3>
+<ul>
+<li><strong>Clear headlines</strong> that state the takeaway (“X overtakes Y by 2028”).<br>
+</li>
+<li><strong>Annotation-first</strong> style: callouts, arrows, and direct labels reduce legend hopping.<br>
+</li>
+<li><strong>Tidy scales</strong> with restrained grids; frequent use of <strong>small multiples</strong> for regional splits.<br>
+</li>
+<li><strong>Sane color use</strong>: neutrals for context, accent color for the focal series.</li>
+</ul>
+</section>
+<section id="side-by-side-compare-picked-representative-patterns" class="level3">
+<h3 class="anchored" data-anchor-id="side-by-side-compare-picked-representative-patterns">2.2 Side-by-Side Compare (Picked representative patterns)</h3>
+<p>Create a small comparison table:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Criterion</th>
+<th>Week in Charts — Example A</th>
+<th>Year in Charts — Example B</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Question clarity</td>
+<td>Sharp, one-sentence claim (“Hiring cooled vs.&nbsp;last quarter”)</td>
+<td>Broader synthesis (“Decade of decarbonization progress”)</td>
+<td>Weekly posts target one nugget; yearly posts summarize themes.</td>
+</tr>
+<tr class="even">
+<td>Encoding choice</td>
+<td>Line or bar emphasizing <strong>position/length</strong></td>
+<td>Mix of small multiples, slopegraphs, and stacked bars</td>
+<td>Both mostly align with Cleveland–McGill; stacks used sparingly.</td>
+</tr>
+<tr class="odd">
+<td>Scale &amp; axis</td>
+<td>Usually linear; bars start at <strong>zero</strong></td>
+<td>Mix of linear/log for wide ranges; clear tick labels</td>
+<td>Yearly pieces sometimes justify non-zero baselines or log.</td>
+</tr>
+<tr class="even">
+<td>Annotation</td>
+<td>Short text plus <strong>direct labels</strong> at ends of lines</td>
+<td>Longer captions; <strong>subtitles</strong> add context and caveats</td>
+<td>Annotation density higher in yearly roundups.</td>
+</tr>
+<tr class="odd">
+<td>Cognitive load</td>
+<td><strong>Low</strong>—single idea per chart</td>
+<td><strong>Medium</strong>—comparisons across sectors/regions</td>
+<td>Yearly: add section dividers and mini legends to chunk info.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="what-could-be-better-actionable-fixes" class="level3">
+<h3 class="anchored" data-anchor-id="what-could-be-better-actionable-fixes">2.3 What could be better (actionable fixes)</h3>
+<ul>
+<li>Replace remaining <strong>pies</strong> and <strong>stacked area</strong> with <strong>bars + small multiples</strong> when precise part-to-whole or category change matters.<br>
+</li>
+<li>Favor <strong>direct labeling</strong> over color legends in dense multi-series lines.<br>
+</li>
+<li>Standardize <strong>y-axis ranges</strong> across small multiples to support scanning.<br>
+</li>
+<li>Where uncertainty is material, add <strong>CIs/ribbons</strong> or <strong>data source notes</strong> near the chart.<br>
+</li>
+<li>Add <strong>accessible alt text</strong> and ensure <strong>colorblind-safe</strong> palettes (e.g., avoid red–green pairings).</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="library-guides-what-to-borrow" class="level2">
+<h2 class="anchored" data-anchor-id="library-guides-what-to-borrow">3. Library Guides — What to Borrow</h2>
+<p>Links: - Duke University Library Data Viz Guide: <a href="https://guides.library.duke.edu/datavis" class="uri">https://guides.library.duke.edu/datavis</a><br>
+- UC Berkeley Data Visualization: <a href="https://guides.lib.berkeley.edu/data-visualization" class="uri">https://guides.lib.berkeley.edu/data-visualization</a></p>
+<section id="takeaways-from-duke" class="level3">
+<h3 class="anchored" data-anchor-id="takeaways-from-duke">3.1 Takeaways from Duke</h3>
+<ul>
+<li>Start with the <strong>question and audience</strong>; write the one-line message first.<br>
+</li>
+<li><strong>Prototyping loop:</strong> sketch → build minimal → get feedback → iterate.<br>
+</li>
+<li><strong>Ethics &amp; accessibility:</strong> show <strong>sources, methods, and uncertainty</strong>; meet color contrast; label units.<br>
+</li>
+<li>Maintain a <strong>reproducible workflow</strong> (document code, versions, and data cleaning).</li>
+</ul>
+</section>
+<section id="takeaways-from-berkeley" class="level3">
+<h3 class="anchored" data-anchor-id="takeaways-from-berkeley">3.2 Takeaways from Berkeley</h3>
+<ul>
+<li><strong>Pipeline mindset:</strong> problem → data → encoding → iteration → evaluation.<br>
+</li>
+<li>Prefer <strong>position/length</strong> encodings; avoid 3D and dual axes.<br>
+</li>
+<li>Build for <strong>readability at small sizes</strong> (12–14pt text, direct labels), and add <strong>alt text</strong> and <strong>ARIA</strong> for web.</li>
+</ul>
+</section>
+<section id="answer-what-are-the-four-pillars-of-visualization" class="level3">
+<h3 class="anchored" data-anchor-id="answer-what-are-the-four-pillars-of-visualization">3.3 <strong>Answer:</strong> What are the “Four Pillars of Visualization”?</h3>
+<blockquote class="blockquote">
+<p>Phrasing varies across sources. I adopt this framing, which is consistent with the guides above and the Cleveland–McGill evidence:</p>
+</blockquote>
+<ol type="1">
+<li><strong>Purpose</strong> — What question and who is the audience? Define the one-sentence takeaway and the action it should enable.<br>
+</li>
+<li><strong>Data</strong> — Are the data suitable, trustworthy, and ethically sourced? Document cleaning, units, uncertainty, and limitations.<br>
+</li>
+<li><strong>Design</strong> — Choose the <strong>strongest encodings</strong>, honest scales, and uncluttered layouts; use small multiples and direct labels.<br>
+</li>
+<li><strong>Narrative &amp; Annotation</strong> — Titles, subtitles, callouts, and captions that tell the reader exactly how to read the chart and why it matters.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="my-design-checklist-for-upcoming-assignments" class="level2">
+<h2 class="anchored" data-anchor-id="my-design-checklist-for-upcoming-assignments">4. My Design Checklist (for upcoming assignments)</h2>
+<ul>
+<li>Start with the <strong>question &amp; audience</strong>; write the takeaway first.<br>
+</li>
+<li>Choose <strong>position/length</strong> encodings before angle/area/color; avoid 3D.<br>
+</li>
+<li>Use <strong>honest scales</strong>; show <strong>zero</strong> for bars or justify exceptions; avoid dual axes.<br>
+</li>
+<li><strong>Direct labels</strong> where possible; minimize legend hopping; annotate the story beats.<br>
+</li>
+<li><strong>Accessibility:</strong> colorblind-safe palette; sufficient text contrast; alt text for web.<br>
+</li>
+<li>Show <strong>uncertainty</strong> and <strong>sample sizes</strong> where relevant.<br>
+</li>
+<li>Prefer <strong>small multiples</strong> over cluttered single panels.<br>
+</li>
+<li>Keep <strong>data-ink high</strong>; remove chartjunk; test with a non-expert peer.</li>
+</ul>
+<hr>
+</section>
+<section id="optional-quick-r-setup-chunk" class="level2">
+<h2 class="anchored" data-anchor-id="optional-quick-r-setup-chunk">5. (Optional) Quick R Setup Chunk</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Uncomment if you want a ready environment for sketching</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(c("ggplot2","readr","dplyr","tidyr","forcats","scales"))</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># library(ggplot2); library(readr); library(dplyr); library(tidyr); library(forcats); library(scales)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Example skeleton for a comparison dot plot (replace with your data)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># df &lt;- tibble::tibble(category = LETTERS[1:5], value = c(10, 14, 8, 13, 9))</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot(df, aes(x = value, y = forcats::fct_reorder(category, value))) +</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   ggtitle("Comparison Dot Plot") +</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   geom_point(size = 3) +</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   labs(x = "Value (units)", y = NULL, caption = "Source: ...") +</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#   theme_minimal(base_size = 13)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="reflection-35-sentences" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-35-sentences">6. Reflection (3–5 sentences)</h2>
+<p><strong>I will</strong> convert any pie/stacked-area comparisons in my drafts to <strong>sorted bars or dot plots</strong> with direct labels. <strong>I will</strong> standardize axes across small multiples and keep bar charts pinned to <strong>zero</strong> unless a non-zero baseline is defensible and clearly signposted. <strong>I will</strong> add uncertainty ribbons or CIs when readers could otherwise over-read a trend. Finally, <strong>I will</strong> run a quick peer test: can a non-expert state the one-sentence takeaway in 10 seconds?</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
