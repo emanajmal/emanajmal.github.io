@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Assignment 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./EPPS6302_Assignment5.qmd">
+    <a class="dropdown-item" href="./EPPS6302_Assignment5.html">
  <span class="dropdown-text">Assignment 5</span></a>
   </li>  
     </ul>
@@ -165,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Assignment 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./EPPS6356_PrepareforClass2">
+    <a class="dropdown-item" href="./EPPS6356_PrepareforClass2.html">
  <span class="dropdown-text">Prepare For Class 2</span></a>
   </li>  
         <li>
@@ -173,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Assignment 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./EPPS6356_PrepareforClass3">
+    <a class="dropdown-item" href="./EPPS6356_PrepareforClass3.html">
  <span class="dropdown-text">Prepare For Class 3</span></a>
   </li>  
         <li>
@@ -181,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Assignment 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./EPPS6356_PrepareforClass4">
+    <a class="dropdown-item" href="./EPPS6356_PrepareforClass4.html">
  <span class="dropdown-text">Prepare For Class 4</span></a>
   </li>  
         <li>
@@ -189,8 +189,17 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Assignment 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./EPPS6356_PrepareforClass5">
+    <a class="dropdown-item" href="./EPPS6356_PrepareforClass5.html">
  <span class="dropdown-text">Prepare For Class 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./EPPS6356_Assignment5.qmd">
+ <span class="dropdown-text">Assignment 5</span></a>
+  </li>  
+        <li class="dropdown-header">Prepare For Class 6</li>
+        <li>
+    <a class="dropdown-item" href="./EPPS6356_PrepareforClass6.html">
+ <span class="dropdown-text">Prepare for Class 6</span></a>
   </li>  
     </ul>
   </li>
@@ -210,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#one-page-note-big-data-pitfalls-and-overfitting" id="toc-one-page-note-big-data-pitfalls-and-overfitting" class="nav-link active" data-scroll-target="#one-page-note-big-data-pitfalls-and-overfitting">One-Page Note: <em>Big Data Pitfalls and Overfitting</em></a></li>
+  <li><a href="#one-page-note-big-data-pitfalls-and-over-fitting" id="toc-one-page-note-big-data-pitfalls-and-over-fitting" class="nav-link active" data-scroll-target="#one-page-note-big-data-pitfalls-and-over-fitting">One-Page Note: <em>Big Data Pitfalls and Over fitting</em></a></li>
   <li><a href="#hadley-wickham-data-visualization-and-data-science-embl-summary-and-commentary" id="toc-hadley-wickham-data-visualization-and-data-science-embl-summary-and-commentary" class="nav-link" data-scroll-target="#hadley-wickham-data-visualization-and-data-science-embl-summary-and-commentary">Hadley Wickham: <em>Data Visualization and Data Science (EMBL)</em> — Summary and Commentary</a></li>
   </ul>
 </nav>
@@ -238,12 +247,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="one-page-note-big-data-pitfalls-and-overfitting" class="level2">
-<h2 class="anchored" data-anchor-id="one-page-note-big-data-pitfalls-and-overfitting">One-Page Note: <em>Big Data Pitfalls and Overfitting</em></h2>
-<p>Big data has reshaped how we understand social behavior, public health, and markets—but with its scale comes illusion. <em>The Parable of Google Flu</em>, published in <em>Nature</em>, remains a cautionary tale. In 2008, Google’s algorithm predicted flu outbreaks by analyzing search queries, claiming to forecast epidemics faster than the CDC. For a brief period, the results looked revolutionary—until they stopped working. The algorithm overestimated flu cases by more than 140%, revealing that the apparent success of “big data” can mask deeper analytical flaws.</p>
-<p>The first pitfall is <strong>data without theory</strong>. Massive datasets tempt analysts to treat correlation as causation. Without grounding in domain knowledge, we misinterpret noise as signal. In the Google Flu case, rising media attention and public anxiety—rather than infection rates—drove search trends. This created a self-reinforcing feedback loop that the model mistook for real-world growth. Tufte’s warning about “seeing without thinking” echoes here: visualization and data alike require interpretation, not just computation.</p>
-<p>Another pitfall is <strong>algorithmic opacity</strong>. Big data often relies on proprietary, ever-changing systems. When inputs, models, or weighting methods are unknown, replication becomes impossible. This erodes scientific transparency and accountability—two pillars of credible data analysis. Furthermore, as datasets grow, <strong>bias does not disappear; it scales</strong>. If underlying data are incomplete, unrepresentative, or contextually skewed, bigger datasets simply reproduce error with greater confidence.</p>
-<p>Closely related is the danger of <strong>overfitting and overparameterization</strong>. In large models, especially machine learning systems, it’s easy to fit data so perfectly that the model memorizes patterns rather than generalizes them. This creates high accuracy in training but failure in prediction. Overfitting is a form of overconfidence disguised as precision—it reflects modeling power used without restraint. The solution, as both Hadley Wickham and Andrew Gelman emphasize, lies in simplicity, cross-validation, and clarity: build models that explain rather than impress.</p>
+<section id="one-page-note-big-data-pitfalls-and-over-fitting" class="level2">
+<h2 class="anchored" data-anchor-id="one-page-note-big-data-pitfalls-and-over-fitting">One-Page Note: <em>Big Data Pitfalls and Over fitting</em></h2>
+<p>Big data has reshaped how we understand social behavior, public health, and markets but with its scale comes illusion. <em>The Parable of Google Flu</em>, published in <em>Nature</em>, remains a cautionary tale. In 2008, Google’s algorithm predicted flu outbreaks by analyzing search queries, claiming to forecast epidemics faster than the CDC. For a brief period, the results looked revolutionary until they stopped working. The algorithm overestimated flu cases by more than 140%, revealing that the apparent success of “big data” can mask deeper analytical flaws.</p>
+<p>The first pitfall is <strong>data without theory</strong>. Massive datasets tempt analysts to treat correlation as causation. Without grounding in domain knowledge, we misinterpret noise as signal. In the Google Flu case, rising media attention and public anxiety, rather than infection rates, drove search trends. This created a self-reinforcing feedback loop that the model mistook for real-world growth. Tufte’s warning about “seeing without thinking” echoes here: visualization and data alike require interpretation, not just computation.</p>
+<p>Another pitfall is <strong>algorithmic opacity</strong>. Big data often relies on proprietary, ever-changing systems. When inputs, models, or weighting methods are unknown, replication becomes impossible. This erodes scientific transparency and accountability, two pillars of credible data analysis. Furthermore, as datasets grow, <strong>bias does not disappear; it scales</strong>. If underlying data are incomplete, unrepresentative, or contextually skewed, bigger datasets simply reproduce error with greater confidence.</p>
+<p>Closely related is the danger of <strong>overfitting and overparameterization</strong>. In large models, especially machine learning systems, it’s easy to fit data so perfectly that the model memorizes patterns rather than generalizes them. This creates high accuracy in training but failure in prediction. Overfitting is a form of overconfidence disguised as precision it reflects modeling power used without restraint. The solution, as both Hadley Wickham and Andrew Gelman emphasize, lies in simplicity, cross-validation, and clarity: build models that explain rather than impress.</p>
 <p>Ethically, the pitfalls of big data remind us that quantity does not equal quality. A million observations cannot compensate for poor measurement, biased sampling, or conceptual confusion. The role of the analyst is to filter wisely, visualize responsibly, and remain skeptical of “too-good-to-be-true” correlations. In the end, meaningful data analysis depends not on how much data we have, but on how thoughtfully we use it.</p>
 <hr>
 </section>
