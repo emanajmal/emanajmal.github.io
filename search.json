@@ -1195,5 +1195,26 @@
     "title": "Assignment 5",
     "section": "3) Notes on File Format Differences",
     "text": "3) Notes on File Format Differences\n\n\n\n\n\n\n\n\n\n\nFormat\nType\nTypical Use\nPros\nCons\n\n\n\n\nPDF\nVector\nPrint, sharing\nScales cleanly; embeds fonts\nLarge if rasterized elements\n\n\nJPG\nRaster (lossy)\nWeb, slides\nSmall file size\nArtifacts on text/lines\n\n\nSVG\nVector\nWeb/infographics\nInfinite scaling; editable\nNot ideal for photo-heavy\n\n\nTIFF\nRaster (lossless/LZW)\nJournals/print\nHigh quality\nLarger than JPG\n\n\nBMP\nRaster (uncompressed)\nLegacy/compatibility\nSimple, widely readable\nVery large files\n\n\n\n\nAfter rendering, check the exports/ folder for all files."
+  },
+  {
+    "objectID": "EPPS6356_Assignment6.html",
+    "href": "EPPS6356_Assignment6.html",
+    "title": "Assignment 06",
+    "section": "",
+    "text": "(mtcars, USArrests, uspop)\n\n\n\n\n\n\n(GapMinder)"
+  },
+  {
+    "objectID": "EPPS6356_Assignment6.html#built-in-dataset-app",
+    "href": "EPPS6356_Assignment6.html#built-in-dataset-app",
+    "title": "Assignment 06",
+    "section": "",
+    "text": "(mtcars, USArrests, uspop)"
+  },
+  {
+    "objectID": "EPPS6356_Assignment6.html#my-own-dataset-app",
+    "href": "EPPS6356_Assignment6.html#my-own-dataset-app",
+    "title": "Assignment 06",
+    "section": "",
+    "text": "(GapMinder)"
   }
 ]
