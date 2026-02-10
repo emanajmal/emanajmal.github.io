@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 5: Government Data API – Eman Ajmal</title>
+<title>Assignment 5: Government Data API</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,225 +23,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-80f6653e4bad1240590acd7234152a3f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
+<script src="EPPS6302_Assignment5_files/libs/clipboard/clipboard.min.js"></script>
+<script src="EPPS6302_Assignment5_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="EPPS6302_Assignment5_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="EPPS6302_Assignment5_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="EPPS6302_Assignment5_files/libs/quarto-html/popper.min.js"></script>
+<script src="EPPS6302_Assignment5_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="EPPS6302_Assignment5_files/libs/quarto-html/anchor.min.js"></script>
+<link href="EPPS6302_Assignment5_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="EPPS6302_Assignment5_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="EPPS6302_Assignment5_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="EPPS6302_Assignment5_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="EPPS6302_Assignment5_files/libs/bootstrap/bootstrap-07856ccd07157181b6c57ddbe7d8c2c1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="quarto-light">
 
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Eman Ajmal</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./CV.html"> 
-<span class="menu-text">CV</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6354" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">EPPS 6354</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-epps-6354">    
-        <li>
-    <a class="dropdown-item" href="./Assignment1.html">
- <span class="dropdown-text">Assignment 1</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./Assignment2.html">
- <span class="dropdown-text">Assignment 2</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./Assignment3.html">
- <span class="dropdown-text">Assignment 3</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./Assignment4.html">
- <span class="dropdown-text">Assignment 4</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./Assignment5.html">
- <span class="dropdown-text">Assignment 5</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./Assignment6.html">
- <span class="dropdown-text">Assignment 6</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6302" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">EPPS 6302</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-epps-6302">    
-        <li>
-    <a class="dropdown-item" href="./EPPS6302_Assignment1.html">
- <span class="dropdown-text">Assignment 1</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6302_Assignment2.html">
- <span class="dropdown-text">Assignment 2</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6302_Assignment3.html">
- <span class="dropdown-text">Assignment 3</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6302_Assignment4.qmd">
- <span class="dropdown-text">Assignment 4</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6302_Assignment5.html">
- <span class="dropdown-text">Assignment 5</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6302_Assignment6.html">
- <span class="dropdown-text">Assignment 6</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6356" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">EPPS 6356</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-epps-6356">    
-        <li>
-    <a class="dropdown-item" href="./EPPS6356_Assignment1.html">
- <span class="dropdown-text">Assignment 1</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6356_PrepareforClass2.html">
- <span class="dropdown-text">Prepare For Class 2</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6356_Assignment2.html">
- <span class="dropdown-text">Assignment 2</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6356_PrepareforClass3.html">
- <span class="dropdown-text">Prepare For Class 3</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6356_Assignment3.html">
- <span class="dropdown-text">Assignment 3</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6356_PrepareforClass4.html">
- <span class="dropdown-text">Prepare For Class 4</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6356_Assignment4.html">
- <span class="dropdown-text">Assignment 4</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6356_PrepareforClass5.html">
- <span class="dropdown-text">Prepare For Class 5</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6356_Assignment5.html">
- <span class="dropdown-text">Assignment 5</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6356_PrepareforClass6.html">
- <span class="dropdown-text">Prepare For Class 6</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6356_Assignment6.html">
- <span class="dropdown-text">Assignment 6</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./EPPS6356_PrepareforClass7.qmd">
- <span class="dropdown-text">Prepare For Class 7</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6323" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">EPPS 6323</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-epps-6323">    
-        <li>
-    <a class="dropdown-item" href="./EPPS6323_Assignment1.qmd">
- <span class="dropdown-text">Assignment 1</span></a>
-  </li>  
-    </ul>
-  </li>
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
   <li><a href="#ten-most-recent-documents-linked-pdfs" id="toc-ten-most-recent-documents-linked-pdfs" class="nav-link active" data-scroll-target="#ten-most-recent-documents-linked-pdfs">1) Ten Most Recent Documents — <strong>Linked PDFs</strong></a></li>
@@ -251,8 +55,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#reproducibility-note-what-i-ran" id="toc-reproducibility-note-what-i-ran" class="nav-link" data-scroll-target="#reproducibility-note-what-i-ran">5) Reproducibility Note (What I Ran)</a></li>
   </ul>
 </nav>
-    </div>
-<!-- main -->
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -325,11 +128,10 @@ ul.task-list li input[type="checkbox"] {
 <li>This report links those local PDFs as evidence of retrieval and provides an index table above.</li>
 <li>If re-running on a different day, you may see a <strong>different set of documents</strong> (the API is time-ordered).</li>
 </ul>
-
-
 </section>
 
-</main> <!-- /main -->
+</main>
+<!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
