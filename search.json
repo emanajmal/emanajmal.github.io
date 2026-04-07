@@ -207,21 +207,21 @@
     "href": "CV.html#institute-for-urban-policy-research-utd",
     "title": "CV",
     "section": "Institute for Urban Policy Research (UTD)",
-    "text": "Institute for Urban Policy Research (UTD)\nPolicy Research Analyst\nMay 2025 – Present | Richardson, TX\n- Analyze socio-economic datasets.\n- Draft policy indicators and summaries using insights from state and nonprofit sources.\n- Collaborate with faculty and research staff to refine data visualizations and narratives for public reporting."
+    "text": "Institute for Urban Policy Research (UTD)\nPolicy Research Analyst\nMay 2025 – Present | Richardson, TX\n\nContribute to the NTX Quality of Life Dashboard by updating indicators, enhancing visualizations, and supporting Dashboard 2.0 with advanced text analytics.\nAnalyze data for the Texas Council on Family Violence BIPP Evaluation and Children’s Well-Being Study to inform state and community policy decisions"
   },
   {
     "objectID": "CV.html#nestlé-pakistan",
     "href": "CV.html#nestlé-pakistan",
     "title": "CV",
     "section": "Nestlé Pakistan",
-    "text": "Nestlé Pakistan\nLead Social Listening\nApril 2024 – September 2024 | Lahore, Pakistan\n- Led sentiment/Regression analysis using Sprinklr & SPSS to uncover key trends and improve brand perception by 15%.\n- Streamlined the content review and feedback process by integrating real-time data, enhancing stakeholder collaboration and increasing operational efficiency."
+    "text": "Nestlé Pakistan\nLead Social Listening\nApril 2024 – September 2024 | Lahore, Pakistan\n\nLed sentiment/Regression analysis using Sprinklr & SPSS to uncover key trends and improve brand perception by 15%.\nStreamlined the content review and feedback process by integrating real-time data, enhancing stakeholder collaboration and increasing operational efficiency."
   },
   {
     "objectID": "CV.html#punjab-commission-on-the-status-of-women",
     "href": "CV.html#punjab-commission-on-the-status-of-women",
     "title": "CV",
     "section": "Punjab Commission on the Status of Women",
-    "text": "Punjab Commission on the Status of Women\nResearch & Development Intern\nOctober 2023 – December 2023 | Lahore, Pakistan\n- Conducted qualitative and quantitative research for the Gender Parity Report 2022, analyzing large-scale datasets to identify trends in gender equity across Punjab.\n- Collaborated with cross-functional teams to develop evidence-based policy recommendations aimed at improving gender parity and social outcomes."
+    "text": "Punjab Commission on the Status of Women\nResearch & Development Intern\nOctober 2023 – December 2023 | Lahore, Pakistan\n\nConducted qualitative and quantitative research for the Gender Parity Report 2022, analyzing large-scale datasets to identify trends in gender equity across Punjab.\nCollaborated with cross-functional teams to develop evidence-based policy recommendations aimed at improving gender parity and social outcomes."
   },
   {
     "objectID": "EPPS6302_Assignment1.html",
@@ -1342,5 +1342,215 @@
     "title": "EPPS 6323: Lab02 R programming basics II",
     "section": "",
     "text": "summary(lm(medv~lstat*age,data=Boston))\n\n\nCall:\nlm(formula = medv ~ lstat * age, data = Boston)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-15.806  -4.045  -1.333   2.085  27.552 \n\nCoefficients:\n              Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 36.0885359  1.4698355  24.553  &lt; 2e-16 ***\nlstat       -1.3921168  0.1674555  -8.313 8.78e-16 ***\nage         -0.0007209  0.0198792  -0.036   0.9711    \nlstat:age    0.0041560  0.0018518   2.244   0.0252 *  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 6.149 on 502 degrees of freedom\nMultiple R-squared:  0.5557,    Adjusted R-squared:  0.5531 \nF-statistic: 209.3 on 3 and 502 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "EPPS6323_Assignment2.html",
+    "href": "EPPS6323_Assignment2.html",
+    "title": "Assignment 2 – Prompt Exercise",
+    "section": "",
+    "text": "This assignment examines how different AI models respond to the same research task. The goal is to design prompts, evaluate model outputs, refine instructions, and understand how prompt structure influences the quality, accuracy, and depth of responses."
+  },
+  {
+    "objectID": "EPPS6323_Assignment2.html#objective",
+    "href": "EPPS6323_Assignment2.html#objective",
+    "title": "Assignment 2 – Prompt Exercise",
+    "section": "",
+    "text": "This assignment examines how different AI models respond to the same research task. The goal is to design prompts, evaluate model outputs, refine instructions, and understand how prompt structure influences the quality, accuracy, and depth of responses."
+  },
+  {
+    "objectID": "EPPS6323_Assignment2.html#design-prompt",
+    "href": "EPPS6323_Assignment2.html#design-prompt",
+    "title": "Assignment 2 – Prompt Exercise",
+    "section": "Design Prompt",
+    "text": "Design Prompt\nFor the first test, I submitted the following prompt to multiple AI models:\nWrite a 1,500-word literature review that reads like an analytical discussion rather than a textbook summary. Start by explaining the purpose and scope of the review. Include a methodology section describing how ideas, themes, and findings are compared across studies. Add key insights by identifying patterns, similarities, and differences. Highlight important trends, challenges, and meaningful research gaps. Finish by suggesting one realistic and testable hypothesis that logically follows from the discussion. Maintain a formal but clear writing style, prioritizing explanation and reasoning over definitions or lists.\nThe prompt was submitted to ChatGPT, Copilot, and Grok 3."
+  },
+  {
+    "objectID": "EPPS6323_Assignment2.html#model-response-analysis",
+    "href": "EPPS6323_Assignment2.html#model-response-analysis",
+    "title": "Assignment 2 – Prompt Exercise",
+    "section": "Model Response Analysis",
+    "text": "Model Response Analysis\nEach model response was evaluated using the following criteria:\n\nStructure\nSynthesis\nTrends and Gaps\nHypothesis Quality\nReferences\n\n\nStructure\nChatGPT demonstrated the strongest structure by clearly including a methodology section and organizing the response in a professional, systematic format. Copilot also performed well in this area, using clean headings that made the review easy to follow. In contrast, Grok 3 included a methodology paragraph but presented the response more like a continuous essay, lacking clearly defined sections expected in a structured review.\n\n\nSynthesis\nChatGPT provided the most accurate synthesis of data mining and machine learning applications. It remained focused on the topic and discussed how researchers balance model accuracy with interpretability. Copilot failed in this area by shifting focus to technology in education rather than data mining. Similarly, Grok 3 emphasized AI’s impact on jobs and the economy, offering interesting insights but insufficient technical discussion of machine learning applications.\n\n\nTrends and Gaps\nAll models attempted to identify trends, but ChatGPT was the most aligned with the prompt. It highlighted a shift from simple predictive models to more causal and explainable approaches. Copilot identified meaningful gaps related to education, but these were irrelevant to the assignment topic. Grok 3 introduced a strong contemporary trend, agentic AI, and correctly noted the lack of long-term evaluation of such systems.\n\n\nHypothesis Quality\nThe quality of hypotheses varied. ChatGPT proposed a clear and testable hypothesis regarding adaptive versus static models over time. Copilot also produced a well-structured hypothesis, but it was unrelated to data mining. Grok 3 failed to provide a hypothesis due to an incomplete response, which significantly weakened its overall performance.\n\n\nReferences\nAll models struggled with references. None provided verifiable citations with authors, dates, or sources. Instead, they referred broadly to existing literature, which limits academic reliability and makes it difficult to verify claims using sources such as Google Scholar or Semantic Scholar."
+  },
+  {
+    "objectID": "EPPS6323_Assignment2.html#strengths-and-weaknesses",
+    "href": "EPPS6323_Assignment2.html#strengths-and-weaknesses",
+    "title": "Assignment 2 – Prompt Exercise",
+    "section": "Strengths and Weaknesses",
+    "text": "Strengths and Weaknesses\nOverall, ChatGPT’s main strength was its ability to follow instructions accurately while staying on topic, though it lacked verifiable citations. Copilot’s strength was its clear and organized structure, but it struggled significantly with topic relevance. Grok 3 stood out for offering unique and forward-looking insights, but its incomplete response and lack of structure limited its effectiveness."
+  },
+  {
+    "objectID": "EPPS6323_Assignment2.html#refined-prompts",
+    "href": "EPPS6323_Assignment2.html#refined-prompts",
+    "title": "Assignment 2 – Prompt Exercise",
+    "section": "Refined Prompts",
+    "text": "Refined Prompts\n\nChatGPT\nWrite a 1,500-word literature review on data mining and machine learning. You must include real academic in-text citations (Author, Year) to support your arguments. Include a methodology section explaining how studies were selected and compared. Ensure synthesis across studies rather than simple description. Conclude with a clear, testable hypothesis and provide a full reference list at the end.\n\n\nCopilot\nWrite an analytical literature review of exactly 1,500 words on the technical applications of data mining and machine learning. Focus strictly on computer science topics such as algorithms, model performance, and data patterns. Do not include discussions of human learning or education. Organize the review using clear sections: methodology, key findings, trends, and research gaps. End with a formal, testable hypothesis.\n\n\nGrok 3\nImagine you are a data scientist writing a 2,000-word systematic literature review on data mining and machine learning in domains such as healthcare and finance. Include a clear methodology and focus on technical aspects like model accuracy and handling complex data. Ensure the response is complete, well-structured, and ends with a bold, testable hypothesis and a conclusion."
+  },
+  {
+    "objectID": "EPPS6323_Assignment2.html#final-prompt",
+    "href": "EPPS6323_Assignment2.html#final-prompt",
+    "title": "Assignment 2 – Prompt Exercise",
+    "section": "Final Prompt",
+    "text": "Final Prompt\nI am providing three drafts of a literature review on data mining and machine learning. Combine them into one cohesive 2,000-word systematic review. Use the methodology and citations from the first draft, the structure and organization from the second, and the modern technical insights from the third. Ensure the final paper is well-structured, academically rigorous, and flows as a single unified document. Conclude with the most realistic and testable hypothesis."
+  },
+  {
+    "objectID": "EPPS6323_Assignment2.html#reflection",
+    "href": "EPPS6323_Assignment2.html#reflection",
+    "title": "Assignment 2 – Prompt Exercise",
+    "section": "Reflection",
+    "text": "Reflection\n\nHow did the models respond differently?\nEach model approached the task differently. ChatGPT emphasized structure and technical accuracy, connecting historical and modern developments in data mining. Copilot focused on formatting and readability but initially struggled with topic alignment. Grok 3 provided more contemporary and forward-looking insights, particularly around emerging AI trends, but had difficulty maintaining completeness and structure in longer responses.\n\n\nWhich refinements worked best?\nThe most effective refinements were those that added specificity. Requiring ChatGPT to include real citations improved credibility significantly. For Copilot, explicitly restricting the topic ensured it stayed within the correct domain. For Grok 3, instructions about length and completeness helped prevent incomplete outputs and ensured inclusion of the hypothesis.\n\n\nWhat did you learn?\nThis exercise demonstrated that AI-generated academic work requires active human guidance. Initial outputs often lack precision, accuracy, or completeness. By refining prompts, the quality improves significantly. It also showed that different models have different strengths, making it useful to combine outputs rather than rely on a single source. Ultimately, human oversight remains essential to verify accuracy, ensure relevance, and produce a reliable final review."
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html",
+    "href": "EPPS6323_Lab01.html",
+    "title": "EPPS 6323 Lab01 - R Programming Basics",
+    "section": "",
+    "text": "x &lt;- c(1,3,2,5)\nx\n\n[1] 1 3 2 5\n\nx &lt;- c(1,6,2)\nx\n\n[1] 1 6 2\n\ny &lt;- c(1,4,3)\ny\n\n[1] 1 4 3"
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html#create-object-using-the-assignment-operator--",
+    "href": "EPPS6323_Lab01.html#create-object-using-the-assignment-operator--",
+    "title": "EPPS 6323: Lab01 R programming basics I",
+    "section": "",
+    "text": "```{r} x &lt;- c(1,3,2,5) x x = c(1,6,2) x y = c(1,4,3)\nThis section creates vectors using the assignment operators &lt;- and =. Both operators assign values to objects in R.\nUsing function length(x) # What does length() do? length(y)\nThe length() function returns the number of elements in a vector. Here, it shows how many values are stored in x and y.\nUsing +, -, *, /, ^ operators x+y ls() # List objects in the environment rm(x,y) # Remove objects ls() rm(list=ls()) # Danger! What does this do? Not recommended!\nThe expression x+y adds corresponding elements of the two vectors. The ls() function lists all objects currently stored in the environment. The rm(x,y) function removes only the specified objects. The rm(list=ls()) function removes all objects in the current environment, which is why it is marked as dangerous.\nMatrix operations ?matrix x=matrix(data=c(1,2,3,4), nrow=2, ncol=2) # Create a 2x2 matrix object x x=matrix(c(1,2,3,4),2,2) matrix(c(1,2,3,4),2,2,byrow=T) # What about byrow=F?\nsqrt(x) # What does x look like? x x^2\nx=rnorm(50) # Generate a vector of 50 numbers using the rnorm() function\ny=x+rnorm(50,mean=50,sd=.1) # What does rnorm(50,mean=50,sd=.1) generate?\ncor(x,y) # Correlation of x and y set.seed(1303) # Set the seed for Random Number Generator (RNG) to generate values that are reproducible. rnorm(50) set.seed(3) # Try different seeds? y=rnorm(100)\nThe matrix() function creates a matrix with a chosen number of rows and columns. When byrow=TRUE, values are filled row by row. If byrow=FALSE, which is the default, values are filled column by column. The sqrt(x) function returns the square root of each element in the matrix. The expression x^2 squares each element of the matrix. The rnorm() function generates random numbers from a normal distribution. In rnorm(50, mean=50, sd=.1), R generates 50 random values with an average of 50 and a standard deviation of 0.1. The cor(x,y) function calculates the correlation between x and y. The set.seed() function makes the random numbers reproducible, so the same seed gives the same results each time.\nSimple descriptive statistics (base) mean(y) var(y) sqrt(var(y)) sd(y)\nThe mean() function calculates the average of y. The var() function calculates the variance of y. The sqrt(var(y)) gives the square root of the variance. The sd() function calculates the standard deviation, which should match sqrt(var(y)).\nVisualization using R Graphics (without packages) x=rnorm(100) y=rnorm(100) plot(x,y)\nplot(x,y, pch=20, col = “firebrick”) # Scatterplot for two numeric variables by default plot(x,y, pch=20, col = “steelblue”,xlab=“this is the x-axis”,ylab=“this is the y-axis”,main=“Plot of X vs Y”) # Add labels pdf(“Figure01.pdf”) # Save as pdf, add a path or it will be stored on the project directory plot(x,y,pch=20, col=“forestgreen”) # Try different colors? dev.off() # Close the file using the dev.off function x=seq(1,10) # Same as x=c(1:10) x x=1:10 x x=seq(-pi,pi,length=50) y=x\nThe plot(x,y) function creates a scatterplot using x and y. The argument pch=20 changes the plotting symbol, while col changes the color of the points. The xlab, ylab, and main arguments add axis labels and a title to the graph. The pdf(“Figure01.pdf”) command saves the next plot as a PDF file in the working directory. The dev.off() command closes the graphics device and finishes saving the PDF file. The seq() function creates a sequence of numbers. For example, seq(1,10) and 1:10 both produce values from 1 to 10. The command seq(-pi, pi, length=50) creates 50 equally spaced values between -pi and pi.\n​:contentReferenceoaicite:0​ all in 1 pls\nGot you — here is your FINAL Lab01 QMD (clean, complete, all-in-one, ready to submit) 👇\nJust copy-paste this into your .qmd file:"
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html#create-object-using-the-assignment-operator---1",
+    "href": "EPPS6323_Lab01.html#create-object-using-the-assignment-operator---1",
+    "title": "EPPS 6323: Lab01 R programming basics I",
+    "section": "Create object using the assignment operator (<-, =)",
+    "text": "Create object using the assignment operator (&lt;-, =)\n```{r} x &lt;- c(1,3,2,5) x x = c(1,6,2) x y = c(1,4,3)\nThis section creates vectors using the assignment operators &lt;- and =. Both operators assign values to objects in R.\nUsing function length(x) # What does length() do? length(y)\nThe length() function returns the number of elements in a vector. It tells us how many values are stored in x and y.\nUsing +, -, *, /, ^ operators x+y ls() rm(x,y) ls() rm(list=ls())\nThe expression x+y adds corresponding elements of the two vectors. The ls() function lists all objects currently in the environment. The rm(x,y) function removes specific objects from the environment. The rm(list=ls()) function removes all objects from the environment and is considered dangerous because it deletes everything.\nMatrix operations ?matrix x=matrix(data=c(1,2,3,4), nrow=2, ncol=2) x x=matrix(c(1,2,3,4),2,2) matrix(c(1,2,3,4),2,2,byrow=T)\nsqrt(x) x x^2\nx=rnorm(50)\ny=x+rnorm(50,mean=50,sd=.1)\ncor(x,y) set.seed(1303) rnorm(50) set.seed(3) y=rnorm(100)\nThe matrix() function creates a matrix with a specified number of rows and columns. When byrow=TRUE, the matrix is filled row by row. If byrow=FALSE, it is filled column by column. The sqrt(x) function returns the square root of each element in the matrix. The expression x^2 squares each element. The rnorm() function generates random numbers from a normal distribution. The command rnorm(50, mean=50, sd=.1) generates 50 random values with a mean of 50 and standard deviation of 0.1. The cor(x,y) function calculates the correlation between two variables. The set.seed() function ensures that random numbers can be reproduced.\nSimple descriptive statistics (base) mean(y) var(y) sqrt(var(y)) sd(y)\nThe mean() function calculates the average. The var() function calculates the variance. The sqrt(var(y)) gives the square root of variance. The sd() function calculates the standard deviation.\nVisualization using R Graphics (without packages) x=rnorm(100) y=rnorm(100) plot(x,y)\nplot(x,y, pch=20, col = “firebrick”) plot(x,y, pch=20, col = “steelblue”,xlab=“this is the x-axis”,ylab=“this is the y-axis”,main=“Plot of X vs Y”)\npdf(“Figure01.pdf”) plot(x,y,pch=20, col=“forestgreen”) dev.off()\nx=seq(1,10) x x=1:10 x x=seq(-pi,pi,length=50) y=x\nThe plot(x,y) function creates a scatterplot. The pch argument changes point style and col changes color. The xlab, ylab, and main arguments add labels and title. The pdf() function saves the plot as a PDF file. The dev.off() function closes the file. The seq() function generates sequences of numbers."
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html#create-vectors",
+    "href": "EPPS6323_Lab01.html#create-vectors",
+    "title": "EPPS 6323 Lab01 - R Programming Basics",
+    "section": "",
+    "text": "x &lt;- c(1,3,2,5)\nx\n\n[1] 1 3 2 5\n\nx &lt;- c(1,6,2)\nx\n\n[1] 1 6 2\n\ny &lt;- c(1,4,3)\ny\n\n[1] 1 4 3"
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html#basic-functions",
+    "href": "EPPS6323_Lab01.html#basic-functions",
+    "title": "EPPS 6323 Lab01 - R Programming Basics",
+    "section": "2. Basic Functions",
+    "text": "2. Basic Functions\n\nlength(x)\n\n[1] 3\n\nlength(y)\n\n[1] 3\n\nx + y\n\n[1]  2 10  5"
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html#environment-commands",
+    "href": "EPPS6323_Lab01.html#environment-commands",
+    "title": "EPPS 6323 Lab01 - R Programming Basics",
+    "section": "3. Environment Commands",
+    "text": "3. Environment Commands\n\nls()\n\n[1] \"x\" \"y\"\n\nrm(x, y)\n\nls()\n\ncharacter(0)"
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html#matrix-operations",
+    "href": "EPPS6323_Lab01.html#matrix-operations",
+    "title": "EPPS 6323 Lab01 - R Programming Basics",
+    "section": "4. Matrix Operations",
+    "text": "4. Matrix Operations\n\nx &lt;- matrix(c(1,2,3,4), nrow=2, ncol=2)\nx\n\n     [,1] [,2]\n[1,]    1    3\n[2,]    2    4\n\nmatrix(c(1,2,3,4), 2, 2, byrow=TRUE)\n\n     [,1] [,2]\n[1,]    1    2\n[2,]    3    4\n\nsqrt(x)\n\n         [,1]     [,2]\n[1,] 1.000000 1.732051\n[2,] 1.414214 2.000000\n\nx^2\n\n     [,1] [,2]\n[1,]    1    9\n[2,]    4   16"
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html#random-numbers-statistics",
+    "href": "EPPS6323_Lab01.html#random-numbers-statistics",
+    "title": "EPPS 6323 Lab01 - R Programming Basics",
+    "section": "5. Random Numbers & Statistics",
+    "text": "5. Random Numbers & Statistics\n\nset.seed(1303)\nrnorm(50)\n\n [1] -1.1439763145  1.3421293656  2.1853904757  0.5363925179  0.0631929665\n [6]  0.5022344825 -0.0004167247  0.5658198405 -0.5725226890 -1.1102250073\n[11] -0.0486871234 -0.6956562176  0.8289174803  0.2066528551 -0.2356745091\n[16] -0.5563104914 -0.3647543571  0.8623550343 -0.6307715354  0.3136021252\n[21] -0.9314953177  0.8238676185  0.5233707021  0.7069214120  0.4202043256\n[26] -0.2690521547 -1.5103172999 -0.6902124766 -0.1434719524 -1.0135274099\n[31]  1.5732737361  0.0127465055  0.8726470499  0.4220661905 -0.0188157917\n[36]  2.6157489689 -0.6931401748 -0.2663217810 -0.7206364412  1.3677342065\n[41]  0.2640073322  0.6321868074 -1.3306509858  0.0268888182  1.0406363208\n[46]  1.3120237985 -0.0300020767 -0.2500257125  0.0234144857  1.6598706557\n\nset.seed(3)\ny &lt;- rnorm(100)\n\nmean(y)\n\n[1] 0.01103557\n\nvar(y)\n\n[1] 0.7328675\n\nsd(y)\n\n[1] 0.8560768"
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html#correlation",
+    "href": "EPPS6323_Lab01.html#correlation",
+    "title": "EPPS 6323 Lab01 - R Programming Basics",
+    "section": "6. Correlation",
+    "text": "6. Correlation\n\nx &lt;- rnorm(50)\ny &lt;- x + rnorm(50, mean=50, sd=0.1)\n\ncor(x, y)\n\n[1] 0.9934096"
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html#basic-plot",
+    "href": "EPPS6323_Lab01.html#basic-plot",
+    "title": "EPPS 6323 Lab01 - R Programming Basics",
+    "section": "7. Basic Plot",
+    "text": "7. Basic Plot\n\nx &lt;- rnorm(100)\ny &lt;- rnorm(100)\n\nplot(x, y)"
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html#styled-plot",
+    "href": "EPPS6323_Lab01.html#styled-plot",
+    "title": "EPPS 6323 Lab01 - R Programming Basics",
+    "section": "8. Styled Plot",
+    "text": "8. Styled Plot\n\nplot(x, y, pch=20, col=\"firebrick\")"
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html#labeled-plot",
+    "href": "EPPS6323_Lab01.html#labeled-plot",
+    "title": "EPPS 6323 Lab01 - R Programming Basics",
+    "section": "9. Labeled Plot",
+    "text": "9. Labeled Plot\n\nplot(x, y,\n     pch=20,\n     col=\"steelblue\",\n     xlab=\"x-axis\",\n     ylab=\"y-axis\")"
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html#save-plot-as-pdf",
+    "href": "EPPS6323_Lab01.html#save-plot-as-pdf",
+    "title": "EPPS 6323 Lab01 - R Programming Basics",
+    "section": "10. Save Plot as PDF",
+    "text": "10. Save Plot as PDF\n\npdf(\"Figure01.pdf\")\nplot(x, y, pch=20, col=\"forestgreen\")\ndev.off()\n\nquartz_off_screen \n                2"
+  },
+  {
+    "objectID": "EPPS6323_Lab01.html#sequences",
+    "href": "EPPS6323_Lab01.html#sequences",
+    "title": "EPPS 6323 Lab01 - R Programming Basics",
+    "section": "11. Sequences",
+    "text": "11. Sequences\n\nx &lt;- seq(1,10)\nx\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nx &lt;- 1:10\nx\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nx &lt;- seq(-pi, pi, length=50)\ny &lt;- x"
+  },
+  {
+    "objectID": "EPPS6323_Assignment3.html",
+    "href": "EPPS6323_Assignment3.html",
+    "title": "Assignment 3: ML Exercise",
+    "section": "",
+    "text": "This assignment requires running Lab_ML01.R first as preparation."
+  },
+  {
+    "objectID": "EPPS6323_Assignment3.html#run-lab_ml01.r",
+    "href": "EPPS6323_Assignment3.html#run-lab_ml01.r",
+    "title": "Assignment 3: ML Exercise",
+    "section": "",
+    "text": "This assignment requires running Lab_ML01.R first as preparation."
+  },
+  {
+    "objectID": "EPPS6323_Assignment3.html#review-islr-chapters-3",
+    "href": "EPPS6323_Assignment3.html#review-islr-chapters-3",
+    "title": "Assignment 3: ML Exercise",
+    "section": "2. Review ISLR Chapters 3",
+    "text": "2. Review ISLR Chapters 3\nISLR Chapter 3 explains simple and multiple linear regression. In a multiple regression model, each coefficient shows the effect of one predictor while holding the other predictors constant."
+  },
+  {
+    "objectID": "EPPS6323_Assignment3.html#load-the-teds2016-dataset",
+    "href": "EPPS6323_Assignment3.html#load-the-teds2016-dataset",
+    "title": "Assignment 3: ML Exercise",
+    "section": "3. Load the TEDS2016 dataset",
+    "text": "3. Load the TEDS2016 dataset\n\nlibrary(haven)\n\nTEDS_2016 &lt;- read_stata(\"https://github.com/datageneration/home/blob/master/DataProgramming/data/TEDS_2016.dta?raw=true\")"
+  },
+  {
+    "objectID": "EPPS6323_Assignment3.html#run-the-multiple-regression-model",
+    "href": "EPPS6323_Assignment3.html#run-the-multiple-regression-model",
+    "title": "Assignment 3: ML Exercise",
+    "section": "4. Run the multiple regression model",
+    "text": "4. Run the multiple regression model\n\nlm.fit &lt;- lm(PartyID ~ Age + Edu + income, data = TEDS_2016)\nsummary(lm.fit)\n\n\nCall:\nlm(formula = PartyID ~ Age + Edu + income, data = TEDS_2016)\n\nResiduals:\n   Min     1Q Median     3Q    Max \n-5.038 -2.963 -2.121  4.135  6.622 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  7.00058    0.42994  16.283  &lt; 2e-16 ***\nAge         -0.28172    0.07176  -3.926 9.00e-05 ***\nEdu         -0.29039    0.06906  -4.205 2.75e-05 ***\nincome      -0.10909    0.03301  -3.304 0.000972 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.511 on 1686 degrees of freedom\nMultiple R-squared:  0.02327,   Adjusted R-squared:  0.02153 \nF-statistic: 13.39 on 3 and 1686 DF,  p-value: 1.233e-08\n\n\nThe model uses PartyID as the dependent variable and Age, Edu, and income as predictors."
+  },
+  {
+    "objectID": "EPPS6323_Assignment3.html#create-a-function-called-regplot-to-plot-a-regression-line",
+    "href": "EPPS6323_Assignment3.html#create-a-function-called-regplot-to-plot-a-regression-line",
+    "title": "Assignment 3: ML Exercise",
+    "section": "5. Create a function called regplot to plot a regression line",
+    "text": "5. Create a function called regplot to plot a regression line\n\nregplot &lt;- function(x, y){\n  fit &lt;- lm(y ~ x)\n  plot(x, y)\n  abline(fit, col = \"red\")\n}\n\n\n5a. Run a regplot using Age\n\nregplot(TEDS_2016$Age, TEDS_2016$PartyID)\n\n\n\n\n\n\n\n\n\n\n5b. Run a regplot using Education\n\nregplot(TEDS_2016$Edu, TEDS_2016$PartyID)\n\n\n\n\n\n\n\n\n\n\n5c. Run a regplot using Income\n\nregplot(TEDS_2016$income, TEDS_2016$PartyID)"
+  },
+  {
+    "objectID": "EPPS6323_Assignment3.html#what-is-the-problem-why",
+    "href": "EPPS6323_Assignment3.html#what-is-the-problem-why",
+    "title": "Assignment 3: ML Exercise",
+    "section": "6. What is the problem? Why?",
+    "text": "6. What is the problem? Why?\nThe main problem is that the dependent variable is not a continuous outcome. Instead, it consists of discrete categories, so the points in the regression plots appear in stacked horizontal levels rather than along a continuous scale. Because ordinary linear regression is designed for a quantitative continuous response variable, the fitted regression line is not the most appropriate way to model or predict this type of outcome."
+  },
+  {
+    "objectID": "EPPS6323_Assignment3.html#what-can-be-done-to-improve-prediction-of-the-dependent-variable",
+    "href": "EPPS6323_Assignment3.html#what-can-be-done-to-improve-prediction-of-the-dependent-variable",
+    "title": "Assignment 3: ML Exercise",
+    "section": "7. What can be done to improve prediction of the dependent variable?",
+    "text": "7. What can be done to improve prediction of the dependent variable?\nPrediction can be improved by using a model that is designed for a categorical dependent variable rather than ordinary linear regression. A better choice would be multinomial logistic regression if the dependent variable has several categories. Another possible improvement would be to recode the dependent variable into fewer meaningful groups before modeling."
   }
 ]

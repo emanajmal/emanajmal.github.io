@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CV – Eman Ajmal</title>
+<title>Assignment 3: ML Exercise – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -97,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./CV.html" aria-current="page"> 
+    <a class="nav-link" href="./CV.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -256,18 +291,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#education" id="toc-education" class="nav-link active" data-scroll-target="#education">Education</a></li>
-  <li><a href="#skills" id="toc-skills" class="nav-link" data-scroll-target="#skills">Skills</a></li>
-  <li><a href="#professional-experience" id="toc-professional-experience" class="nav-link" data-scroll-target="#professional-experience">Professional Experience</a>
+  <li><a href="#run-lab_ml01.r" id="toc-run-lab_ml01.r" class="nav-link active" data-scroll-target="#run-lab_ml01.r">1. Run Lab_ML01.R</a></li>
+  <li><a href="#review-islr-chapters-3" id="toc-review-islr-chapters-3" class="nav-link" data-scroll-target="#review-islr-chapters-3">2. Review ISLR Chapters 3</a></li>
+  <li><a href="#load-the-teds2016-dataset" id="toc-load-the-teds2016-dataset" class="nav-link" data-scroll-target="#load-the-teds2016-dataset">3. Load the TEDS2016 dataset</a></li>
+  <li><a href="#run-the-multiple-regression-model" id="toc-run-the-multiple-regression-model" class="nav-link" data-scroll-target="#run-the-multiple-regression-model">4. Run the multiple regression model</a></li>
+  <li><a href="#create-a-function-called-regplot-to-plot-a-regression-line" id="toc-create-a-function-called-regplot-to-plot-a-regression-line" class="nav-link" data-scroll-target="#create-a-function-called-regplot-to-plot-a-regression-line">5. Create a function called <code>regplot</code> to plot a regression line</a>
   <ul class="collapse">
-  <li><a href="#institute-for-urban-policy-research-utd" id="toc-institute-for-urban-policy-research-utd" class="nav-link" data-scroll-target="#institute-for-urban-policy-research-utd">Institute for Urban Policy Research (UTD)</a></li>
-  <li><a href="#nestlé-pakistan" id="toc-nestlé-pakistan" class="nav-link" data-scroll-target="#nestlé-pakistan">Nestlé Pakistan</a></li>
-  <li><a href="#punjab-commission-on-the-status-of-women" id="toc-punjab-commission-on-the-status-of-women" class="nav-link" data-scroll-target="#punjab-commission-on-the-status-of-women">Punjab Commission on the Status of Women</a></li>
+  <li><a href="#a.-run-a-regplot-using-age" id="toc-a.-run-a-regplot-using-age" class="nav-link" data-scroll-target="#a.-run-a-regplot-using-age">5a. Run a regplot using Age</a></li>
+  <li><a href="#b.-run-a-regplot-using-education" id="toc-b.-run-a-regplot-using-education" class="nav-link" data-scroll-target="#b.-run-a-regplot-using-education">5b. Run a regplot using Education</a></li>
+  <li><a href="#c.-run-a-regplot-using-income" id="toc-c.-run-a-regplot-using-income" class="nav-link" data-scroll-target="#c.-run-a-regplot-using-income">5c. Run a regplot using Income</a></li>
   </ul></li>
-  <li><a href="#academic-project-experience" id="toc-academic-project-experience" class="nav-link" data-scroll-target="#academic-project-experience">Academic Project Experience</a></li>
-  <li><a href="#publications-research" id="toc-publications-research" class="nav-link" data-scroll-target="#publications-research">Publications &amp; Research</a></li>
-  <li><a href="#leadership-experience" id="toc-leadership-experience" class="nav-link" data-scroll-target="#leadership-experience">Leadership Experience</a></li>
-  <li><a href="#keywords" id="toc-keywords" class="nav-link" data-scroll-target="#keywords">Keywords</a></li>
+  <li><a href="#what-is-the-problem-why" id="toc-what-is-the-problem-why" class="nav-link" data-scroll-target="#what-is-the-problem-why">6. What is the problem? Why?</a></li>
+  <li><a href="#what-can-be-done-to-improve-prediction-of-the-dependent-variable" id="toc-what-can-be-done-to-improve-prediction-of-the-dependent-variable" class="nav-link" data-scroll-target="#what-can-be-done-to-improve-prediction-of-the-dependent-variable">7. What can be done to improve prediction of the dependent variable?</a></li>
   </ul>
 </nav>
     </div>
@@ -276,7 +311,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">CV</h1>
+<h1 class="title">Assignment 3: ML Exercise</h1>
 </div>
 
 
@@ -293,95 +328,108 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Richardson, Texas 75080</p>
-<p><a href="https://tinyurl.com/55w66938">Portfolio</a></p>
-<hr>
-<section id="education" class="level1">
-<h1>Education</h1>
-<p><strong>University of Texas at Dallas</strong> — <em>MS, Social Data Analytics and Research</em><br>
-GPA: 3.85 | <em>Expected December 2026</em></p>
-<p><strong>Forman Christian College</strong>, Lahore, Pakistan — <em>BS, Sociology (Minor in Education)</em><br>
-GPA: 3.47 | <em>Graduated January 2024</em></p>
-<p><strong>Istanbul Aydun University</strong>, Istanbul, Turkey — <em>Research &amp; Development, Delightful Summer Programme</em><br>
-<em>August 2022</em></p>
-<hr>
+<section id="run-lab_ml01.r" class="level2">
+<h2 class="anchored" data-anchor-id="run-lab_ml01.r">1. Run Lab_ML01.R</h2>
+<p>This assignment requires running <code>Lab_ML01.R</code> first as preparation.</p>
 </section>
-<section id="skills" class="level1">
-<h1>Skills</h1>
-<ul>
-<li><strong>Research &amp; Data Analysis:</strong> Quantitative &amp; qualitative research, survey design, SPSS, R Studio, SQL, data visualization, reporting</li>
-<li><strong>Marketing Tools:</strong> Canva, Meta Ads, DV360, Google Ads, Keyword Analysis, Sprinklr</li>
-<li><strong>Technical:</strong> Microsoft Office, Advanced Excel, SketchUp, Slack, Discord, Zoom</li>
-<li><strong>Soft Skills:</strong> Creativity, Adaptability, Communication, Problem Solving, Critical Thinking</li>
-</ul>
-<hr>
+<section id="review-islr-chapters-3" class="level2">
+<h2 class="anchored" data-anchor-id="review-islr-chapters-3">2. Review ISLR Chapters 3</h2>
+<p>ISLR Chapter 3 explains simple and multiple linear regression. In a multiple regression model, each coefficient shows the effect of one predictor while holding the other predictors constant.</p>
 </section>
-<section id="professional-experience" class="level1">
-<h1>Professional Experience</h1>
-<section id="institute-for-urban-policy-research-utd" class="level2">
-<h2 class="anchored" data-anchor-id="institute-for-urban-policy-research-utd">Institute for Urban Policy Research (UTD)</h2>
-<p><strong>Policy Research Analyst</strong><br>
-<em>May 2025 – Present | Richardson, TX</em></p>
-<ul>
-<li><p>Contribute to the <a href="https://ntxqualityoflife.com/">NTX Quality of Life Dashboard</a> by updating indicators, enhancing visualizations, and supporting Dashboard 2.0 with advanced text analytics.</p></li>
-<li><p>Analyze data for the Texas Council on Family Violence BIPP Evaluation and Children’s Well-Being Study to inform state and community policy decisions</p></li>
-</ul>
+<section id="load-the-teds2016-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="load-the-teds2016-dataset">3. Load the TEDS2016 dataset</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>TEDS_2016 <span class="ot">&lt;-</span> <span class="fu">read_stata</span>(<span class="st">"https://github.com/datageneration/home/blob/master/DataProgramming/data/TEDS_2016.dta?raw=true"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
-<section id="nestlé-pakistan" class="level2">
-<h2 class="anchored" data-anchor-id="nestlé-pakistan">Nestlé Pakistan</h2>
-<p><strong>Lead Social Listening</strong><br>
-<em>April 2024 – September 2024 | Lahore, Pakistan</em></p>
-<ul>
-<li><p>Led sentiment/Regression analysis using Sprinklr &amp; SPSS to uncover key trends and improve brand perception by 15%.</p></li>
-<li><p>Streamlined the content review and feedback process by integrating real-time data, enhancing stakeholder collaboration and increasing operational efficiency.</p></li>
-</ul>
+<section id="run-the-multiple-regression-model" class="level2">
+<h2 class="anchored" data-anchor-id="run-the-multiple-regression-model">4. Run the multiple regression model</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>lm.fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(PartyID <span class="sc">~</span> Age <span class="sc">+</span> Edu <span class="sc">+</span> income, <span class="at">data =</span> TEDS_2016)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm.fit)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = PartyID ~ Age + Edu + income, data = TEDS_2016)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-5.038 -2.963 -2.121  4.135  6.622 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  7.00058    0.42994  16.283  &lt; 2e-16 ***
+Age         -0.28172    0.07176  -3.926 9.00e-05 ***
+Edu         -0.29039    0.06906  -4.205 2.75e-05 ***
+income      -0.10909    0.03301  -3.304 0.000972 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3.511 on 1686 degrees of freedom
+Multiple R-squared:  0.02327,   Adjusted R-squared:  0.02153 
+F-statistic: 13.39 on 3 and 1686 DF,  p-value: 1.233e-08</code></pre>
+</div>
+</div>
+<p>The model uses <code>PartyID</code> as the dependent variable and <code>Age</code>, <code>Edu</code>, and <code>income</code> as predictors.</p>
 </section>
-<section id="punjab-commission-on-the-status-of-women" class="level2">
-<h2 class="anchored" data-anchor-id="punjab-commission-on-the-status-of-women">Punjab Commission on the Status of Women</h2>
-<p><strong>Research &amp; Development Intern</strong><br>
-<em>October 2023 – December 2023 | Lahore, Pakistan</em></p>
-<ul>
-<li><p>Conducted qualitative and quantitative research for the Gender Parity Report 2022, analyzing large-scale datasets to identify trends in gender equity across Punjab.</p></li>
-<li><p>Collaborated with cross-functional teams to develop evidence-based policy recommendations aimed at improving gender parity and social outcomes.</p></li>
-</ul>
-<hr>
+<section id="create-a-function-called-regplot-to-plot-a-regression-line" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-function-called-regplot-to-plot-a-regression-line">5. Create a function called <code>regplot</code> to plot a regression line</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>regplot <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(x, y)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(fit, <span class="at">col =</span> <span class="st">"red"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="a.-run-a-regplot-using-age" class="level3">
+<h3 class="anchored" data-anchor-id="a.-run-a-regplot-using-age">5a. Run a regplot using Age</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">regplot</span>(TEDS_2016<span class="sc">$</span>Age, TEDS_2016<span class="sc">$</span>PartyID)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="EPPS6323_Assignment3_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="b.-run-a-regplot-using-education" class="level3">
+<h3 class="anchored" data-anchor-id="b.-run-a-regplot-using-education">5b. Run a regplot using Education</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">regplot</span>(TEDS_2016<span class="sc">$</span>Edu, TEDS_2016<span class="sc">$</span>PartyID)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="EPPS6323_Assignment3_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="c.-run-a-regplot-using-income" class="level3">
+<h3 class="anchored" data-anchor-id="c.-run-a-regplot-using-income">5c. Run a regplot using Income</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">regplot</span>(TEDS_2016<span class="sc">$</span>income, TEDS_2016<span class="sc">$</span>PartyID)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="EPPS6323_Assignment3_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 </section>
-<section id="academic-project-experience" class="level1">
-<h1>Academic Project Experience</h1>
-<p><strong>Thesis – Legal Awareness Among Female University Students in Lahore</strong><br>
-<em>September 2023 – January 2024</em><br>
-- Led a comprehensive research study on legal knowledge among female students by surveying over 300 participants, uncovering critical gaps in legal literacy and identifying key opportunities for academic empowerment.<br>
-- Developed and presented data-driven recommendations to academic stakeholders, driving a 25% increase in student engagement with legal literacy initiatives and demonstrating impactful leadership in addressing contemporary societal challenges.</p>
-<hr>
+<section id="what-is-the-problem-why" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-problem-why">6. What is the problem? Why?</h2>
+<p>The main problem is that the dependent variable is not a continuous outcome. Instead, it consists of discrete categories, so the points in the regression plots appear in stacked horizontal levels rather than along a continuous scale. Because ordinary linear regression is designed for a quantitative continuous response variable, the fitted regression line is not the most appropriate way to model or predict this type of outcome.</p>
 </section>
-<section id="publications-research" class="level1">
-<h1>Publications &amp; Research</h1>
-<p><strong>The Efficacy of Battering Intervention and Prevention Programs</strong><br>
-<em>Institute for Urban Policy Research (UTD), Texas Council on Family Violence — 2025</em> <a href="https://tcfv.org/wp-content/uploads/The-Efficacy-of-Battering-Intervention-and-Prevention-Programs.pdf">Full Report PDF</a></p>
-<ul>
-<li>Contributed as Research Assistant on a statewide evaluation examining the impact of Battering Intervention and Prevention Programs (BIPPs) on reducing domestic violence recidivism across Texas. Analyzed program data and outcomes for over 1,600 participants, supporting evidence-based policy recommendations.</li>
-</ul>
-<p><strong>Beyond ABC: Assessing the Well-Being of Children in North Texas</strong> Institute for Urban Policy Research (UTD) — 2025–2026 <a href="https://assets.childrens.com/m/71eec1496f7ddddb/original/BABC-2025-26-FINAL.pdf">Full Report PDF</a></p>
-<ul>
-<li>Supported research, data interpretation, and synthesis of findings to inform community health policy and practice</li>
-</ul>
-<hr>
-</section>
-<section id="leadership-experience" class="level1">
-<h1>Leadership Experience</h1>
-<ul>
-<li><strong>International Center Global Ambassador (UTD)</strong> — Vice President<br>
-</li>
-<li><strong>Art Junction (FCCU)</strong> — Director PR<br>
-</li>
-<li><strong>Aghaaz (NGO)</strong> — Executive Council</li>
-</ul>
-<hr>
-</section>
-<section id="keywords" class="level1">
-<h1>Keywords</h1>
-<p>R Studio, SQL, SPSS, Sprinklr, Data Visualization, Policy Research, Public Reporting, Stakeholder Engagement</p>
+<section id="what-can-be-done-to-improve-prediction-of-the-dependent-variable" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-be-done-to-improve-prediction-of-the-dependent-variable">7. What can be done to improve prediction of the dependent variable?</h2>
+<p>Prediction can be improved by using a model that is designed for a categorical dependent variable rather than ordinary linear regression. A better choice would be multinomial logistic regression if the dependent variable has several categories. Another possible improvement would be to recode the dependent variable into fewer meaningful groups before modeling.</p>
 
 
 </section>
