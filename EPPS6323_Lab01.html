@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Prepare for Class 6 – Eman Ajmal</title>
+<title>EPPS 6323 Lab01 - R Programming Basics – Eman Ajmal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -244,23 +279,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#reading-notes" id="toc-reading-notes" class="nav-link active" data-scroll-target="#reading-notes">1. Reading Notes</a>
-  <ul class="collapse">
-  <li><a href="#core-ideas-35-bullets" id="toc-core-ideas-35-bullets" class="nav-link" data-scroll-target="#core-ideas-35-bullets">1.1 Core Ideas (3–5 bullets)</a></li>
-  <li><a href="#examples-good-vs.-weak" id="toc-examples-good-vs.-weak" class="nav-link" data-scroll-target="#examples-good-vs.-weak">1.2 Examples (good vs.&nbsp;weak)</a></li>
-  </ul></li>
-  <li><a href="#mckinsey-week-in-charts-year-in-charts-2024" id="toc-mckinsey-week-in-charts-year-in-charts-2024" class="nav-link" data-scroll-target="#mckinsey-week-in-charts-year-in-charts-2024">2. McKinsey “Week in Charts” &amp; “Year in Charts” (2024)</a>
-  <ul class="collapse">
-  <li><a href="#quick-scan-what-they-do-well" id="toc-quick-scan-what-they-do-well" class="nav-link" data-scroll-target="#quick-scan-what-they-do-well">2.1 Quick Scan — What they do well</a></li>
-  <li><a href="#side-by-side-compare-picked-representative-patterns" id="toc-side-by-side-compare-picked-representative-patterns" class="nav-link" data-scroll-target="#side-by-side-compare-picked-representative-patterns">2.2 Side-by-Side Compare (Picked representative patterns)</a></li>
-  <li><a href="#what-could-be-better-actionable-fixes" id="toc-what-could-be-better-actionable-fixes" class="nav-link" data-scroll-target="#what-could-be-better-actionable-fixes">2.3 What could be better (actionable fixes)</a></li>
-  </ul></li>
-  <li><a href="#library-guides-what-to-borrow" id="toc-library-guides-what-to-borrow" class="nav-link" data-scroll-target="#library-guides-what-to-borrow">3. Library Guides — What to Borrow</a>
-  <ul class="collapse">
-  <li><a href="#takeaways-from-duke" id="toc-takeaways-from-duke" class="nav-link" data-scroll-target="#takeaways-from-duke">3.1 Takeaways from Duke</a></li>
-  <li><a href="#takeaways-from-berkeley" id="toc-takeaways-from-berkeley" class="nav-link" data-scroll-target="#takeaways-from-berkeley">3.2 Takeaways from Berkeley</a></li>
-  <li><a href="#answer-what-are-the-four-pillars-of-visualization" id="toc-answer-what-are-the-four-pillars-of-visualization" class="nav-link" data-scroll-target="#answer-what-are-the-four-pillars-of-visualization">3.3 <strong>Answer:</strong> What are the “Four Pillars of Visualization”?</a></li>
-  </ul></li>
+  <li><a href="#create-vectors" id="toc-create-vectors" class="nav-link active" data-scroll-target="#create-vectors">1. Create Vectors</a></li>
+  <li><a href="#basic-functions" id="toc-basic-functions" class="nav-link" data-scroll-target="#basic-functions">2. Basic Functions</a></li>
+  <li><a href="#environment-commands" id="toc-environment-commands" class="nav-link" data-scroll-target="#environment-commands">3. Environment Commands</a></li>
+  <li><a href="#matrix-operations" id="toc-matrix-operations" class="nav-link" data-scroll-target="#matrix-operations">4. Matrix Operations</a></li>
+  <li><a href="#random-numbers-statistics" id="toc-random-numbers-statistics" class="nav-link" data-scroll-target="#random-numbers-statistics">5. Random Numbers &amp; Statistics</a></li>
+  <li><a href="#correlation" id="toc-correlation" class="nav-link" data-scroll-target="#correlation">6. Correlation</a></li>
+  <li><a href="#basic-plot" id="toc-basic-plot" class="nav-link" data-scroll-target="#basic-plot">7. Basic Plot</a></li>
+  <li><a href="#styled-plot" id="toc-styled-plot" class="nav-link" data-scroll-target="#styled-plot">8. Styled Plot</a></li>
+  <li><a href="#labeled-plot" id="toc-labeled-plot" class="nav-link" data-scroll-target="#labeled-plot">9. Labeled Plot</a></li>
+  <li><a href="#save-plot-as-pdf" id="toc-save-plot-as-pdf" class="nav-link" data-scroll-target="#save-plot-as-pdf">10. Save Plot as PDF</a></li>
+  <li><a href="#sequences" id="toc-sequences" class="nav-link" data-scroll-target="#sequences">11. Sequences</a></li>
   </ul>
 </nav>
     </div>
@@ -269,8 +298,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Prepare for Class 6</h1>
-<p class="subtitle lead">Graphical Perception &amp; Design Reviews</p>
+<h1 class="title">EPPS 6323 Lab01 - R Programming Basics</h1>
 </div>
 
 
@@ -287,151 +315,210 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="reading-notes" class="level2">
-<h2 class="anchored" data-anchor-id="reading-notes">1. Reading Notes</h2>
-<p><strong>Required:</strong> Cleveland, W. S., &amp; McGill, R. (1984). <em>Graphical perception: Theory, experimentation, and application to the development of graphical methods.</em> <strong>JASA, 79(387)</strong>, 531–554.</p>
-<p><strong>Optional:</strong> Cleveland (1993) <em>Visualizing Data</em>; KH Ch. 2–4.</p>
-<section id="core-ideas-35-bullets" class="level3">
-<h3 class="anchored" data-anchor-id="core-ideas-35-bullets">1.1 Core Ideas (3–5 bullets)</h3>
-<ul>
-<li><strong>Perceptual task hierarchy:</strong> Judgments are most accurate with <strong>position on a common scale</strong>, then <strong>position on nonaligned scales</strong>, <strong>length</strong>, <strong>angle/slope</strong>, <strong>area</strong>, <strong>volume</strong>, and finally <strong>color hue/saturation</strong>. Design should push comparisons toward the top of this ladder.</li>
-<li><strong>Experimental method:</strong> Subjects made pairwise quantitative judgments across encodings. <strong>Error increased</strong> as encodings moved down the hierarchy; <strong>direct labeling and consistent baselines</strong> improved accuracy.</li>
-<li><strong>Implications:</strong> Prefer <strong>dot plots, bars (zero baseline), and aligned lines</strong> over pies, bubbles, and 3D shapes. Use <strong>small multiples</strong> for multi-category trends instead of dual y-axes.</li>
-<li><strong>Caveats:</strong> Context matters—<strong>range, aspect ratio, and scale choice</strong> can change difficulty; over-aggregation and clutter add cognitive load even with “good” encodings.</li>
-</ul>
+<section id="create-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="create-vectors">1. Create Vectors</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">5</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 3 2 5</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">2</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 6 2</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">3</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 4 3</code></pre>
+</div>
+</div>
 </section>
-<section id="examples-good-vs.-weak" class="level3">
-<h3 class="anchored" data-anchor-id="examples-good-vs.-weak">1.2 Examples (good vs.&nbsp;weak)</h3>
-<ul>
-<li><strong>Good:</strong> A small-multiple <strong>dot plot</strong> comparing graduation rates by district and year on a <strong>shared x-axis</strong>. Viewers compare <strong>position</strong> quickly and precisely.</li>
-<li><strong>Weak:</strong> A <strong>pie chart</strong> showing six programs’ budget shares that differ by only 1–3%. Angles are hard to discriminate; replace with a <strong>sorted bar chart</strong> (0 baseline), add <strong>direct labels</strong> and <strong>percent signs</strong>, and show <strong>total n</strong> for context.</li>
-</ul>
-<hr>
+<section id="basic-functions" class="level2">
+<h2 class="anchored" data-anchor-id="basic-functions">2. Basic Functions</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> y</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  2 10  5</code></pre>
+</div>
+</div>
 </section>
+<section id="environment-commands" class="level2">
+<h2 class="anchored" data-anchor-id="environment-commands">3. Environment Commands</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "x" "y"</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(x, y)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>character(0)</code></pre>
+</div>
+</div>
 </section>
-<section id="mckinsey-week-in-charts-year-in-charts-2024" class="level2">
-<h2 class="anchored" data-anchor-id="mckinsey-week-in-charts-year-in-charts-2024">2. McKinsey “Week in Charts” &amp; “Year in Charts” (2024)</h2>
-<section id="quick-scan-what-they-do-well" class="level3">
-<h3 class="anchored" data-anchor-id="quick-scan-what-they-do-well">2.1 Quick Scan — What they do well</h3>
-<ul>
-<li><strong>Clear headlines</strong> that state the takeaway (“X overtakes Y by 2028”).<br>
-</li>
-<li><strong>Annotation-first</strong> style: callouts, arrows, and direct labels reduce legend hopping.<br>
-</li>
-<li><strong>Tidy scales</strong> with restrained grids; frequent use of <strong>small multiples</strong> for regional splits.<br>
-</li>
-<li><strong>Sane color use</strong>: neutrals for context, accent color for the focal series.</li>
-</ul>
+<section id="matrix-operations" class="level2">
+<h2 class="anchored" data-anchor-id="matrix-operations">4. Matrix Operations</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>), <span class="at">nrow=</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">2</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    3
+[2,]    2    4</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    2
+[2,]    3    4</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         [,1]     [,2]
+[1,] 1.000000 1.732051
+[2,] 1.414214 2.000000</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>x<span class="sc">^</span><span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1    9
+[2,]    4   16</code></pre>
+</div>
+</div>
 </section>
-<section id="side-by-side-compare-picked-representative-patterns" class="level3">
-<h3 class="anchored" data-anchor-id="side-by-side-compare-picked-representative-patterns">2.2 Side-by-Side Compare (Picked representative patterns)</h3>
-<p>Create a small comparison table:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Criterion</th>
-<th>Week in Charts — Example A</th>
-<th>Year in Charts — Example B</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Question clarity</td>
-<td>Sharp, one-sentence claim (“Hiring cooled vs.&nbsp;last quarter”)</td>
-<td>Broader synthesis (“Decade of decarbonization progress”)</td>
-<td>Weekly posts target one nugget; yearly posts summarize themes.</td>
-</tr>
-<tr class="even">
-<td>Encoding choice</td>
-<td>Line or bar emphasizing <strong>position/length</strong></td>
-<td>Mix of small multiples, slopegraphs, and stacked bars</td>
-<td>Both mostly align with Cleveland–McGill; stacks used sparingly.</td>
-</tr>
-<tr class="odd">
-<td>Scale &amp; axis</td>
-<td>Usually linear; bars start at <strong>zero</strong></td>
-<td>Mix of linear/log for wide ranges; clear tick labels</td>
-<td>Yearly pieces sometimes justify non-zero baselines or log.</td>
-</tr>
-<tr class="even">
-<td>Annotation</td>
-<td>Short text plus <strong>direct labels</strong> at ends of lines</td>
-<td>Longer captions; <strong>subtitles</strong> add context and caveats</td>
-<td>Annotation density higher in yearly roundups.</td>
-</tr>
-<tr class="odd">
-<td>Cognitive load</td>
-<td><strong>Low</strong>—single idea per chart</td>
-<td><strong>Medium</strong>—comparisons across sectors/regions</td>
-<td>Yearly: add section dividers and mini legends to chunk info.</td>
-</tr>
-</tbody>
-</table>
+<section id="random-numbers-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="random-numbers-statistics">5. Random Numbers &amp; Statistics</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1303</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">50</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] -1.1439763145  1.3421293656  2.1853904757  0.5363925179  0.0631929665
+ [6]  0.5022344825 -0.0004167247  0.5658198405 -0.5725226890 -1.1102250073
+[11] -0.0486871234 -0.6956562176  0.8289174803  0.2066528551 -0.2356745091
+[16] -0.5563104914 -0.3647543571  0.8623550343 -0.6307715354  0.3136021252
+[21] -0.9314953177  0.8238676185  0.5233707021  0.7069214120  0.4202043256
+[26] -0.2690521547 -1.5103172999 -0.6902124766 -0.1434719524 -1.0135274099
+[31]  1.5732737361  0.0127465055  0.8726470499  0.4220661905 -0.0188157917
+[36]  2.6157489689 -0.6931401748 -0.2663217810 -0.7206364412  1.3677342065
+[41]  0.2640073322  0.6321868074 -1.3306509858  0.0268888182  1.0406363208
+[46]  1.3120237985 -0.0300020767 -0.2500257125  0.0234144857  1.6598706557</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.01103557</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.7328675</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8560768</code></pre>
+</div>
+</div>
 </section>
-<section id="what-could-be-better-actionable-fixes" class="level3">
-<h3 class="anchored" data-anchor-id="what-could-be-better-actionable-fixes">2.3 What could be better (actionable fixes)</h3>
-<ul>
-<li>Replace remaining <strong>pies</strong> and <strong>stacked area</strong> with <strong>bars + small multiples</strong> when precise part-to-whole or category change matters.<br>
-</li>
-<li>Favor <strong>direct labeling</strong> over color legends in dense multi-series lines.<br>
-</li>
-<li>Standardize <strong>y-axis ranges</strong> across small multiples to support scanning.<br>
-</li>
-<li>Where uncertainty is material, add <strong>CIs/ribbons</strong> or <strong>data source notes</strong> near the chart.<br>
-</li>
-<li>Add <strong>accessible alt text</strong> and ensure <strong>colorblind-safe</strong> palettes (e.g., avoid red–green pairings).</li>
-</ul>
-<hr>
+<section id="correlation" class="level2">
+<h2 class="anchored" data-anchor-id="correlation">6. Correlation</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">50</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> x <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">50</span>, <span class="at">mean=</span><span class="dv">50</span>, <span class="at">sd=</span><span class="fl">0.1</span>)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x, y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.9934096</code></pre>
+</div>
+</div>
 </section>
+<section id="basic-plot" class="level2">
+<h2 class="anchored" data-anchor-id="basic-plot">7. Basic Plot</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="EPPS6323_Lab01_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="library-guides-what-to-borrow" class="level2">
-<h2 class="anchored" data-anchor-id="library-guides-what-to-borrow">3. Library Guides — What to Borrow</h2>
-<p>Links: - Duke University Library Data Viz Guide: <a href="https://guides.library.duke.edu/datavis" class="uri">https://guides.library.duke.edu/datavis</a><br>
-- UC Berkeley Data Visualization: <a href="https://guides.lib.berkeley.edu/data-visualization" class="uri">https://guides.lib.berkeley.edu/data-visualization</a></p>
-<section id="takeaways-from-duke" class="level3">
-<h3 class="anchored" data-anchor-id="takeaways-from-duke">3.1 Takeaways from Duke</h3>
-<ul>
-<li>Start with the <strong>question and audience</strong>; write the one-line message first.<br>
-</li>
-<li><strong>Prototyping loop:</strong> sketch → build minimal → get feedback → iterate.<br>
-</li>
-<li><strong>Ethics &amp; accessibility:</strong> show <strong>sources, methods, and uncertainty</strong>; meet color contrast; label units.<br>
-</li>
-<li>Maintain a <strong>reproducible workflow</strong> (document code, versions, and data cleaning).</li>
-</ul>
+<section id="styled-plot" class="level2">
+<h2 class="anchored" data-anchor-id="styled-plot">8. Styled Plot</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y, <span class="at">pch=</span><span class="dv">20</span>, <span class="at">col=</span><span class="st">"firebrick"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="EPPS6323_Lab01_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="takeaways-from-berkeley" class="level3">
-<h3 class="anchored" data-anchor-id="takeaways-from-berkeley">3.2 Takeaways from Berkeley</h3>
-<ul>
-<li><strong>Pipeline mindset:</strong> problem → data → encoding → iteration → evaluation.<br>
-</li>
-<li>Prefer <strong>position/length</strong> encodings; avoid 3D and dual axes.<br>
-</li>
-<li>Build for <strong>readability at small sizes</strong> (12–14pt text, direct labels), and add <strong>alt text</strong> and <strong>ARIA</strong> for web.</li>
-</ul>
+<section id="labeled-plot" class="level2">
+<h2 class="anchored" data-anchor-id="labeled-plot">9. Labeled Plot</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y,</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">20</span>,</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">"steelblue"</span>,</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"x-axis"</span>,</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab=</span><span class="st">"y-axis"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="EPPS6323_Lab01_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="answer-what-are-the-four-pillars-of-visualization" class="level3">
-<h3 class="anchored" data-anchor-id="answer-what-are-the-four-pillars-of-visualization">3.3 <strong>Answer:</strong> What are the “Four Pillars of Visualization”?</h3>
-<ol type="1">
-<li><strong>Purpose</strong> — What question and who is the audience? Define the one-sentence takeaway and the action it should enable.<br>
-</li>
-<li><strong>Data</strong> — Are the data suitable, trustworthy, and ethically sourced? Document cleaning, units, uncertainty, and limitations.<br>
-</li>
-<li><strong>Design</strong> — Choose the <strong>strongest encodings</strong>, honest scales, and uncluttered layouts; use small multiples and direct labels.<br>
-</li>
-<li><strong>Narrative &amp; Annotation</strong> — Titles, subtitles, callouts, and captions that tell the reader exactly how to read the chart and why it matters.</li>
-</ol>
-<hr>
+<section id="save-plot-as-pdf" class="level2">
+<h2 class="anchored" data-anchor-id="save-plot-as-pdf">10. Save Plot as PDF</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(<span class="st">"Figure01.pdf"</span>)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y, <span class="at">pch=</span><span class="dv">20</span>, <span class="at">col=</span><span class="st">"forestgreen"</span>)</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>quartz_off_screen 
+                2 </code></pre>
+</div>
+</div>
+</section>
+<section id="sequences" class="level2">
+<h2 class="anchored" data-anchor-id="sequences">11. Sequences</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span>pi, pi, <span class="at">length=</span><span class="dv">50</span>)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> x</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
