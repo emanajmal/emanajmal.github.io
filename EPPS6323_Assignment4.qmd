@@ -1,0 +1,449 @@
+---
+title: "Assignment 4"
+author: "Eman Ajmal"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    theme: cosmo
+    code-fold: false
+    df-print: paged
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(quanteda)
+library(quanteda.textmodels)
+library(quanteda.textstats)
+library(quanteda.textplots)
+library(readtext)
+library(ggplot2)
+library(dplyr)
+library(stringr)
+library(knitr)
+
+theme_set(theme_minimal(base_size = 13))
+set.seed(123)
+```
+
+## 1. Quanteda tutorial
+
+I reviewed the **quanteda** tutorial and used the main workflow from it in this assignment: building a **corpus**, converting text into **tokens**, and then creating a **document-feature matrix (dfm)** for analysis. This workflow is useful because it turns raw text into a structure that can be compared across documents.
+
+## 2a. U.S. presidential inaugural speeches
+
+This section uses the built-in inaugural speeches corpus in **quanteda**.
+
+```{r}
+#| label: inaugural-corpus
+corp_inaug <- data_corpus_inaugural
+summary(corp_inaug, n = 5)
+head(docvars(corp_inaug))
+```
+
+```{r}
+#| label: inaugural-dfm
+toks_inaug <- tokens(
+  corp_inaug,
+  remove_punct = TRUE,
+  remove_numbers = TRUE,
+  remove_symbols = TRUE
+)
+
+toks_inaug <- tokens_remove(toks_inaug, pattern = stopwords("en"))
+dfmat_inaug <- dfm(toks_inaug)
+dfmat_inaug
+```
+
+### Similarities and differences among presidents
+
+```{r}
+#| label: presidents-grouped
+dfmat_pres <- dfm_group(dfmat_inaug, groups = President)
+
+top_pres_words <- topfeatures(dfmat_pres, 20)
+top_pres_words
+```
+
+The most common words across grouped inaugural speeches emphasize broad governing themes such as **people**, **government**, **nation**, **states**, **power**, and **public**. This suggests that presidents across time share a similar ceremonial and political vocabulary.
+
+```{r}
+#| label: president-similarity
+pres_sim <- textstat_simil(dfmat_pres, method = "cosine")
+pres_sim_matrix <- as.matrix(pres_sim)
+pres_sim_matrix[1:10, 1:10]
+```
+
+```{r}
+#| label: most-similar-presidents
+pres_sim_df <- as.data.frame(as.table(pres_sim_matrix)) |>
+  rename(president1 = Var1, president2 = Var2, similarity = Freq) |>
+  filter(president1 != president2) |>
+  rowwise() |>
+  mutate(pair = paste(sort(c(president1, president2)), collapse = " - ")) |>
+  ungroup() |>
+  distinct(pair, .keep_all = TRUE) |>
+  arrange(desc(similarity))
+
+head(pres_sim_df, 10)
+```
+
+The cosine similarities show that some presidents are much closer to one another in language than others. In general, presidents from nearby historical periods tend to look more similar because they are responding to related political concerns and use comparable public language.
+
+### Similarities and differences over time
+
+```{r}
+#| label: era-analysis
+era <- ifelse(docvars(corp_inaug, "Year") < 1900, "Before1900", "1900plus")
+dfmat_era <- dfm_group(dfmat_inaug, groups = era)
+
+topfeatures(dfmat_era, 20)
+```
+
+```{r}
+#| label: era-keyness
+key_era <- textstat_keyness(dfmat_era, target = "1900plus")
+head(key_era, 20)
+```
+
+```{r}
+#| label: era-keyness-plot
+textplot_keyness(key_era, n = 20)
+```
+
+The keyness results compare speeches **before 1900** with speeches from **1900 and later**. Later speeches are more associated with words like **America**, **world**, **freedom**, **democracy**, **economic**, and **today**, while earlier speeches tend to emphasize more formal institutional and constitutional language. This suggests a shift from nation-founding language toward modern mass politics, global leadership, and democratic identity.
+
+**Answer for 2a(i):**  
+There are both similarities and differences among presidents and across time. The main similarity is that inaugural speeches consistently focus on public leadership, government, and the nation. The main difference is historical emphasis. Earlier presidents use more formal constitutional and institutional language, while twentieth- and twenty-first-century presidents use more modern language about America, democracy, the economy, and the world.
+
+## 2b. U.S. Department of Defense reports
+
+This section reads the DOD reports from the `USDOD` folder.
+
+```{r}
+#| label: dod-read
+dod_files <- list.files(
+  path = "USDOD",
+  pattern = "\\.pdf$",
+  full.names = TRUE
+)
+
+if (length(dod_files) == 0) {
+  stop("No PDF files were found in the 'USDOD' folder.")
+}
+
+dod_texts <- readtext(dod_files)
+dod_texts
+```
+
+```{r}
+#| label: dod-corpus
+corp_dod <- corpus(dod_texts)
+summary(corp_dod)
+```
+
+```{r}
+#| label: dod-dfm
+toks_dod <- tokens(
+  corp_dod,
+  remove_punct = TRUE,
+  remove_numbers = TRUE,
+  remove_symbols = TRUE
+)
+
+toks_dod <- tokens_remove(toks_dod, pattern = stopwords("en"))
+dfmat_dod <- dfm(toks_dod)
+dfmat_dod_trim <- dfm_trim(dfmat_dod, min_termfreq = 5)
+dfmat_dod_trim
+```
+
+```{r}
+#| label: dod-topfeatures
+top_dod_words <- topfeatures(dfmat_dod_trim, 30)
+top_dod_words
+```
+
+The top terms in the DOD reports center on words such as **china**, **military**, **defense**, **security**, **PLA**, **Taiwan**, **air**, **missile**, and **capabilities**. This indicates that the reports repeatedly focus on Chinese military development, security competition, and strategic assessment.
+
+```{r}
+#| label: dod-similarity
+dod_sim <- textstat_simil(dfmat_dod_trim, method = "cosine")
+dod_sim_matrix <- as.matrix(dod_sim)
+dod_sim_matrix[1:8, 1:8]
+```
+
+```{r}
+#| label: most-similar-dod
+dod_sim_df <- as.data.frame(as.table(dod_sim_matrix)) |>
+  rename(doc1 = Var1, doc2 = Var2, similarity = Freq) |>
+  filter(doc1 != doc2) |>
+  rowwise() |>
+  mutate(pair = paste(sort(c(doc1, doc2)), collapse = " - ")) |>
+  ungroup() |>
+  distinct(pair, .keep_all = TRUE) |>
+  arrange(desc(similarity))
+
+head(dod_sim_df, 10)
+```
+
+The similarity scores confirm that the annual China military power reports are highly similar to one another because they follow a repeated reporting structure and cover the same strategic topics each year. Reports from adjacent years tend to be the most similar pairs.
+
+## 3. What is Wordfish?
+
+**Wordfish** is an unsupervised one-dimensional text scaling method. It uses word frequencies to estimate the position of each document on a latent dimension. In simple terms, it places documents on a line based on how their word choices differ. Documents with similar language are placed close together, and documents with different language are placed farther apart. It is commonly used to scale political texts such as legislative speeches or party manifestos along an ideological or thematic dimension without requiring any prior labeling of documents.
+
+## 3a. Run Wordfish on DOD reports
+
+```{r}
+#| label: dod-wordfish
+wf_dod <- textmodel_wordfish(dfmat_dod_trim, dir = c(1, ndoc(dfmat_dod_trim)))
+summary(wf_dod)
+```
+
+```{r}
+#| label: dod-wordfish-plot
+wf_plot_data <- data.frame(
+  document = docnames(dfmat_dod_trim),
+  wordfish_position = as.numeric(wf_dod$theta)
+)
+
+ggplot(wf_plot_data, aes(x = wordfish_position, y = reorder(document, wordfish_position))) +
+  geom_point(size = 3, color = "#003366") +
+  labs(
+    title = "Wordfish Positions for DOD Reports",
+    x = "Wordfish Position",
+    y = NULL
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(color = "#003366", face = "bold"),
+    axis.text = element_text(color = "#003366"),
+    axis.title = element_text(color = "#003366")
+  )
+
+knitr::kable(wf_plot_data, digits = 3, format = "html")
+```
+
+The Wordfish output places the DOD reports along a single dimension. Earlier reports appear at one end of the scale while later reports cluster toward the other end, suggesting that language and strategic framing have shifted over time. The clustering of recent reports indicates their vocabulary has become more standardized.
+
+## 4. How to compare positions
+
+One way to validate Wordfish results is to compare them against another scaling method such as **correspondence analysis (CA)**. If both methods place documents in a similar order, that gives more confidence that the pattern is real and not an artifact of one particular algorithm.
+
+```{r}
+#| label: compare-positions
+ca_dod <- textmodel_ca(dfmat_dod_trim)
+
+dod_positions_compare <- data.frame(
+  document = docnames(dfmat_dod_trim),
+  wordfish = as.numeric(wf_dod$theta),
+  ca_dim1 = as.numeric(coef(ca_dod, doc_dim = 1)$coef_document)
+)
+
+kable(dod_positions_compare, digits = 3)
+```
+
+```{r}
+#| label: compare-plot
+ggplot(dod_positions_compare, aes(x = wordfish, y = ca_dim1, label = document)) +
+  geom_point(size = 3) +
+  geom_text(size = 3, vjust = -0.5, check_overlap = TRUE) +
+  labs(
+    title = "Comparing Document Positions: Wordfish vs Correspondence Analysis",
+    x = "Wordfish Position",
+    y = "Correspondence Analysis Dimension 1"
+  )
+```
+
+```{r}
+#| label: compare-correlation
+cor(dod_positions_compare$wordfish, dod_positions_compare$ca_dim1)
+```
+
+**Answer for Question 4:**  
+Positions can be compared by running the same documents through a second scaling method such as correspondence analysis and then computing the correlation between the two sets of scores. A high correlation means both methods detect the same underlying structure, which validates the Wordfish results. If the scores diverge, the dimension being captured may differ between methods.
+
+## 5. Hackathlon: APSA eJobs corpus
+
+```{r}
+#| label: apsa-read
+pdf_folder <- "PSJobs201606_202603"
+
+apsa_files <- list.files(
+  path = pdf_folder,
+  pattern = "\\.pdf$",
+  full.names = TRUE
+)
+
+if (length(apsa_files) == 0) {
+  stop("No APSA PDF files were found in the folder 'PSJobs201606_202603'.")
+}
+
+apsa_texts <- readtext(apsa_files)
+apsa_texts
+```
+
+```{r}
+#| label: apsa-corpus
+corp_apsa <- corpus(apsa_texts)
+summary(corp_apsa, n = 5)
+```
+
+```{r}
+#| label: apsa-dfm
+toks_apsa <- tokens(
+  corp_apsa,
+  remove_punct = TRUE,
+  remove_numbers = TRUE,
+  remove_symbols = TRUE
+)
+
+toks_apsa <- tokens_remove(toks_apsa, pattern = stopwords("en"))
+
+dfmat_apsa <- dfm(toks_apsa)
+dfmat_apsa_trim <- dfm_trim(dfmat_apsa, min_termfreq = 2)
+
+dfmat_apsa_trim
+```
+
+### APSA eJobs top features
+
+```{r}
+#| label: apsa-topfeatures
+apsa_top <- topfeatures(dfmat_apsa_trim, 30)
+apsa_top
+```
+
+This analysis identifies the most common language in APSA job ads. The top words highlight core academic hiring priorities such as **political science**, **research**, **teaching**, **university**, **position**, **students**, **methods**, and **application**.
+
+### APSA eJobs similarity over time
+
+```{r}
+#| label: apsa-docvars
+job_docs <- docnames(dfmat_apsa_trim)
+job_year <- stringr::str_extract(basename(job_docs), "19\\d{2}|20\\d{2}")
+
+keep_docs <- !is.na(job_year)
+
+dfmat_apsa_trim_year <- dfmat_apsa_trim[keep_docs, ]
+job_year <- job_year[keep_docs]
+
+apsa_year_grouped <- dfm_group(dfmat_apsa_trim_year, groups = job_year)
+apsa_year_grouped <- dfm_trim(apsa_year_grouped, min_termfreq = 1)
+apsa_year_grouped <- apsa_year_grouped[ntoken(apsa_year_grouped) > 0, ]
+apsa_year_grouped <- dfm_trim(apsa_year_grouped, min_docfreq = 2)
+
+dim(apsa_year_grouped)
+```
+
+```{r}
+#| label: apsa-year-features
+if (ndoc(apsa_year_grouped) >= 1 && nfeat(apsa_year_grouped) >= 1) {
+  topfeatures(apsa_year_grouped, 20)
+} else {
+  cat("Not enough grouped APSA text data to show year-level top features.")
+}
+```
+
+```{r}
+#| label: apsa-year-similarity
+if (ndoc(apsa_year_grouped) >= 2 && nfeat(apsa_year_grouped) >= 2) {
+  apsa_year_sim <- tryCatch(
+    textstat_simil(apsa_year_grouped, method = "cosine"),
+    error = function(e) NULL
+  )
+
+  if (is.null(apsa_year_sim)) {
+    cat("Year-level cosine similarity could not be computed because the grouped APSA matrix is too sparse.")
+  } else {
+    as.matrix(apsa_year_sim)
+  }
+} else {
+  cat("Not enough grouped APSA text data to compute year-level cosine similarity.")
+}
+```
+
+### APSA eJobs keyness: pre-COVID vs post-COVID
+
+```{r}
+#| label: apsa-period
+job_year_num <- suppressWarnings(as.numeric(job_year))
+period <- ifelse(job_year_num <= 2019, "PreCOVID", "PostCOVID")
+
+docvars(dfmat_apsa_trim_year, "period") <- period
+
+apsa_period_grouped <- dfm_group(dfmat_apsa_trim_year, groups = docvars(dfmat_apsa_trim_year, "period"))
+apsa_period_grouped <- apsa_period_grouped[ntoken(apsa_period_grouped) > 0, ]
+
+if (ndoc(apsa_period_grouped) == 2) {
+  apsa_keyness <- textstat_keyness(apsa_period_grouped, target = "PostCOVID")
+  head(apsa_keyness, 20)
+} else {
+  cat("Not enough pre- and post-COVID grouped text to compute keyness.")
+}
+```
+
+```{r}
+#| label: apsa-keyness-plot
+if (exists("apsa_keyness")) {
+  textplot_keyness(apsa_keyness, n = 20)
+} else {
+  cat("Keyness plot not available because APSA pre/post groups were not both present.")
+}
+```
+
+This analysis identifies which words became more associated with the post-COVID academic job market. Words related to diversity, data, methods, public policy, or online teaching becoming more prominent would indicate shifts in hiring priorities after COVID.
+
+### APSA eJobs Wordfish
+
+```{r}
+#| label: apsa-wordfish
+
+# Trim aggressively to prevent segfault in Wordfish dense matrix computation
+dfmat_apsa_wf <- dfm_trim(dfmat_apsa_trim, min_termfreq = 10, min_docfreq = 3)
+dfmat_apsa_wf <- dfmat_apsa_wf[ntoken(dfmat_apsa_wf) > 0, ]
+
+# Cap features at 2000 to keep the dense matrix within memory limits
+if (nfeat(dfmat_apsa_wf) > 2000) {
+  dfmat_apsa_wf <- dfmat_apsa_wf[, order(colSums(dfmat_apsa_wf), decreasing = TRUE)[1:2000]]
+}
+
+wf_apsa <- textmodel_wordfish(dfmat_apsa_wf, dir = c(1, ndoc(dfmat_apsa_wf)))
+
+apsa_wordfish_positions <- data.frame(
+  document = docnames(dfmat_apsa_wf),
+  wordfish_position = as.numeric(wf_apsa$theta)
+)
+
+kable(head(apsa_wordfish_positions[order(apsa_wordfish_positions$wordfish_position), ], 15), digits = 3)
+```
+
+```{r}
+#| label: apsa-wordfish-plot
+ggplot(apsa_wordfish_positions, aes(x = wordfish_position, y = reorder(document, wordfish_position))) +
+  geom_point(size = 2) +
+  labs(
+    title = "Wordfish Positions for APSA eJobs Files",
+    x = "Wordfish Position",
+    y = NULL
+  )
+```
+
+### Hackathlon summary
+
+**Answer for 5(c):**  
+Using quanteda on the APSA eJobs corpus allows us to identify the most frequent words, compare language across years, examine changes before and after COVID, and estimate document positions with Wordfish. Together, these analyses show what themes dominate academic job ads and how the language of hiring changes over time.
+
+## Final conclusion
+
+This assignment used the quanteda workflow to analyze three types of political text: inaugural speeches, DOD reports, and APSA eJobs documents. The inaugural speeches showed both continuity and historical change in presidential language. The DOD reports showed a highly repeated strategic vocabulary and strong consistency across years. Wordfish helped place the DOD and APSA documents on a one-dimensional scale, and comparing Wordfish with correspondence analysis showed whether those patterns were stable across methods.
+
+## AI use statement
+
+I used ChatGPT and Claude as a tutor to help me understand the assignment, organize the code, and troubleshoot formatting and coding issues. The final submission was reviewed and edited by me.
